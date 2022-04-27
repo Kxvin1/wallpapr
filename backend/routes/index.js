@@ -1,5 +1,13 @@
 const express = require("express");
+
 const router = express.Router();
+
+const apiRouter = require("./api");
+// import apiRouter from nested api folder
+
+// use routes
+// all the URLs of the routes in the api router will be prefixed with /api
+router.use("/api", apiRouter);
 
 router.get("/hello/world", function (req, res) {
   // setting a cookie on the response with the name of XSRF-TOKEN to the value of the csrfToken
