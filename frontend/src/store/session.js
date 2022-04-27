@@ -1,0 +1,78 @@
+//  Make sure to use the custom csrfFetch function from frontend/src/store/csrf.js
+import { csrfFetch } from "./csrf";
+
+// Create two POJO action creators.
+// One that will set the session user in the session slice of state to the action creator's input parameter
+// And another that will remove the session user.
+// Their types should be extracted as a constant and used by the action creator and the session reducer.
+const SET_USER = "session/setUser";
+const REMOVE_USER = "session/RemoveUser";
+
+const setUser = (user) => {
+  return {
+    type: SET_USER,
+    payload: user,
+  };
+};
+
+const removeUser = (user) => {
+  return {
+    type: REMOVE_USER,
+  };
+};
+
+// You need to call the API to login then set the session user from the response, so add a thunk action for the POST /api/session.
+export const login = (user) => async (dispatch) => {
+  const { credential, password } = user;
+  const response = await csrfFetch("/api/session", {
+    // The POST /api/session route expects the request body to have a key of credential with an existing username or email and a key of password
+    method: "POST",
+    body: JSON.stringify({
+      credential,
+      password,
+    }),
+  });
+  //  After the response from the AJAX call comes back, parse the JSON body of the response, and dispatch the action for setting the session user to the user in the response's body.
+  const data = await response.json();
+  dispatch(setUser(data.user));
+  return response;
+};
+
+// the session slice of state should look like this if there is a session user:
+// {
+//     user: {
+//       id,
+//       email,
+//       username,
+//       createdAt,
+//       updatedAt
+//     }
+//   }
+
+// if there is no session user, then the session slice of state should look like this:
+// {
+//     user: null
+//   }
+
+// By default, there should be no session user in the session slice of state.
+const initialState = { user: null };
+
+// add a session reducer that will hold the current session user's information
+const sessionReducer = (state = initialState, action) => {
+  let newState;
+  switch (action.type) {
+    case SET_USER:
+      newState = Object.assign({}, state);
+      newState.user = action.payload;
+      return newState;
+    case REMOVE_USER:
+      newState = Object.assign({}, state);
+      newState.user = null;
+      return newState;
+    default:
+      return state;
+  }
+};
+
+// Export the login thunk action, and export the reducer as the default export.
+export default sessionReducer;
