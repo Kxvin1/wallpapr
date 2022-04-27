@@ -6,7 +6,7 @@ import { csrfFetch } from "./csrf";
 // And another that will remove the session user.
 // Their types should be extracted as a constant and used by the action creator and the session reducer.
 const SET_USER = "session/setUser";
-const REMOVE_USER = "session/RemoveUser";
+const REMOVE_USER = "session/removeUser";
 
 const setUser = (user) => {
   return {
@@ -15,7 +15,7 @@ const setUser = (user) => {
   };
 };
 
-const removeUser = (user) => {
+const removeUser = () => {
   return {
     type: REMOVE_USER,
   };

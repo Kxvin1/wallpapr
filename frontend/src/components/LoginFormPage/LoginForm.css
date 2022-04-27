@@ -1,0 +1,39 @@
+.login-button,
+.demo-button {
+  color: whitesmoke;
+  border-radius: 3px;
+  margin-top: 1.2rem;
+  margin-left: 1.2rem;
+  padding: 10px;
+  width: 300px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+.login-button {
+  color: #0077b4;
+  border: 1.4px solid #0077b4;
+}
+
+.demo-button {
+  color: #00c896;
+  border: 1.4px solid #00c896;
+}
+
+.login-button:hover {
+  color: #fff;
+  background-color: #0078b4ce;
+  border: 1px solid #0078b4ce;
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.demo-button:hover {
+  color: #fff;
+  background-color: #00c896;
+  border: 1px solid #00c896;
+  transform: scale(1.03);
+  cursor: pointer;
+}
