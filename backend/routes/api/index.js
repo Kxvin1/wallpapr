@@ -1,6 +1,9 @@
 const router = require("express").Router();
 const asyncHandler = require("express-async-handler");
 
+const sessionRouter = require("./session");
+const usersRouter = require("./users");
+
 // User model
 const { User } = require("../../db/models");
 
@@ -9,14 +12,16 @@ const { setTokenCookie } = require("../../utils/auth.js");
 const { restoreUser } = require("../../utils/auth.js");
 const { requireAuth } = require("../../utils/auth.js");
 
+router.use("/session", sessionRouter);
+router.use("/users", usersRouter);
+
+router.post("/test", function (req, res) {
+  res.json({ requestBody: req.body });
+});
+
 module.exports = router;
 
 // Test Routes Below (uncomment if want to test!)
-// // test route (simple one)
-// router.post("/test", function (req, res) {
-//   res.json({ requestBody: req.body });
-// });
-
 // // test route (for set token cookie) -- this sets the token (in dev tools > application > "token")
 // router.get(
 //   "/set-token-cookie",
