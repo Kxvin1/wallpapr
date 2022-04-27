@@ -20,29 +20,3 @@ router.post("/test", function (req, res) {
 });
 
 module.exports = router;
-
-// Test Routes Below (uncomment if want to test!)
-// // test route (for set token cookie) -- this sets the token (in dev tools > application > "token")
-// router.get(
-//   "/set-token-cookie",
-//   asyncHandler(async (_req, res) => {
-//     const user = await User.findOne({
-//       where: {
-//         username: "Demo-lition",
-//       },
-//     });
-//     setTokenCookie(res, user);
-//     return res.json({ user });
-//   })
-// );
-
-// // test route (for restore user) -- this restores the user if a token was set
-// router.get("/restore-user", restoreUser, (req, res) => {
-//   return res.json(req.user);
-// });
-
-// // test route (for require auth) -- if there is no session user, it will return an error
-// // otherwise, it will return the session user's information
-// router.get("/require-auth", requireAuth, (req, res) => {
-//   return res.json(req.user);
-// });
