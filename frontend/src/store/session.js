@@ -38,21 +38,15 @@ export const login = (user) => async (dispatch) => {
   return response;
 };
 
-// the session slice of state should look like this if there is a session user:
-// {
-//     user: {
-//       id,
-//       email,
-//       username,
-//       createdAt,
-//       updatedAt
-//     }
-//   }
-
-// if there is no session user, then the session slice of state should look like this:
-// {
-//     user: null
-//   }
+// Retain the session user information across a refresh, in order to do so,
+// call the GET /api/session, parse the JSON body of the response, and dispatch the
+// action for setting the session user to the user in the response's body
+export const restoreUser = () => async (dispatch) => {
+  const response = await csrfFetch("/api/session");
+  const data = await response.json();
+  dispatch(setUser(data.user));
+  return response;
+};
 
 // By default, there should be no session user in the session slice of state.
 const initialState = { user: null };
