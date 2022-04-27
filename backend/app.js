@@ -41,3 +41,11 @@ app.use(
     },
   })
 );
+
+// routes
+const routes = require("./routes");
+
+// connect all routes
+app.use(routes);
+
+module.exports = app;
