@@ -1,7 +1,7 @@
 "use strict";
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable("Images", {
+    return queryInterface.createTable("Comments", {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -13,18 +13,13 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: { model: "Users" },
       },
-      imageURL: {
+      commentText: {
         allowNull: false,
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
       },
-      tags: {
-        type: Sequelize.ARRAY(Sequelize.TEXT),
-        defaultValue: [],
-      },
-      favoritedCount: {
+      rating: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        defaultValue: 0,
       },
       createdAt: {
         allowNull: false,
@@ -39,6 +34,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable("Images");
+    return queryInterface.dropTable("Comments");
   },
 };
