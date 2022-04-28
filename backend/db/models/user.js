@@ -50,10 +50,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  User.associate = function (models) {
-    // associations can be defined here
-  };
-
   // This method will return an object with only the User instance information that is safe to save to a JWT.
   User.prototype.toSafeObject = function () {
     const { id, username, email } = this; // context will be the User instance
@@ -95,6 +91,14 @@ module.exports = (sequelize, DataTypes) => {
       hashedPassword,
     });
     return await User.scope("currentUser").findByPk(user.id);
+  };
+
+  User.associate = function (models) {
+    // - Many to Many: User belongsToMany Image
+    // - One to Many: User hasMany Image
+    // - One to Many: User hasMany Favorite
+    // - One to Many: User hasMany Profile
+    // - One to Many: User hasMany Comment
   };
 
   return User;
