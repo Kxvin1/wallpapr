@@ -1,5 +1,14 @@
-.login-button,
-.demo-button {
+.welcome-text {
+  padding: 0 10px;
+  color: var(--soft-white);
+  cursor: default;
+  font-weight: 400;
+  font-style: italic;
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+.logout-btn {
   color: whitesmoke;
   border-radius: 3px;
   margin-top: 1.2rem;
@@ -10,19 +19,11 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   background-color: white;
-}
-
-.login-button {
   color: #1396e7;
   border: 1.4px solid #1396e7;
 }
 
-.demo-button {
-  color: #00c896;
-  border: 1.4px solid #00c896;
-}
-
-.login-button:hover {
+.logout-btn:hover {
   color: #fff;
   background-color: #1396e7;
   border: 1px solid #1396e7;
@@ -30,10 +31,6 @@
   cursor: pointer;
 }
 
-.demo-button:hover {
-  color: #fff;
-  background-color: #00c896;
-  border: 1px solid #00c896;
-  transform: scale(1.03);
-  cursor: pointer;
+.profile-dropdown {
+  list-style: none;
 }
