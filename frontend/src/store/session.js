@@ -66,6 +66,15 @@ export const signup = (user) => async (dispatch) => {
   return response;
 };
 
+// user sign out (log out)
+export const logout = () => async (dispatch) => {
+  const response = await csrfFetch("/api/session", {
+    method: "DELETE",
+  });
+  dispatch(removeUser());
+  return response;
+};
+
 // By default, there should be no session user in the session slice of state.
 const initialState = { user: null };
 
