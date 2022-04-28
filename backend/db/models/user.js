@@ -94,11 +94,12 @@ module.exports = (sequelize, DataTypes) => {
   };
 
   User.associate = function (models) {
-    // - Many to Many: User belongsToMany Image
-    // - One to Many: User hasMany Image
-    // - One to Many: User hasMany Favorite
-    // - One to Many: User hasMany Profile
-    // - One to Many: User hasMany Comment
+    // - Many to Many: User belongsToMany Image (fk: userId // through: "Favorite" // otherKey: imageId)
+    // - One to Many: User hasMany Image (fk: userId)
+    // - One to Many: User hasMany Favorite (fk: userId)
+    // - One to Many: User hasMany Profile (fk: userId)
+    // - One to Many: User hasMany Comment (fk: userId)
+    // - One to Many: User hasMany Comment (fk: uploaderId)
   };
 
   return User;

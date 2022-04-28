@@ -25,9 +25,9 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   Image.associate = function (models) {
-    // - Many to Many: Image belongsToMany User
-    // - Many to One: Image belongsTo User
-    // - One to Many: Image hasMany Favorite
+    // - Many to Many: Image belongsToMany User (fk: imageId // through: "Favorite" // otherKey: userId)
+    // - Many to One: Image belongsTo User (fk: userId)
+    // - One to Many: Image hasMany Favorite (fk: imageId)
   };
   return Image;
 };

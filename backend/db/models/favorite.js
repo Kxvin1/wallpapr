@@ -18,8 +18,8 @@ module.exports = (sequelize, DataTypes) => {
   );
   Favorite.associate = function (models) {
     // - Join Table for User/Images
-    // - Many to Many: Favorite belongsTo User
-    // - Many to Many: Favorite belongsTo Image
+    // - Many to Many: Favorite belongsTo User (fk: userId)
+    // - Many to Many: Favorite belongsTo Image (fk: imageId)
   };
   return Favorite;
 };

@@ -8,19 +8,21 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         references: { model: "Users" },
       },
+      uploaderId: {
+        allowNull: false,
+        type: DataTypes.INTEGER,
+        references: { model: "Users" },
+      },
       commentText: {
         allowNull: false,
         type: DataTypes.TEXT,
-      },
-      rating: {
-        allowNull: false,
-        type: DataTypes.INTEGER,
       },
     },
     {}
   );
   Comment.associate = function (models) {
-    // - Many to One: Review belongsTo User
+    // - Many to One: Comment belongsTo User (fk: uploaderId)
+    // - Many to One: Comment belongsTo User (fk: userId)
   };
   return Comment;
 };

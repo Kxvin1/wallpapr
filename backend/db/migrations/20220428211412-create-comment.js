@@ -13,13 +13,14 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: { model: "Users" },
       },
+      uploaderId: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: { model: "Users" },
+      },
       commentText: {
         allowNull: false,
         type: Sequelize.TEXT,
-      },
-      rating: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
       },
       createdAt: {
         allowNull: false,
