@@ -23,3 +23,19 @@ form {
   -webkit-box-shadow: 3px 3px 5px #535353;
   box-shadow: 3px 3px 5px #535353;
 }
+
+.errors-ul {
+  margin-bottom: 20px;
+  padding: 0 30px;
+  width: 100%;
+}
+
+.error-li {
+  font-size: 1rem;
+  margin-top: -5rem;
+  margin-bottom: 1rem;
+  padding: 10px;
+  list-style-type: none;
+  margin-right: 40px;
+  color: red;
+}
