@@ -9,13 +9,13 @@
   cursor: pointer;
   background-color: whitesmoke;
   color: #a8927a;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid #a8927a;
 }
 
 .login-btn:hover {
   color: #fff;
   background-color: #a8927a;
-  border: 1px solid #a8927a;
   transform: scale(1.03);
   cursor: pointer;
 }
@@ -31,13 +31,13 @@
   cursor: pointer;
   background-color: whitesmoke;
   color: #3d4248;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid #3d4248;
 }
 
 .demo-btn:hover {
   color: #fff;
   background-color: #3d4248;
-  border: 1px solid #3d4248;
   transform: scale(1.03);
   cursor: pointer;
 }
@@ -45,8 +45,9 @@
 .login-form {
   display: flex;
   flex-direction: column;
+  padding: 15px;
   height: 430px;
-  width: 550px;
+  width: 650px;
   align-items: center;
   justify-content: center;
   background-image: url("../../../public/logo-images/login-modal.jpg");
@@ -75,8 +76,10 @@
 
 .login-input {
   color: black;
+  padding: 5px;
   width: 154px;
   margin-bottom: 7px;
+  font-size: 14px;
 }
 
 .errors-ul {
