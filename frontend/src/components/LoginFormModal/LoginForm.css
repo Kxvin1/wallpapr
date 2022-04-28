@@ -1,0 +1,96 @@
+.login-btn {
+  border: 1.4px solid #a8927a;
+  color: whitesmoke;
+  border-radius: 3px;
+  margin-top: 0.6rem;
+  padding: 5px;
+  width: 160px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: whitesmoke;
+  color: #a8927a;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-btn:hover {
+  color: #fff;
+  background-color: #a8927a;
+  border: 1px solid #a8927a;
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.demo-btn {
+  border: 1.4px solid #3d4248;
+  color: whitesmoke;
+  border-radius: 3px;
+  margin-top: 0.6rem;
+  padding: 5px;
+  width: 160px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: whitesmoke;
+  color: #3d4248;
+  transition: all 0.3s ease-in-out;
+}
+
+.demo-btn:hover {
+  color: #fff;
+  background-color: #3d4248;
+  border: 1px solid #3d4248;
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  height: 430px;
+  width: 550px;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../../public/logo-images/test-4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.login-form input:focus {
+  outline: 0;
+}
+
+.login-form input:focus::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+  transition: all 0.15s ease-in;
+}
+
+.login-header {
+  color: whitesmoke;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-top: -3rem;
+  margin-bottom: 1rem;
+  padding: 10px;
+}
+
+.login-input {
+  color: black;
+  width: 154px;
+  margin-bottom: 7px;
+}
+
+.errors-ul {
+  margin-bottom: 20px;
+  padding: 0 30px;
+  width: 100%;
+}
+
+.error-li {
+  font-size: 1rem;
+  margin-top: -5rem;
+  margin-bottom: 1rem;
+  padding: 10px;
+  list-style-type: none;
+  margin-right: 40px;
+  color: red;
+}

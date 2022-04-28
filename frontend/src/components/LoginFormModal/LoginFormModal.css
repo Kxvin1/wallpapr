@@ -1,0 +1,15 @@
+.login-btn2 {
+  border: none;
+  display: inline-block;
+  margin: 0;
+  /* background: none; */
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 500;
+}
+
+.login-btn2:hover {
+  color: #1396e7;
+}
