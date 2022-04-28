@@ -48,6 +48,24 @@ export const restoreUser = () => async (dispatch) => {
   return response;
 };
 
+// User Sign up (registering)
+export const signup = (user) => async (dispatch) => {
+  const { username, password, email } = user;
+
+  const response = await csrfFetch("/api/users", {
+    method: "POST",
+    body: JSON.stringify({
+      username,
+      password,
+      email,
+    }),
+  });
+
+  const data = await response.json();
+  dispatch(setUser(data.user));
+  return response;
+};
+
 // By default, there should be no session user in the session slice of state.
 const initialState = { user: null };
 
