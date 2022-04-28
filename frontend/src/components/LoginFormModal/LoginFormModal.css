@@ -1,4 +1,4 @@
-.login-btn2 {
+.login-btn-modal {
   border: none;
   display: inline-block;
   margin: 0;
@@ -10,6 +10,6 @@
   font-weight: 500;
 }
 
-.login-btn2:hover {
+.login-btn-modal:hover {
   color: #1396e7;
 }

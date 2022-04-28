@@ -37,6 +37,42 @@ function SignupForm() {
           </li>
         ))}
       </ul>
+      <label className="signup-header">Sign up for Wallpapr</label>
+      <input
+        placeholder="Email Address"
+        className="signup-input"
+        type="text"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+      />
+      <input
+        placeholder="Username"
+        className="signup-input"
+        type="text"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+        required
+      />
+      <input
+        placeholder="Password"
+        className="signup-input"
+        type="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        required
+      />
+      <input
+        placeholder="Confirm Password"
+        className="signup-input"
+        type="password"
+        value={confirmPassword}
+        onChange={(e) => setConfirmPassword(e.target.value)}
+        required
+      />
+      <button type="submit" className="signup-btn">
+        Sign Up
+      </button>
     </form>
   );
 }

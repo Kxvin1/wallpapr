@@ -1,44 +1,43 @@
 .login-btn {
-  border: 1.4px solid #a8927a;
+  border: 1.4px solid rgb(160, 158, 158);
   color: whitesmoke;
   border-radius: 3px;
   margin-top: 0.6rem;
   padding: 5px;
-  width: 160px;
+  width: 170px;
   font-weight: 700;
-  cursor: pointer;
-  background-color: whitesmoke;
-  color: #a8927a;
+  background-color: #090d0e;
+  color: #fff;
   transition: all 0.2s ease-in-out;
-  border: 1px solid #a8927a;
+  border: 1px solid #090d0e;
+  background-color: #090d0e;
 }
 
 .login-btn:hover {
   color: #fff;
-  background-color: #a8927a;
-  transform: scale(1.03);
+  transform: scale(1.06);
   cursor: pointer;
 }
 
 .demo-btn {
-  border: 1.4px solid #3d4248;
+  border: 1.4px solid #ee5557;
   color: whitesmoke;
   border-radius: 3px;
   margin-top: 0.6rem;
   padding: 5px;
-  width: 160px;
+  width: 170px;
   font-weight: 700;
   cursor: pointer;
   background-color: whitesmoke;
-  color: #3d4248;
+  color: #fff;
   transition: all 0.2s ease-in-out;
-  border: 1px solid #3d4248;
+  border: 1px solid #ee5557;
+  background-color: #ee5557;
 }
 
 .demo-btn:hover {
   color: #fff;
-  background-color: #3d4248;
-  transform: scale(1.03);
+  transform: scale(1.06);
   cursor: pointer;
 }
 
@@ -50,7 +49,7 @@
   width: 650px;
   align-items: center;
   justify-content: center;
-  background-image: url("../../../public/logo-images/login-modal.jpg");
+  background-image: url("../../../public/logo-images/test-3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -67,17 +66,17 @@
 
 .login-header {
   color: whitesmoke;
-  font-weight: 500;
-  font-size: 1rem;
+  font-weight: 700;
+  font-size: 1.4rem;
   margin-top: -3rem;
-  margin-bottom: 1rem;
-  padding: 10px;
+  margin-bottom: 2rem;
 }
 
 .login-input {
   color: black;
   padding: 5px;
   width: 154px;
+  margin: 5px;
   margin-bottom: 7px;
   font-size: 14px;
 }
