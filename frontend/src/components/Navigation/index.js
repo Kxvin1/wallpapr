@@ -14,14 +14,14 @@ function Navigation({ isLoaded }) {
     sessionLinks = <ProfileButton user={sessionUser} />;
   } else {
     sessionLinks = (
-      <>
+      <ul>
         <li className="id-nav-link">
           <LoginFormModal />
         </li>
         <li className="signup-nav-link">
           <SignupFormModal />
         </li>
-      </>
+      </ul>
     );
   }
 
