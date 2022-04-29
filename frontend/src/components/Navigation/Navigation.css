@@ -1,3 +1,14 @@
+header {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  background-color: #212121cc;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  max-height: 5.5rem;
+}
+
 .welcome-text {
   padding: 0 10px;
   color: var(--soft-white);
@@ -9,37 +20,24 @@
 }
 
 .logout-btn {
+  border: 1.4px solid #a8927a;
   color: whitesmoke;
   border-radius: 3px;
-  margin-top: 1.2rem;
-  margin-left: 1.2rem;
-  padding: 10px;
-  width: 300px;
+  margin-top: 1.5rem;
+  padding: 5px;
+  width: 240px;
   font-weight: 700;
-  cursor: pointer;
+  background-color: whitesmoke;
+  color: #fff;
   transition: all 0.3s ease-in-out;
-  background-color: white;
-  color: #1396e7;
-  border: 1.4px solid #1396e7;
+  border: 1px solid #a8927a;
+  background-color: #a8927a;
 }
 
 .logout-btn:hover {
   color: #fff;
-  background-color: #1396e7;
-  border: 1px solid #1396e7;
-  transform: scale(1.03);
+  transform: scale(1.06);
   cursor: pointer;
-}
-
-header {
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  background-color: #212121cc;
-  position: fixed;
-  width: 100%;
-  z-index: 2;
-  max-height: 67px;
 }
 
 .nav-bar {
@@ -48,9 +46,14 @@ header {
   width: 85%;
   padding: 15px 0;
   text-align: center;
+  color: #fff;
 }
 
-.left-container {
+.nav-bar:hover {
+  color: #1396e7;
+}
+
+/* .left-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,4 +77,4 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-}
+} */

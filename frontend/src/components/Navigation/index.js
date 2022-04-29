@@ -10,8 +10,6 @@ function Navigation({ isLoaded }) {
   const sessionUser = useSelector((state) => state.session.user);
 
   let sessionLinks;
-  let centerLinks;
-
   if (sessionUser) {
     sessionLinks = <ProfileButton user={sessionUser} />;
   } else {
@@ -32,15 +30,12 @@ function Navigation({ isLoaded }) {
       <nav className="nav-bar">
         <div className="nav-bar-element left-container">
           <NavLink exact to="/">
-            Home (replace with logo img or something)
+            Home
           </NavLink>
-        </div>
-        <div className="nav-bar-element center-container">
-          {isLoaded && centerLinks}
-        </div>
-        <div className="nav-bar-element right-container">
           {isLoaded && sessionLinks}
         </div>
+        {/* <div className="nav-bar-element right-container">
+        </div> */}
       </nav>
     </header>
   );

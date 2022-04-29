@@ -16,6 +16,22 @@ li {
   list-style-type: none;
 }
 
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover,
+a:visited,
+a:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1396e7;
+}
+
 .roundbox {
   -moz-border-radius: 6px 6px 6px 6px;
   -webkit-border-radius: 6px;
