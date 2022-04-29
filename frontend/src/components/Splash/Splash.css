@@ -1,3 +1,6 @@
+/* Img Slideshow */
+/* https://tympanus.net/codrops/2012/01/02/fullscreen-background-image-slideshow-with-css3/ */
+
 body {
   margin: 0;
   width: 100%;
@@ -13,7 +16,7 @@ body {
   margin: 0 25% 25%;
   position: absolute;
   text-align: center;
-  z-index: 10;
+  z-index: 3;
   opacity: 1;
   color: #fff;
 }
@@ -34,9 +37,6 @@ body {
   line-height: 32px;
   width: 70%;
 }
-
-/* Img Slideshow */
-/* https://tympanus.net/codrops/2012/01/02/fullscreen-background-image-slideshow-with-css3/ */
 
 .cb-slideshow,
 .cb-slideshow:after {

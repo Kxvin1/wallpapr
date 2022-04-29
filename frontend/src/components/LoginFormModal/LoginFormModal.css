@@ -2,8 +2,8 @@
   border: none;
   display: inline-block;
   margin: 0;
-  /* background: none; */
-  color: black;
+  background-color: #21212100;
+  color: white;
   font-size: 16px;
   cursor: pointer;
   text-align: center;

@@ -12,6 +12,10 @@ form {
   padding: 20px;
 }
 
+li {
+  list-style-type: none;
+}
+
 .roundbox {
   -moz-border-radius: 6px 6px 6px 6px;
   -webkit-border-radius: 6px;

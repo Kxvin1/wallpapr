@@ -31,6 +31,47 @@
   cursor: pointer;
 }
 
-.profile-dropdown {
-  list-style: none;
+header {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  background-color: #212121cc;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  max-height: 67px;
+}
+
+.nav-bar {
+  display: grid;
+  grid-template-columns: 150px auto 500px;
+  width: 85%;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.left-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: flex-start;
+  width: fit-content;
+}
+
+.right-container {
+  display: flex;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  justify-self: flex-end;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.center-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
