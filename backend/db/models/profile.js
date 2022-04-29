@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
   );
   Profile.associate = function (models) {
     // - Many to One: Profile belongsTo User (fk: userId)
+    Profile.belongsTo(models.User, { foreignKey: "userId" });
   };
   return Profile;
 };

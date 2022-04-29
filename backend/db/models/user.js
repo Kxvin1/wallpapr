@@ -95,11 +95,41 @@ module.exports = (sequelize, DataTypes) => {
 
   User.associate = function (models) {
     // - Many to Many: User belongsToMany Image (fk: userId // through: "Favorite" // otherKey: imageId)
+    User.belongsToMany(models.Image, {
+      foreignKey: "userId",
+      through: "Favorite",
+      otherKey: "imageId",
+    });
     // - One to Many: User hasMany Image (fk: userId)
+    User.hasMany(models.Image, {
+      foreignKey: "userId",
+      onDelete: "CASCADE",
+      hooks: true,
+    });
     // - One to Many: User hasMany Favorite (fk: userId)
+    User.hasMany(models.Favorite, {
+      foreignKey: "userId",
+      onDelete: "CASCADE",
+      hooks: true,
+    });
     // - One to Many: User hasMany Profile (fk: userId)
+    User.hasMany(models.Profile, {
+      foreignKey: "userId",
+      onDelete: "CASCADE",
+      hooks: true,
+    });
     // - One to Many: User hasMany Comment (fk: userId)
+    User.hasMany(models.Comment, {
+      foreignKey: "userId",
+      onDelete: "CASCADE",
+      hooks: true,
+    });
     // - One to Many: User hasMany Comment (fk: uploaderId)
+    User.hasMany(models.Comment, {
+      foreignKey: "uploaderId",
+      onDelete: "CASCADE",
+      hooks: true,
+    });
   };
 
   return User;

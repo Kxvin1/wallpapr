@@ -19,7 +19,9 @@ module.exports = (sequelize, DataTypes) => {
   Favorite.associate = function (models) {
     // - Join Table for User/Images
     // - Many to Many: Favorite belongsTo User (fk: userId)
+    Favorite.belongsTo(models.User, { foreignKey: "userId" });
     // - Many to Many: Favorite belongsTo Image (fk: imageId)
+    Favorite.belongsTo(models.Image, { foreignKey: "imageId" });
   };
   return Favorite;
 };
