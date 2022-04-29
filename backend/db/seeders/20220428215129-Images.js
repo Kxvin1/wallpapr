@@ -6,13 +6,13 @@ module.exports = {
       "Images",
       [
         {
-          userId: 2,
+          userId: 5,
           imageURL: "/images/image-1.jpg",
           tags: ["lake", "scenic", "outdoors"],
           favoritedCount: 420,
         },
         {
-          userId: 2,
+          userId: 4,
           imageURL: "/images/image-2.png",
           tags: ["dragon", "fantasy", "army"],
           favoritedCount: 151,
