@@ -4,7 +4,7 @@ import "./Splash.css";
 
 function Splash() {
   return (
-    <>
+    <div className="parent-div-splash">
       <div className="body-text">
         <h1>Find your next wallpaper.</h1>
 
@@ -28,7 +28,7 @@ function Splash() {
           <span>Fourth Image</span>
         </li>
       </ul>
-    </>
+    </div>
   );
 }
 
