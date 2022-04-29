@@ -5,14 +5,14 @@ function Footer() {
   return (
     <footer className="footer">
       <ul className="footer-ul">
-        <li>Javascript</li>
+        <li>JavaScript</li>
         <li>HTML5</li>
-        <li>CSS</li>
-        <li>React</li>
-        <li>Redux</li>
+        <li>CSS3</li>
+        <li>React.js</li>
+        <li>Redux.js</li>
         <li>Git</li>
         <li>JSON API</li>
-        <li>Express</li>
+        <li>Express.js</li>
         <li>PostgreSQL</li>
       </ul>
       <ul className="below-footer-ul">
