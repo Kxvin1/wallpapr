@@ -4,6 +4,7 @@ const cors = require("cors");
 const csurf = require("csurf");
 const helmet = require("helmet");
 const cookieParser = require("cookie-parser");
+const path = require("path");
 
 const { ValidationError } = require("sequelize");
 
@@ -43,6 +44,8 @@ app.use(
     },
   })
 );
+
+app.use(express.static(path.join(__dirname, "public")));
 
 // routes
 const routes = require("./routes");
