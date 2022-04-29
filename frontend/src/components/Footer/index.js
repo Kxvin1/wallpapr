@@ -4,7 +4,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer className="footer">
-      <ul className="foot-stuff">
+      <ul className="footer-ul">
         <li>Javascript</li>
         <li>HTML5</li>
         <li>CSS</li>
@@ -15,8 +15,8 @@ function Footer() {
         <li>Express</li>
         <li>PostgreSQL</li>
       </ul>
-      <ul className="copyright">
-        <ul className="about-me">
+      <ul className="below-footer-ul">
+        <ul className="inner-ul">
           <li className="footer-text">
             <a
               target="_blank"

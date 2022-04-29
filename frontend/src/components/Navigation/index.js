@@ -34,8 +34,6 @@ function Navigation({ isLoaded }) {
           </NavLink>
           {isLoaded && sessionLinks}
         </div>
-        {/* <div className="nav-bar-element right-container">
-        </div> */}
       </nav>
     </header>
   );
