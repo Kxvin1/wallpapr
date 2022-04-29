@@ -5,16 +5,15 @@ const asyncHandler = require("express-async-handler");
 const sessionRouter = require("./session");
 const usersRouter = require("./users");
 const imagesRouter = require("./images");
+const favoritesRouter = require("./favorites");
 
 // router usage
 router.use("/session", sessionRouter);
 router.use("/users", usersRouter);
 router.use("/images", imagesRouter);
+router.use("/favorites", favoritesRouter);
 
 // To do routes:
-
-// ? Favorites -- Get
-// router.use('/favorites', favoritesRouter);
 
 // ? Profiles -- Get and Update(Put)
 // router.use('/profiles', profilesRouter);
