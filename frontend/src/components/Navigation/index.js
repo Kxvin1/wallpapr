@@ -42,12 +42,12 @@ function Navigation({ isLoaded }) {
             activeClassName="active-link"
             to={`/members/${sessionUser.id}`}
           >
-            My Profile
+            Profile
           </NavLink>
         </li>
         <li className="favorites-nav nav-button">
           <NavLink activeClassName="active-link" to="/my-favorites">
-            My Favorites
+            Favorites
           </NavLink>
         </li>
       </ul>

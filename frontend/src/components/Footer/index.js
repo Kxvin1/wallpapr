@@ -14,38 +14,38 @@ function Footer() {
         <li>JSON API</li>
         <li>Express.js</li>
         <li>PostgreSQL</li>
+        <li className="footer-text">
+          <a
+            target="_blank"
+            rel="noreferrer noopener"
+            href="https://github.com/Kxvin1/wallpapr"
+            className="white"
+          >
+            Wallpapr | 2022
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            rel="noreferrer noopener"
+            href="https://github.com/Kxvin1"
+          >
+            <i className="fab fa-github" />
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            rel="noreferrer noopener"
+            href="https://www.linkedin.com/in/kevin-b-643664221/"
+          >
+            <i className="fab fa-linkedin" />
+          </a>
+        </li>
       </ul>
-      <ul className="below-footer-ul">
-        <ul className="inner-ul">
-          <li className="footer-text">
-            <a
-              target="_blank"
-              rel="noreferrer noopener"
-              href="https://github.com/Kxvin1/wallpapr"
-            >
-              Wallpapr | 2022
-            </a>
-          </li>
-          <li>
-            <a
-              target="_blank"
-              rel="noreferrer noopener"
-              href="https://github.com/Kxvin1"
-            >
-              <i className="fab fa-github" />
-            </a>
-          </li>
-          <li>
-            <a
-              target="_blank"
-              rel="noreferrer noopener"
-              href="https://www.linkedin.com/in/kevin-b-643664221/"
-            >
-              <i className="fab fa-linkedin" />
-            </a>
-          </li>
-        </ul>
-      </ul>
+      {/* <ul className="below-footer-ul">
+        <ul className="inner-ul"></ul>
+      </ul> */}
     </footer>
   );
 }

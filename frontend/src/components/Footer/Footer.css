@@ -20,7 +20,7 @@ footer {
   justify-content: space-around;
   align-items: center;
   width: 90%;
-  border-bottom: 1px solid #dfe0df9f;
+  border-bottom: 0.5px solid #dfe0df9f;
   min-width: 550px;
 }
 
@@ -29,21 +29,11 @@ footer {
   font-size: 15px;
 }
 
-.below-footer-ul {
-  color: #dfe0df;
-  display: flex;
-  justify-content: space-between;
-  width: fit-content;
-  min-width: 260px;
-  margin-bottom: 0.8em;
+.white {
+  color: #fff;
 }
-
-.inner-ul {
-  display: flex;
-}
-
-.inner-ul li {
-  margin: 0 10px;
+.white:hover {
+  color: #a8927a;
 }
 
 .fa-github,
@@ -58,6 +48,7 @@ footer {
 }
 
 .footer-text {
+  color: white;
   transition-duration: 0.4s;
 }
 
