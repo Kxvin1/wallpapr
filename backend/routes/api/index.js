@@ -1,23 +1,17 @@
 const router = require("express").Router();
 const asyncHandler = require("express-async-handler");
 
+// route imports
 const sessionRouter = require("./session");
 const usersRouter = require("./users");
+const imagesRouter = require("./images");
 
-// User model
-const { User } = require("../../db/models");
-
-// utils
-const { setTokenCookie } = require("../../utils/auth.js");
-const { restoreUser } = require("../../utils/auth.js");
-const { requireAuth } = require("../../utils/auth.js");
-
+// router usage
 router.use("/session", sessionRouter);
 router.use("/users", usersRouter);
-// To do routes:
+router.use("/images", imagesRouter);
 
-// ? Images -- Get, Post, Put, Delete ++ Put (update favorite count), Post (add to favorites table with favoriteCount), Delete (delete from favorites table)
-// router.use('/images', imagesRouter);
+// To do routes:
 
 // ? Favorites -- Get
 // router.use('/favorites', favoritesRouter);
