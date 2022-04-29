@@ -44,13 +44,17 @@ header {
   display: grid;
   grid-template-columns: 150px auto 500px;
   width: 85%;
-  padding: 15px 0;
+  padding: 10px 0;
   text-align: center;
   color: #fff;
 }
 
 .nav-bar:hover {
-  color: #1396e7;
+  color: #a8927a;
+}
+
+.active-link {
+  border-bottom: 1px solid #dfe0df;
 }
 
 #left-container {

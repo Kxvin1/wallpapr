@@ -40,7 +40,7 @@ function Navigation({ isLoaded }) {
         <li className="nav-button my-page-link">
           <NavLink
             activeClassName="active-link"
-            to={`/artists/${sessionUser.id}`}
+            to={`/members/${sessionUser.id}`}
           >
             My Profile
           </NavLink>
