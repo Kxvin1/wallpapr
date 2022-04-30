@@ -1,0 +1,60 @@
+.upload-btn {
+  border: 1.4px solid #a8927a;
+  color: whitesmoke;
+  border-radius: 3px;
+  margin-top: 1.5rem;
+  padding: 5px;
+  width: 200px;
+  font-weight: 700;
+  background-color: whitesmoke;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #a8927a;
+  background-color: #a8927a;
+}
+
+.upload-btn:hover {
+  color: #fff;
+  transform: scale(1.06);
+  cursor: pointer;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  height: 400px;
+  width: 750px;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../../public/logo-images/test-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.upload-form input:focus {
+  outline: 0;
+}
+
+.upload-form input:focus::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+  transition: all 0.15s ease-in;
+}
+
+.form-header {
+  color: black;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-top: -5rem;
+  margin-bottom: 4rem;
+}
+
+.form-input {
+  color: black;
+  padding: 5px;
+  width: 224px;
+  margin: 5px;
+  margin-bottom: 7px;
+  font-size: 14px;
+}

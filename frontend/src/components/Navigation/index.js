@@ -4,7 +4,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import LoginFormModal from "../LoginFormModal";
 import SignupFormModal from "../SignupFormModal";
+import ImageUploadModal from "../ImageUploadModal";
 import * as sessionActions from "../../store/session";
+
 import "./Navigation.css";
 
 function Navigation({ isLoaded }) {
@@ -24,6 +26,7 @@ function Navigation({ isLoaded }) {
   if (sessionUser) {
     defaultLinks = (
       <div>
+        <ImageUploadModal />
         <button className="logout-button" onMouseDown={logout}>
           <i className="fas fa-power-off"></i>
         </button>

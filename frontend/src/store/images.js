@@ -48,7 +48,7 @@ export const getImages = () => async (dispatch) => {
   }
 };
 
-// post image -- needs testing
+// post image -- works
 export const postImage = (imageData) => async (dispatch) => {
   const res = await csrfFetch("/api/images", {
     method: "POST",
@@ -61,6 +61,11 @@ export const postImage = (imageData) => async (dispatch) => {
     return image;
   }
 };
+
+// update image -- update the image URL -- NYI
+// code here
+
+// delete image -- delete the image altogether -- NYI
 
 // add to favorites -- needs testing
 // export const addToFavorites = (imageData) => async (dispatch) => {
