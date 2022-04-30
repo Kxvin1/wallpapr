@@ -7,6 +7,7 @@ import "./ImageUpload.css";
 
 function ImageUpload({ showModal }) {
   const dispatch = useDispatch();
+  // const history = useHistory();
 
   const [imageURL, setImageURL] = useState("");
   const [tags, setTags] = useState([]);
