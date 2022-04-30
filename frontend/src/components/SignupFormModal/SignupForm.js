@@ -12,6 +12,13 @@ function SignupForm() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState([]);
 
+  const clearForm = (e) => {
+    setEmail("");
+    setUsername("");
+    setPassword("");
+    setConfirmPassword("");
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -21,7 +28,10 @@ function SignupForm() {
         sessionActions.signup({ email, username, password })
       ).catch(async (res) => {
         const data = await res.json();
-        if (data && data.errors) setErrors(data.errors);
+        if (data && data.errors) {
+          // clearForm();
+          setErrors(data.errors);
+        }
       });
     }
 
@@ -70,7 +80,17 @@ function SignupForm() {
         onChange={(e) => setConfirmPassword(e.target.value)}
         required
       />
-      <button type="submit" className="signup-btn">
+      <button
+        type="submit"
+        className={
+          !email.includes("@") ||
+          username.length < 4 ||
+          password.length < 5 ||
+          confirmPassword.length < 5
+            ? "signup-btn-disabled"
+            : "signup-btn"
+        }
+      >
         Sign Up
       </button>
     </form>

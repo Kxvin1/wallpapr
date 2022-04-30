@@ -20,6 +20,19 @@
   cursor: pointer;
 }
 
+.signup-btn-disabled {
+  font-size: 0.9em;
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  border-radius: 3px;
+  margin-top: 0.6rem;
+  padding: 3.5px;
+  width: 170px;
+  font-weight: 700;
+  font-style: italic;
+}
+
 .signup-form {
   display: flex;
   flex-direction: column;
