@@ -57,7 +57,19 @@ function LoginForm() {
         onChange={(e) => setPassword(e.target.value)}
         required
       />
-      <button type="submit" className="login-btn">
+      <button
+        type="submit"
+        className={
+          credential.length > 0 && password.length > 0
+            ? "login-btn"
+            : "login-btn-disabled"
+        }
+        disabled={
+          credential.length === 0 ||
+          password.length === 0 ||
+          credential.value === "Demo-lition"
+        }
+      >
         Log In
       </button>
       <button type="button" onMouseDown={demoLogin} className="demo-btn">
