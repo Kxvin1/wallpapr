@@ -82,8 +82,12 @@ function ImageUpload({ showModal }) {
       {/* </div> */}
       <button
         type="submit"
-        className="upload-btn"
-        disabled={validationErrors.length > 0}
+        className={
+          sessionUser.id === 7 && validationErrors.length <= 0
+            ? "upload-btn"
+            : "upload-btn-disabled"
+        }
+        disabled={sessionUser.id !== 7 || validationErrors.length > 0}
       >
         Upload
       </button>

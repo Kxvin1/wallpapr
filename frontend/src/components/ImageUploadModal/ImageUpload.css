@@ -20,6 +20,17 @@
   cursor: pointer;
 }
 
+.upload-btn-disabled {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  border-radius: 3px;
+  margin-top: 1rem;
+  padding: 5px;
+  width: 200px;
+  font-weight: 700;
+}
+
 .upload-form {
   display: flex;
   flex-direction: column;
