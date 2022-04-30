@@ -9,10 +9,7 @@ function ImageUploadModal() {
 
   return (
     <>
-      <button
-        className="new-post-button nav-butt right-container-element"
-        onClick={() => setShowModal(true)}
-      >
+      <button className="upload-button" onClick={() => setShowModal(true)}>
         <i className="fas fa-upload"></i>
       </button>
       {showModal && (

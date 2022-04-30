@@ -1,0 +1,14 @@
+.upload-button {
+  border: none;
+  background: none;
+  color: whitesmoke;
+  font-size: 25px;
+  transition-duration: 0.3s;
+  margin-right: 2em;
+}
+
+.upload-button:hover {
+  transform: scale(1.5);
+  color: white;
+  cursor: pointer;
+}
