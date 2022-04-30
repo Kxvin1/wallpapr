@@ -8,11 +8,10 @@ function Footer() {
         <li>JavaScript</li>
         <li>HTML5</li>
         <li>CSS3</li>
-        <li>React.js</li>
-        <li>Redux.js</li>
-        <li>Git</li>
-        <li>JSON API</li>
-        <li>Express.js</li>
+        <li>React</li>
+        <li>Redux</li>
+        <li>Express</li>
+        <li>Sequelize</li>
         <li>PostgreSQL</li>
         <li className="footer-text">
           <a
@@ -21,7 +20,7 @@ function Footer() {
             href="https://github.com/Kxvin1/wallpapr"
             className="white"
           >
-            Wallpapr | 2022
+            GitHub Repository | Wallpapr 2022
           </a>
         </li>
         <li>
