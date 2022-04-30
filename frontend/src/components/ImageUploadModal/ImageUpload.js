@@ -30,9 +30,12 @@ function ImageUpload({ showModal }) {
     };
 
     dispatch(postImage(payload));
-    history.push("/");
+    alert("Image uploaded successfully!");
+    history.push(`/`); // if want to redirect them to discover page after upload
+    // history.push(`/members/${sessionUser.id}`); // if want to redirect them to their profile after upload
 
     showModal(false);
+    return;
   };
 
   useEffect(() => {

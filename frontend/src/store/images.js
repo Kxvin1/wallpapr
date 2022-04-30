@@ -2,6 +2,9 @@ import { csrfFetch } from "./csrf";
 
 const CREATE_IMAGE = "images/createImage";
 const LOAD_IMAGES = "images/loadImages";
+const UPDATE_IMAGE = "images/updateImage";
+const DELETE_IMAGE = "images/deleteImage";
+
 // const FAVORITE_IMAGE = "images/favoriteImage";
 // const UNFAVORITE_IMAGE = "images/unfavoriteImage";
 
@@ -16,6 +19,21 @@ const load = (images) => {
   return {
     type: LOAD_IMAGES,
     images,
+  };
+};
+
+const update = (image) => {
+  return {
+    type: UPDATE_IMAGE,
+    image,
+  };
+};
+
+const deleteImage = (imageId, memberId) => {
+  return {
+    type: DELETE_IMAGE,
+    imageId,
+    memberId,
   };
 };
 
@@ -65,7 +83,18 @@ export const postImage = (imageData) => async (dispatch) => {
 // update image -- update the image URL -- NYI
 // code here
 
-// delete image -- delete the image altogether -- NYI
+// delete image -- delete the image altogether -- works but need to component to implement delete. will add this functionality in the user's profile (they can only delete from their profile)
+export const deleteImageThunk = (imageId, memberId) => async (dispatch) => {
+  const res = await csrfFetch(`/api/images/${imageId}`, {
+    method: "DELETE",
+  });
+
+  if (res.ok) {
+    const { id: deleteImageId } = await res.json();
+    dispatch(deleteImage(deleteImageId, memberId));
+    return deleteImageId;
+  }
+};
 
 // add to favorites -- needs testing
 // export const addToFavorites = (imageData) => async (dispatch) => {
@@ -129,6 +158,19 @@ const imageReducer = (state = initialState, action) => {
         ...state,
         ...newState,
       };
+    }
+    case CREATE_IMAGE: {
+      const newState = {
+        ...state,
+        [action.image.id]: action.image,
+      };
+      return newState;
+    }
+    // works but need to component to implement delete. will add this functionality in the user's profile (they can only delete from their profile)
+    case DELETE_IMAGE: {
+      const newState = { ...state };
+      delete newState[action.imageId];
+      return newState;
     }
 
     default:
