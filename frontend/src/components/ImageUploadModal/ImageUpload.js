@@ -40,11 +40,10 @@ function ImageUpload({ showModal }) {
 
   useEffect(() => {
     const errors = [];
-    if (!imageURL.length) errors.push("URL is required!");
-    if (tags.indexOf(" ") >= 0)
-      errors.push("Tags are comma separated with no spaces.");
+    if (!imageURL.length) errors.push("URL is Required");
+    if (tags.indexOf(" ") >= 0) errors.push("Current Tags Invalid");
     if (!imageURL.match(/^https?:\/\/.+\/.+$/) && imageURL.length > 0)
-      errors.push("Invalid url.");
+      errors.push("Current URL Invalid");
 
     setValidationErrors(errors);
   }, [tags, imageURL]);
@@ -52,33 +51,35 @@ function ImageUpload({ showModal }) {
   return (
     <form onSubmit={imageSubmit} className="upload-form roundbox boxshadow">
       <div className="form-header">
-        <h4>Upload New Image</h4>
+        <h4>New Image Upload</h4>
       </div>
-      <ul className="error-ul">
+      <ul className="error-ul-image-upload">
         {validationErrors.length > 0 &&
           validationErrors.map((error) => (
-            <li className="error-li" key={error}>
+            <li className="error-li-image-upload" key={error}>
               {error}
             </li>
           ))}
       </ul>
-      <div className="form-element">
-        <input
-          type="text"
-          value={imageURL}
-          onChange={(e) => setImageURL(e.target.value)}
-          placeholder="Image URL"
-          required
-        />
-      </div>
-      <div className="form-element">
-        <input
-          type="text"
-          value={tags}
-          onChange={(e) => setTags(e.target.value)}
-          placeholder="Tags (optional) e.g. 'minimal'"
-        />
-      </div>
+      {/* <div className="form-input"> */}
+      <input
+        className="form-input"
+        type="text"
+        value={imageURL}
+        onChange={(e) => setImageURL(e.target.value)}
+        placeholder="ex: https://img.com/NCkJ.jpg"
+        required
+      />
+      {/* </div> */}
+      {/* <div className="form-input"> */}
+      <input
+        className="form-input"
+        type="text"
+        value={tags}
+        onChange={(e) => setTags(e.target.value)}
+        placeholder="ex: lake, sky, dog"
+      />
+      {/* </div> */}
       <button
         type="submit"
         className="upload-btn"

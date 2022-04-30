@@ -2,7 +2,7 @@
   border: 1.4px solid #a8927a;
   color: whitesmoke;
   border-radius: 3px;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   padding: 5px;
   width: 200px;
   font-weight: 700;
@@ -11,6 +11,7 @@
   transition: all 0.3s ease-in-out;
   border: 1px solid #a8927a;
   background-color: #a8927a;
+  font-size: 1.07em;
 }
 
 .upload-btn:hover {
@@ -53,8 +54,26 @@
 .form-input {
   color: black;
   padding: 5px;
-  width: 224px;
+  width: 184px;
   margin: 5px;
   margin-bottom: 7px;
   font-size: 14px;
+}
+
+.errors-ul-image-upload {
+  margin-bottom: 20px;
+  padding: 0 30px;
+  width: 100%;
+}
+
+.error-li-image-upload {
+  font-size: 1.2rem;
+  margin-top: -5rem;
+  margin-bottom: 1rem;
+  padding: 10px;
+  list-style-type: none;
+  margin-right: 40px;
+  color: red;
+  font-weight: bold;
+  text-align: center;
 }
