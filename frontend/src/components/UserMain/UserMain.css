@@ -20,7 +20,7 @@
 }
 
 .image-block {
-  height: 17rem;
+  height: 20rem;
   position: relative;
   cursor: pointer;
   transition: all 0.4s ease-in-out;

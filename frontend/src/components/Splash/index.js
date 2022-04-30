@@ -1,21 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
+import { Modal } from "../../context/Modal";
+import SignupForm from "../SignupFormModal/SignupForm";
 
 import "./Splash.css";
 
 function Splash() {
+  const [showModal, setShowModal] = useState(false);
   return (
     <div className="parent-div-splash">
       <div className="body-text">
-        <h1>Find your next wallpaper.</h1>
+        <h1>Find your next desktop wallpaper.</h1>
 
         <h3>
-          From epic graphical works of art to inspiring moments in nature —
-          submit your best desktop backgrounds.
+          From epic graphical works of art to inspiring moments in nature — join
+          our community, home to high quality desktop wallpapers.
         </h3>
-
-        <h4>
-          Join our community, home to tens of billions of high quality images.{" "}
-        </h4>
+        {/* <h4>Join our community, home to high quality desktop wallpapers. </h4> */}
+        <button
+          className="start-free-button"
+          onClick={() => setShowModal(true)}
+        >
+          Start for free
+        </button>
+        {showModal && (
+          <Modal onClose={() => setShowModal(false)}>
+            <SignupForm />
+          </Modal>
+        )}
       </div>
 
       <ul className="cb-slideshow">
