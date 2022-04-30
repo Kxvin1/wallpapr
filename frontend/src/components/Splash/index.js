@@ -12,6 +12,10 @@ function Splash() {
           From epic graphical works of art to inspiring moments in nature —
           submit your best desktop backgrounds.
         </h3>
+
+        <h4>
+          Join our community, home to tens of billions of high quality images.{" "}
+        </h4>
       </div>
 
       <ul className="cb-slideshow">

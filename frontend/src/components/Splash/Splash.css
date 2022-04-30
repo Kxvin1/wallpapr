@@ -12,13 +12,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 33%;
+  top: 35%;
   margin: 0 25% 25%;
   position: absolute;
   text-align: center;
-  z-index: 3;
+  z-index: 95;
   opacity: 1;
-  color: #dfe0df;
+  color: #f4f4f4;
 }
 
 .body-text h1 {
@@ -34,6 +34,14 @@ body {
   margin: 26px 0px 50px;
   font-weight: 600;
   font-size: 26px;
+  line-height: 32px;
+  width: 70%;
+}
+
+.body-text h4 {
+  margin: 26px 0px 50px;
+  font-weight: 600;
+  font-size: 20px;
   line-height: 32px;
   width: 70%;
 }
@@ -64,7 +72,7 @@ body {
   background-repeat: none;
   opacity: 0;
   z-index: 0;
-  animation: imageAnimation 20s linear infinite 0s;
+  animation: imageAnimation 12s linear infinite 0s;
 }
 
 .cb-slideshow li:nth-child(1) span {
@@ -77,36 +85,36 @@ body {
 }
 .cb-slideshow li:nth-child(3) span {
   background-image: url("../../../images/splash-3.jpg");
-  animation-delay: 10s;
+  animation-delay: 8s;
 }
-.cb-slideshow li:nth-child(4) span {
+/* .cb-slideshow li:nth-child(4) span {
   background-image: url("../../../images/splash-4.jpg");
   animation-delay: 16s;
-}
+} */
 
 .cb-slideshow li:nth-child(2) div {
   animation-delay: 4s;
 }
 .cb-slideshow li:nth-child(3) div {
-  animation-delay: 10s;
+  animation-delay: 8s;
 }
-.cb-slideshow li:nth-child(4) div {
+/* .cb-slideshow li:nth-child(4) div {
   animation-delay: 16s;
-}
+} */
 
 @keyframes imageAnimation {
-  0% {
+  20% {
     opacity: 0;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-in-out;
   }
-  18% {
+  38% {
     opacity: 1;
-    animation-timing-function: ease-out;
+    animation-timing-function: ease-in-out;
   }
-  27% {
+  47% {
     opacity: 1;
   }
-  45% {
+  85% {
     opacity: 0;
   }
   100% {
