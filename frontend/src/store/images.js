@@ -89,38 +89,6 @@ export const postImage = (imageData) => async (dispatch) => {
 // };
 
 // // -- needs testing
-// export const decrementFavCount = (imageData, userId) => async (dispatch) => {
-//   const res = await csrfFetch(`/api/images/${imageData.id}/favorites`, {
-//     method: "PUT",
-//     body: JSON.stringify(imageData),
-//   });
-
-//   if (res.ok) {
-//     const image = await res.json();
-//     dispatch(unfavorite(image, userId));
-//     return image;
-//   } else {
-//     console.log("error in decrementFavCount store/image.js");
-//   }
-// };
-
-// // -- needs testing
-// export const incrementFavCount = (imageData, userId) => async (dispatch) => {
-//   const res = await csrfFetch(`/api/images/${imageData.id}/favorites`, {
-//     method: "PUT",
-//     body: JSON.stringify(imageData),
-//   });
-
-//   if (res.ok) {
-//     const image = await res.json();
-//     dispatch(favorite(image, userId));
-//     return image;
-//   } else {
-//     console.log("error in incrementFavCount store/image.js");
-//   }
-// };
-
-// // -- needs testing
 // const LOAD_FAVORITES = "favorites/loadFavorites";
 
 // // -- needs testing
@@ -143,10 +111,7 @@ export const postImage = (imageData) => async (dispatch) => {
 //   }
 // };
 
-const initialState = {
-  // order: [],
-  // favoritesPage: {},
-};
+const initialState = {};
 
 const imageReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -158,54 +123,8 @@ const imageReducer = (state = initialState, action) => {
       return {
         ...state,
         ...newState,
-        // order: [...action.images],
       };
     }
-    // case CREATE_IMAGE: {
-    //   const newState = {
-    //     ...state,
-    //     [action.image.id]: action.image,
-    //     order: [action.image, ...state.order],
-    //   };
-    //   return newState;
-    // }
-    // case FAVORITE_IMAGE: {
-    //   const favoritedCount = Number(state[action.image.id].favoritedCount);
-    //   const orderedImageIndex = state.order.findIndex(
-    //     (image) => image.id === action.image.id
-    //   );
-    //   const newCount = favoritedCount + 1;
-    //   const newState = {
-    //     ...state,
-    //     [action.image.id]: {
-    //       ...state[action.image.id],
-    //       favoritedCount: newCount,
-    //       Favorites: [
-    //         ...state[action.image.id].Favorites,
-    //         { userId: action.userId, imageId: action.image.id },
-    //       ],
-    //     },
-    //   };
-    //   newState.order[orderedImageIndex].favoritedCount = newCount;
-    //   return newState;
-    // }
-    // case UNFAVORITE_IMAGE: {
-    //   const prevFavoritedCount = Number(state[action.image.id].favoritedCount);
-    //   const favoriteIndex = state[action.image.id].Favorites.findIndex(
-    //     (favorite) => favorite.userId === action.userId
-    //   );
-    //   const newCount = prevFavoritedCount - 1;
-    //   const newState = {
-    //     ...state,
-    //     [action.imageId]: {
-    //       ...state[action.image.id],
-    //       favoritedCount: newCount,
-    //       Favorites: [...state[action.image.id].Favorites],
-    //     },
-    //   };
-    //   newState[action.image.id].Favorites.splice(favoriteIndex, 1);
-    //   return newState;
-    // }
 
     default:
       return state;
