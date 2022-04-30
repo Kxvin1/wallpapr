@@ -12,13 +12,6 @@ function SignupForm() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState([]);
 
-  const clearForm = (e) => {
-    setEmail("");
-    setUsername("");
-    setPassword("");
-    setConfirmPassword("");
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -29,7 +22,6 @@ function SignupForm() {
       ).catch(async (res) => {
         const data = await res.json();
         if (data && data.errors) {
-          // clearForm();
           setErrors(data.errors);
         }
       });
