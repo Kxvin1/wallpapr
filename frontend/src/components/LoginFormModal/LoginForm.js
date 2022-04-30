@@ -64,11 +64,7 @@ function LoginForm() {
             ? "login-btn"
             : "login-btn-disabled"
         }
-        disabled={
-          credential.length === 0 ||
-          password.length === 0 ||
-          credential.value === "Demo-lition"
-        }
+        disabled={credential.length === 0 || password.length === 0}
       >
         Log In
       </button>
