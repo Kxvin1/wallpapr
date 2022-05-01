@@ -21,6 +21,7 @@ router.get(
   asyncHandler(async (req, res) => {
     const images = await Image.findAll({
       include: [{ model: User }, { model: Favorite }],
+      order: [["createdAt", "DESC"]],
     });
     res.json({ images });
   })
