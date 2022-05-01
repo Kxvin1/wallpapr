@@ -1,0 +1,29 @@
+.image-info-container {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+  grid-gap: 2rem;
+  margin-top: 3rem;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.image-info-img {
+  height: 20rem;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  border: 7px solid black;
+  box-shadow: 0.5rem 0.5rem 1rem 0 rgba(31, 27, 27, 0.843);
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.image-info-img:hover {
+  opacity: 85%;
+  cursor: zoom-in;
+  transform: scale(1.07);
+}
