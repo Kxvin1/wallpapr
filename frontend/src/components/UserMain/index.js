@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
 
 import { getImages } from "../../store/images";
-import { Modal } from "../../context/Modal";
+// import { Modal } from "../../context/Modal";
 
 import "./UserMain.css";
 
 function UserMain() {
   const dispatch = useDispatch();
-  const [showModal, setShowModal] = useState(false);
+  // const [showModal, setShowModal] = useState(false);
   const [model, setModel] = useState(false);
   const [tempimgSrc, setTempImgSrc] = useState("");
   const [modelId, setModelId] = useState("");
