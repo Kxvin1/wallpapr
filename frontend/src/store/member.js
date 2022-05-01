@@ -8,8 +8,6 @@ const DELETE_MEMBER_IMAGE = "member/deleteMemberImage";
 
 const LOAD_NEWEST_IMAGE = "member/loadNewestImage";
 
-export const getAllMembersImages = (state) => Object.values(state.artist);
-
 export const loadNewestImage = (image) => ({
   type: LOAD_NEWEST_IMAGE,
   image,
@@ -89,22 +87,6 @@ export const deleteMemberImageThunk = (imageData) => async (dispatch) => {
   }
 };
 
-export const postNewImageOnArtist = (data) => async (dispatch) => {
-  const response = await csrfFetch(`/api/images`, {
-    method: "POST",
-    body: JSON.stringify(data),
-  });
-
-  if (response.ok) {
-    const image = await response.json();
-    dispatch(loadNewestImage(image));
-    return image;
-  } else {
-    const errors = await response.json();
-    console.log(errors.errors);
-  }
-};
-
 const initialState = {};
 
 const memberReducer = (state = initialState, action) => {
@@ -118,6 +100,11 @@ const memberReducer = (state = initialState, action) => {
         ...state,
         ...newState,
       };
+    }
+    case DELETE_MEMBER_IMAGE: {
+      const newState = { ...state };
+      delete newState[action.image];
+      return newState;
     }
 
     default:
