@@ -6,17 +6,16 @@ const sessionRouter = require("./session");
 const usersRouter = require("./users");
 const imagesRouter = require("./images");
 const favoritesRouter = require("./favorites");
+const profilesRouter = require("./profiles");
 
 // router usage
 router.use("/session", sessionRouter);
 router.use("/users", usersRouter);
 router.use("/images", imagesRouter);
 router.use("/favorites", favoritesRouter);
+router.use("/profiles", profilesRouter);
 
 // To do routes:
-
-// ? Profiles -- Get and Update(Put)
-// router.use('/profiles', profilesRouter);
 
 // ? Reviews -- Get, Post, and Delete
 // router.use('/reviews', reviewsRouter);
@@ -24,6 +23,6 @@ router.use("/favorites", favoritesRouter);
 // ? Search -- Get
 // router.use('/search', searchRouter);
 
-// ? Members -- unsure if need this, do it last
-// router.use('/members', artistsRouter);
+// ? Members -- Get
+// router.use('/members', membersRouter);
 module.exports = router;
