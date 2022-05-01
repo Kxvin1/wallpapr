@@ -80,19 +80,38 @@ export const postImage = (imageData) => async (dispatch) => {
   }
 };
 
-// update image -- update the image URL -- NYI
+// update image -- update the image URL -- untested
 // code here
-
-// delete image -- delete the image altogether -- works but need to component to implement delete. will add this functionality in the user's profile (they can only delete from their profile)
-export const deleteImageThunk = (imageId, memberId) => async (dispatch) => {
-  const res = await csrfFetch(`/api/images/${imageId}`, {
-    method: "DELETE",
+// this update only works on home page (wont work on profile)
+// implement edit/delete in the members.js reducer
+export const updateImageThunk = (imageData) => async (dispatch) => {
+  const res = await csrfFetch(`/api/images/${imageData.id}`, {
+    method: "PUT",
+    body: JSON.stringify(imageData),
   });
 
   if (res.ok) {
-    const { id: deleteImageId } = await res.json();
-    dispatch(deleteImage(deleteImageId, memberId));
-    return deleteImageId;
+    const updatedImage = await res.json();
+    dispatch(update(updatedImage));
+    return updatedImage;
+  }
+};
+
+// delete image -- delete the image altogether -- untested
+// this delete only works on home page (wont work on profile)
+export const deleteImageThunk = (imageData, memberId) => async (dispatch) => {
+  const res = await csrfFetch(`/api/images/${imageData.id}`, {
+    method: "DELETE",
+  });
+
+  // if (res.ok) {
+  //   const { id: deleteImageId } = await res.json();
+  //   dispatch(deleteImage(deleteImageId, memberId));
+  //   return deleteImageId;
+  // }
+
+  if (res.ok) {
+    dispatch(deleteImage(imageData.id));
   }
 };
 
