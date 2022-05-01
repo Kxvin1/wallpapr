@@ -63,6 +63,18 @@ a:hover {
   text-align: center;
 }
 
+.error-li-image-edit {
+  font-size: 1rem;
+  /* margin-top: -5rem; */
+  /* margin-bottom: 1rem; */
+  /* padding: 10px; */
+  list-style-type: none;
+  /* margin-right: 40px; */
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
 .delete-button,
 .cancel-button {
   color: white;
