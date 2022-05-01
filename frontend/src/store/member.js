@@ -6,12 +6,12 @@ const LOAD_MEMBER_IMAGES = "member/loadMemberImages";
 const EDIT_MEMBER_IMAGE = "member/editMemberImage";
 const DELETE_MEMBER_IMAGE = "member/deleteMemberImage";
 
-const LOAD_NEWEST_IMAGE = "member/loadNewestImage";
+// const LOAD_NEWEST_IMAGE = "member/loadNewestImage";
 
-export const loadNewestImage = (image) => ({
-  type: LOAD_NEWEST_IMAGE,
-  image,
-});
+// export const loadNewestImage = (image) => ({
+//   type: LOAD_NEWEST_IMAGE,
+//   image,
+// });
 
 // load profile
 const loadMemberProf = (profile) => {
@@ -44,6 +44,20 @@ const deleteMemberImage = (image) => {
     image,
   };
 };
+
+// doesn't work
+// export const getNewImageOnMemberProfile = (imageData) => async (dispatch) => {
+//   const res = await csrfFetch(`/api/images`, {
+//     method: "POST",
+//     body: JSON.stringify(imageData),
+//   });
+
+//   if (res.ok) {
+//     const image = await res.json();
+//     dispatch(loadNewestImage(image));
+//     return image;
+//   }
+// };
 
 export const loadMemberProfileThunk = (memberId) => async (dispatch) => {
   const res = await csrfFetch(`/api/members/${memberId}`);
@@ -101,6 +115,13 @@ const memberReducer = (state = initialState, action) => {
         ...newState,
       };
     }
+
+    // case LOAD_NEWEST_IMAGE: {
+    //   const newState = { ...state };
+    //   newState[action.image.id] = action.image;
+    //   return newState;
+    // }
+
     case DELETE_MEMBER_IMAGE: {
       const newState = { ...state };
       delete newState[action.image];

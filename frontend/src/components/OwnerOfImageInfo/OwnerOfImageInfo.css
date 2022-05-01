@@ -31,7 +31,7 @@
 .edit-and-delete-button-container {
   position: absolute;
   width: fit-content;
-  right: -50px;
+  right: 5px;
   top: 0px;
   opacity: 1;
   transition-duration: 0.3s;

@@ -4,8 +4,6 @@ import { useLocation } from "react-router-dom";
 import { deleteMemberImageThunk } from "../../store/member";
 import { deleteImageThunk } from "../../store/images";
 
-import "./ImageDeleteModal.css";
-
 function ImageDeleteModal({ showModal, image }) {
   const location = useLocation();
   const dispatch = useDispatch();

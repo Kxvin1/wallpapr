@@ -26,14 +26,16 @@ function UserProfile() {
   }, [dispatch]);
 
   return (
-    <div className="image-user-profile-containers">
-      {memberImages?.map((image) => {
-        if (image.userId === sessionUser.id) {
-          return <OwnerOfImageInfo key={image.id} image={image} />;
-        }
+    <div>
+      <div className="image-user-profile-containers">
+        {memberImages?.map((image) => {
+          if (image.userId === sessionUser.id) {
+            return <OwnerOfImageInfo key={image.id} image={image} />;
+          }
 
-        return <ImageInfo key={image.id} image={image} />;
-      })}
+          return <ImageInfo key={image.id} image={image} />;
+        })}
+      </div>
     </div>
   );
 }
