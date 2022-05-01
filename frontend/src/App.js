@@ -5,6 +5,7 @@ import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
+import UserProfile from "./components/UserProfile";
 
 // pages to do:
 // Discover (only displayed when logged in)
@@ -28,7 +29,9 @@ function App() {
             <Main />
             <Footer />
           </Route>
-          <Route path="/members/:memberId">User's Profile Component</Route>
+          <Route path="/members/:memberId">
+            <UserProfile />
+          </Route>
           <Route path="/my-favorites">Favorites Page Component</Route>
           <Route>Page Not Found Component</Route>
         </Switch>
