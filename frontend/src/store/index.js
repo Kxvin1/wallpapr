@@ -4,12 +4,14 @@ import thunk from "redux-thunk";
 import sessionReducer from "./session";
 import imageReducer from "./images";
 import profileReducer from "./profile";
+import memberReducer from "./member";
 
 // Set a key of session in the rootReducer's combineReducer object argument to the session reducer.
 const rootReducer = combineReducers({
   session: sessionReducer,
   image: imageReducer,
   profile: profileReducer,
+  member: memberReducer,
 });
 
 let enhancer;
