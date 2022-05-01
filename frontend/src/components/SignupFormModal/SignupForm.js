@@ -77,8 +77,8 @@ function SignupForm() {
         className={
           !email.includes("@") ||
           username.length < 4 ||
-          password.length < 5 ||
-          confirmPassword.length < 5
+          password.length < 6 ||
+          confirmPassword.length < 6
             ? "signup-btn-disabled"
             : "signup-btn"
         }
