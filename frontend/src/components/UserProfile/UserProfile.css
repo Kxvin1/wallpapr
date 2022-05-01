@@ -1,0 +1,11 @@
+.image-user-profile-containers {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+  grid-gap: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
