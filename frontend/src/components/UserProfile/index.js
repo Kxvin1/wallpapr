@@ -1,33 +1,61 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
-import { getUserProfile } from "../../store/profile";
+import { loadMemberImagesThunk } from "../../store/member";
 
 import "./UserProfile.css";
 
 function UserProfile() {
   const sessionUser = useSelector((state) => state.session.user);
-  const sessionUserProfile = useSelector((state) => state.profile);
   const dispatch = useDispatch();
-  const history = useHistory();
+  const { memberId } = useParams();
 
-  // if user doesn't exist, send them to a page not found
+  const [model, setModel] = useState(false);
+  const [tempimgSrc, setTempImgSrc] = useState("");
+  const [modelId, setModelId] = useState("");
 
-  if (!sessionUser) {
-    history.push("/page-not-found");
-  }
+  const memberImagesObject = useSelector((state) => state.member);
+  const memberImages = Object.values(memberImagesObject);
+  console.log(memberImages);
+
+  memberImages.sort((a, b) => {
+    return b.id - a.id;
+  });
 
   useEffect(() => {
-    dispatch(getUserProfile(sessionUser.id));
+    dispatch(loadMemberImagesThunk(memberId));
   }, [dispatch]);
 
-  console.log(sessionUser);
+  const getImg = (imgSrc, imageId) => {
+    setTempImgSrc(imgSrc);
+    setModelId(imageId);
+    setModel(true);
+  };
 
   return (
-    <div className="main-container my-profile-container">
-      <div>Will it work</div>
-      <div>{sessionUser.id}</div>
+    <div>
+      <div
+        className={model ? "model open" : "model"}
+        onClick={() => setModel(false)}
+      >
+        <img className="modal_img" src={tempimgSrc} alt="img"></img>
+      </div>
+      <div className="image-row">
+        {memberImages.map((image) => {
+          return (
+            <div className="image-block" key={image.id}>
+              <img
+                onClick={() => getImg(image.imageURL, image.id)}
+                className="image-poster"
+                src={image.imageURL}
+                alt="img-alt"
+                key={image.id}
+              ></img>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
