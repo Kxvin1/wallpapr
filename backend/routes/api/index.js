@@ -14,6 +14,7 @@ router.use("/users", usersRouter);
 router.use("/images", imagesRouter);
 router.use("/favorites", favoritesRouter);
 router.use("/profiles", profilesRouter);
+router.use("/members", membersRouter);
 
 // To do routes:
 
@@ -23,6 +24,4 @@ router.use("/profiles", profilesRouter);
 // ? Search -- Get
 // router.use('/search', searchRouter);
 
-// ? Members -- Get
-// router.use('/members', membersRouter);
 module.exports = router;
