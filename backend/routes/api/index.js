@@ -7,6 +7,7 @@ const usersRouter = require("./users");
 const imagesRouter = require("./images");
 const favoritesRouter = require("./favorites");
 const profilesRouter = require("./profiles");
+const membersRouter = require("./members");
 
 // router usage
 router.use("/session", sessionRouter);
