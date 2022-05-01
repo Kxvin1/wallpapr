@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { getImages } from "../../store/images";
 import ImageInfo from "../ImageInfo";
+import OwnerOfImageInfo from "../OwnerOfImageInfo";
 
 import "./UserMain.css";
 
@@ -27,7 +28,7 @@ function UserMain() {
     <div className="image-user-main-container">
       {images?.map((image) => {
         if (image.userId === sessionUser.id) {
-          return <ImageInfo key={image.id} image={image} />;
+          return <OwnerOfImageInfo key={image.id} image={image} />;
         }
 
         return <ImageInfo key={image.id} image={image} />;
