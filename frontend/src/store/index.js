@@ -3,11 +3,13 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from "redux-thunk";
 import sessionReducer from "./session";
 import imageReducer from "./images";
+import profileReducer from "./profile";
 
 // Set a key of session in the rootReducer's combineReducer object argument to the session reducer.
 const rootReducer = combineReducers({
   session: sessionReducer,
   image: imageReducer,
+  profile: profileReducer,
 });
 
 let enhancer;
