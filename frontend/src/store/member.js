@@ -45,7 +45,7 @@ const deleteMemberImage = (image) => {
   };
 };
 
-// doesn't work
+// doesn't work -- doesn't re-render when uploading image on profile page
 // export const getNewImageOnMemberProfile = (imageData) => async (dispatch) => {
 //   const res = await csrfFetch(`/api/images`, {
 //     method: "POST",
@@ -116,10 +116,16 @@ const memberReducer = (state = initialState, action) => {
       };
     }
 
+    // doesnt work
     // case LOAD_NEWEST_IMAGE: {
-    //   const newState = { ...state };
-    //   newState[action.image.id] = action.image;
-    //   return newState;
+    //   const newState = {};
+    //   action.images.forEach((image) => {
+    //     newState[image.id] = image;
+    //   });
+    //   return {
+    //     ...state,
+    //     ...newState,
+    //   };
     // }
 
     case DELETE_MEMBER_IMAGE: {
