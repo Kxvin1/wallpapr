@@ -19,7 +19,9 @@ const validateImage = [
 router.get(
   "/",
   asyncHandler(async (req, res) => {
-    const images = await Image.findAll();
+    const images = await Image.findAll({
+      include: [{ model: User }, { model: Favorite }],
+    });
     res.json({ images });
   })
 );
