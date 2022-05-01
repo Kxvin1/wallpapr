@@ -67,7 +67,7 @@ function ImageUpload({ showModal }) {
         type="text"
         value={imageURL}
         onChange={(e) => setImageURL(e.target.value)}
-        placeholder="ex: https://img.com/NCkJ.jpg"
+        placeholder="URL e.g., http//:img.com/NCkJ.jpg"
         required
       />
       {/* </div> */}
@@ -77,7 +77,7 @@ function ImageUpload({ showModal }) {
         type="text"
         value={tags}
         onChange={(e) => setTags(e.target.value)}
-        placeholder="ex: lake, sky, dog"
+        placeholder="Tags (optional) e.g., lake, sky, dog"
       />
       {/* </div> */}
       <button
