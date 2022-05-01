@@ -19,7 +19,7 @@ const editUserProf = (profile) => {
 
 // load user profile
 export const getUserProfile = (userId) => async (dispatch) => {
-  const res = await csrfFetch(`api/profiles/${userId}`);
+  const res = await csrfFetch(`/api/profiles/${userId}`);
 
   if (res.ok) {
     const profile = await res.json();
