@@ -2,7 +2,6 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { deleteMemberImageThunk } from "../../store/member";
-import { deleteImageThunk } from "../../store/images";
 
 function ImageDeleteModal({ showModal, image }) {
   const location = useLocation();
@@ -18,10 +17,9 @@ function ImageDeleteModal({ showModal, image }) {
 
     if (location.pathname === `/members/${sessionUser.id}`) {
       dispatch(deleteMemberImageThunk(payload));
-    } else {
-      dispatch(deleteImageThunk(payload));
     }
 
+    alert("Image successfully deleted!");
     showModal(false);
   };
 
