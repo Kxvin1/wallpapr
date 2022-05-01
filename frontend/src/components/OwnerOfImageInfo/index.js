@@ -13,9 +13,9 @@ function OwnerOfImageInfo({ image }) {
   const location = useLocation();
   const sessionUser = useSelector((state) => state.session.user);
 
-  let showDelete;
+  let showDeleteAndEdit;
   if (location.pathname === `/members/${sessionUser.id}`) {
-    showDelete = (
+    showDeleteAndEdit = (
       <div className="edit-and-delete-button-container">
         {/* <h1>edit modal component goes here</h1> */}
         <ImageDeleteModal image={image} id={image.id} />
@@ -42,7 +42,7 @@ function OwnerOfImageInfo({ image }) {
           <ImageZoom image={image} key={`${image.id}-iz`} />
         </Modal>
       )}
-      {showDelete}
+      {showDeleteAndEdit}
     </div>
   );
 }
