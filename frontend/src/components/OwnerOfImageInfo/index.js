@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { Modal } from "../../context/Modal";
 import ImageZoom from "../ImageZoom";
 import ImageDeleteModal from "../ImageDeleteModal";
+import EditImageModal from "../ImageEditModal";
 
 import "./OwnerOfImageInfo.css";
 
@@ -17,7 +18,7 @@ function OwnerOfImageInfo({ image }) {
   if (location.pathname === `/members/${sessionUser.id}`) {
     showDeleteAndEdit = (
       <div className="edit-and-delete-button-container">
-        {/* <h1>edit modal component goes here</h1> */}
+        <EditImageModal image={image} id={image.id} />
         <ImageDeleteModal image={image} id={image.id} />
       </div>
     );
