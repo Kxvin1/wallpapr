@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-// import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { postImage } from "../../store/images";
 
 import "./ImageUpload.css";
 
 function ImageUpload({ showModal }) {
   const dispatch = useDispatch();
-  // const history = useHistory();
+  const history = useHistory();
 
   const [imageURL, setImageURL] = useState("");
   const [tags, setTags] = useState([]);
@@ -31,7 +31,7 @@ function ImageUpload({ showModal }) {
 
     dispatch(postImage(payload));
     alert("Image uploaded successfully!");
-    // history.push(`/`); // if want to redirect them to discover page after upload
+    history.push(`/`); // temporary fix, auto redirects to discover page to force the render
     // history.push(`/members/${sessionUser.id}`); // if want to redirect them to their profile after upload
 
     showModal(false);

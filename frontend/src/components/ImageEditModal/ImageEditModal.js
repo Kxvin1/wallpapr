@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useLocation } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 import { editMemberImageThunk } from "../../store/member";
 
 import "./ImageEditModal.css";
 
 function ImageEditModal({ showModal, image }) {
+  const history = useHistory();
   const location = useLocation();
   const dispatch = useDispatch();
   const sessionUser = useSelector((state) => state.session.user);
@@ -35,6 +36,7 @@ function ImageEditModal({ showModal, image }) {
 
     alert("Edit submitted!");
     showModal(false);
+    // history.push("/"); temporary fix, auto redirects to discover page to force the render
   };
 
   useEffect(() => {
