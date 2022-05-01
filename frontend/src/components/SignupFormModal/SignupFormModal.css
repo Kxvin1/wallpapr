@@ -2,14 +2,15 @@
   border: none;
   display: inline-block;
   margin: 0;
-  background-color: #21212100;
   color: #dfe0df;
   font-size: 16px;
   cursor: pointer;
   text-align: center;
   font-weight: 500;
+  background-color: #21212100;
 }
 
 .signup-btn-modal:hover {
-  color: #1396e7;
+  background-color: #a8927a;
+  color: #fff;
 }

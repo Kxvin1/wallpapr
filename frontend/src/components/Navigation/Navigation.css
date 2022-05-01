@@ -19,6 +19,17 @@ header {
   font-size: 18px;
 }
 
+#signup {
+  color: #a8927a;
+  margin: 20px;
+  background-color: #212121cc;
+}
+
+#signup:hover {
+  background-color: #a8927a;
+  color: #fff;
+}
+
 .logout-btn {
   border: 1.4px solid #a8927a;
   color: whitesmoke;

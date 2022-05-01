@@ -61,9 +61,11 @@ function Navigation({ isLoaded }) {
         <li id="login">
           <LoginFormModal />
         </li>
-        <li id="signup">
+        {/* <li id="signup"> */}
+        <button id="signup">
           <SignupFormModal />
-        </li>
+        </button>
+        {/* </li> */}
       </>
     );
 
