@@ -36,7 +36,7 @@ function ImageEditModal({ showModal, image }) {
 
     alert("Edit submitted!");
     showModal(false);
-    // history.push("/"); temporary fix, auto redirects to discover page to force the render
+    history.push("/"); // temporary fix, auto redirects to discover page to force the render
   };
 
   useEffect(() => {
