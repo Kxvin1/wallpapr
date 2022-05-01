@@ -17,7 +17,12 @@ function UserMain() {
 
   const imagesObject = useSelector((state) => state.image);
   const images = Object.values(imagesObject);
-  // console.log("images", images);
+
+  images.sort((a, b) => {
+    return b.id - a.id;
+  });
+
+  // console.log("images sorted?", imagesSorted);
 
   useEffect(() => {
     dispatch(getImages());
