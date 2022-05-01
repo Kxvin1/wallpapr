@@ -11,7 +11,7 @@ function ImageInfo({ image }) {
     <div className="image-info-container">
       <img
         onClick={() => setShowModal(true)}
-        className="image-info-img portfolio-grid-image"
+        className="image-info-img profile-owner-of-image"
         id={image.id}
         key={image.id}
         src={image.imageURL}
