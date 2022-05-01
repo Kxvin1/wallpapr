@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 
 import { loadMemberImagesThunk } from "../../store/member";
+import ImageInfo from "../ImageInfo";
 
 import "./UserProfile.css";
 
@@ -34,28 +35,14 @@ function UserProfile() {
   };
 
   return (
-    <div>
-      <div
-        className={model ? "model open" : "model"}
-        onClick={() => setModel(false)}
-      >
-        <img className="modal_img" src={tempimgSrc} alt="img"></img>
-      </div>
-      <div className="image-row">
-        {memberImages.map((image) => {
-          return (
-            <div className="image-block" key={image.id}>
-              <img
-                onClick={() => getImg(image.imageURL, image.id)}
-                className="image-poster"
-                src={image.imageURL}
-                alt="img-alt"
-                key={image.id}
-              ></img>
-            </div>
-          );
-        })}
-      </div>
+    <div className="image-user-profile-containers">
+      {memberImages?.map((image) => {
+        if (image.userId === sessionUser.id) {
+          return <ImageInfo key={image.id} image={image} />;
+        }
+
+        return <ImageInfo key={image.id} image={image} />;
+      })}
     </div>
   );
 }
