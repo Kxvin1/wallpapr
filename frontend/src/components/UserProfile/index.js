@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 
@@ -12,10 +12,6 @@ function UserProfile() {
   const dispatch = useDispatch();
   const { memberId } = useParams();
 
-  const [model, setModel] = useState(false);
-  const [tempimgSrc, setTempImgSrc] = useState("");
-  const [modelId, setModelId] = useState("");
-
   const memberImagesObject = useSelector((state) => state.member);
   const memberImages = Object.values(memberImagesObject);
   console.log(memberImages);
@@ -27,12 +23,6 @@ function UserProfile() {
   useEffect(() => {
     dispatch(loadMemberImagesThunk(memberId));
   }, [dispatch]);
-
-  const getImg = (imgSrc, imageId) => {
-    setTempImgSrc(imgSrc);
-    setModelId(imageId);
-    setModel(true);
-  };
 
   return (
     <div className="image-user-profile-containers">

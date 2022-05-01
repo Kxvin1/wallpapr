@@ -8,11 +8,7 @@ import "./UserMain.css";
 
 function UserMain() {
   const dispatch = useDispatch();
-  // const [showModal, setShowModal] = useState(false);
   const sessionUser = useSelector((state) => state.session.user);
-  const [model, setModel] = useState(false);
-  const [tempimgSrc, setTempImgSrc] = useState("");
-  const [modelId, setModelId] = useState("");
 
   const imagesObject = useSelector((state) => state.image);
   const images = Object.values(imagesObject);
@@ -26,12 +22,6 @@ function UserMain() {
   useEffect(() => {
     dispatch(getImages());
   }, [dispatch]);
-
-  const getImg = (imgSrc, imageId) => {
-    setTempImgSrc(imgSrc);
-    setModelId(imageId);
-    setModel(true);
-  };
 
   return (
     <div className="image-user-main-container">
