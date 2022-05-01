@@ -23,7 +23,7 @@
 }
 
 .image-info-img:hover {
-  opacity: 85%;
+  opacity: 90%;
   cursor: zoom-in;
   transform: scale(1.07);
 }

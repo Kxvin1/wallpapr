@@ -11,7 +11,7 @@ function ImageInfo({ image }) {
     <div className="image-info-container">
       <img
         onClick={() => setShowModal(true)}
-        className="image-info-img"
+        className="image-info-img portfolio-grid-image"
         id={image.id}
         key={image.id}
         src={image.imageURL}
@@ -19,7 +19,7 @@ function ImageInfo({ image }) {
       ></img>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
-          <ImageZoom image={image} key={`${image.id}-zoom`} />
+          <ImageZoom image={image} key={`${image.id}-iz`} />
         </Modal>
       )}
     </div>
