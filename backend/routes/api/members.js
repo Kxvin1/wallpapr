@@ -6,7 +6,7 @@ const { Image, User, Favorite } = require("../../db/models");
 const router = express.Router();
 
 router.get(
-  "/:id(\\d+)/gallery",
+  "/:id(\\d+)/images",
   asyncHandler(async (req, res) => {
     const memberImages = await Image.findAll({
       where: {
