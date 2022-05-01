@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 
 import { loadMemberImagesThunk } from "../../store/member";
 import ImageInfo from "../ImageInfo";
+import OwnerOfImageInfo from "../OwnerOfImageInfo";
 
 import "./UserProfile.css";
 
@@ -28,7 +29,7 @@ function UserProfile() {
     <div className="image-user-profile-containers">
       {memberImages?.map((image) => {
         if (image.userId === sessionUser.id) {
-          return <ImageInfo key={image.id} image={image} />;
+          return <OwnerOfImageInfo key={image.id} image={image} />;
         }
 
         return <ImageInfo key={image.id} image={image} />;
