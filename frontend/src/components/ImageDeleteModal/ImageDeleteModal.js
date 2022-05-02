@@ -1,9 +1,10 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useLocation } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 import { deleteMemberImageThunk } from "../../store/member";
 
 function ImageDeleteModal({ showModal, image }) {
+  const history = useHistory();
   const location = useLocation();
   const dispatch = useDispatch();
   const sessionUser = useSelector((state) => state.session.user);
@@ -20,6 +21,7 @@ function ImageDeleteModal({ showModal, image }) {
     }
 
     alert("Image successfully deleted!");
+    history.push("/"); // temp fix while i fix the issue where if we delete from uploads page, and then click to discover, our deleted image is still there
     showModal(false);
   };
 

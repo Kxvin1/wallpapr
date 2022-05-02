@@ -45,13 +45,13 @@ function Navigation({ isLoaded }) {
             activeClassName="active-link"
             to={`/members/${sessionUser.id}`}
           >
-            Photostream
+            Uploads
           </NavLink>
         </li>
         <li className="favorites-nav nav-button">
           <NavLink activeClassName="active-link" to="/my-favorites">
             Favorites{" "}
-            {/*(change this (and other corresponding URLs/displays) to Profile when configuring) */}
+            {/*(change this (and other corresponding URLs/displays) to Profile when configuring/updating) */}
           </NavLink>
         </li>
       </ul>
