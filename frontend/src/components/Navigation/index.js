@@ -49,9 +49,11 @@ function Navigation({ isLoaded }) {
           </NavLink>
         </li>
         <li className="favorites-nav nav-button">
-          <NavLink activeClassName="active-link" to="/my-favorites">
-            Favorites{" "}
-            {/*(change this (and other corresponding URLs/displays) to Profile when configuring/updating) */}
+          <NavLink
+            activeClassName="active-link"
+            to={`/profile/${sessionUser.id}`}
+          >
+            Profile{" "}
           </NavLink>
         </li>
       </ul>
