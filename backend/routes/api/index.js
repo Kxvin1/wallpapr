@@ -8,6 +8,7 @@ const imagesRouter = require("./images");
 const favoritesRouter = require("./favorites");
 const profilesRouter = require("./profiles");
 const membersRouter = require("./members");
+const commentsRouter = require("./comments");
 
 // router usage
 router.use("/session", sessionRouter);
@@ -16,11 +17,9 @@ router.use("/images", imagesRouter);
 router.use("/favorites", favoritesRouter);
 router.use("/profiles", profilesRouter);
 router.use("/members", membersRouter);
+router.use("/comments", commentsRouter);
 
 // To do routes:
-
-// ? Reviews -- Get, Post, and Delete
-// router.use('/reviews', reviewsRouter);
 
 // ? Search -- Get
 // router.use('/search', searchRouter);
