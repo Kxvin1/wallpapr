@@ -1,12 +1,19 @@
 import { csrfFetch } from "./csrf";
 
+// member stuff
 const LOAD_MEMBER_PROFILE = "member/loadMemberProfile";
-
 const LOAD_MEMBER_IMAGES = "member/loadMemberImages";
 const EDIT_MEMBER_IMAGE = "member/editMemberImage";
 const DELETE_MEMBER_IMAGE = "member/deleteMemberImage";
 
+// comment stuff
+const ADD_COMMENT = "member/addComment";
+const LOAD_COMMENTS = "member/loadComments";
+const DELETE_COMMENT = "member/deleteComment";
+
 //////////////////////////////////////////////////////////////////////////////
+
+// ! member stuff
 
 // load profile
 const loadMemberProf = (profile) => {
@@ -40,7 +47,32 @@ const deleteMemberImage = (image) => {
   };
 };
 
+// ! comment stuff
+
+const addComment = (comment) => {
+  return {
+    type: ADD_COMMENT,
+    comment,
+  };
+};
+
+const loadComments = (comments) => {
+  return {
+    type: LOAD_COMMENTS,
+    comments,
+  };
+};
+
+const deleteComment = (commentId) => {
+  return {
+    type: DELETE_COMMENT,
+    commentId,
+  };
+};
+
 //////////////////////////////////////////////////////////////////////////////
+
+// ! member stuff
 
 export const loadMemberProfileThunk = (memberId) => async (dispatch) => {
   const res = await csrfFetch(`/api/profiles/${memberId}`);
@@ -84,12 +116,48 @@ export const deleteMemberImageThunk = (imageData) => async (dispatch) => {
   }
 };
 
+// ! comment stuff
+
+export const addMemberCommentThunk = (commentData) => async (dispatch) => {
+  const res = await csrfFetch(`/api/comments`, {
+    method: "POST",
+    body: JSON.stringify(commentData),
+  });
+
+  if (res.ok) {
+    const comment = await res.json();
+    dispatch(addComment(comment));
+    return comment;
+  }
+};
+
+export const loadMemberCommentsThunk = (memberId) => async (dispatch) => {
+  const res = await csrfFetch(`/api/comments/${memberId}`);
+
+  if (res.ok) {
+    const comments = await res.json();
+    dispatch(loadComments(comments));
+  }
+};
+
+export const deleteMemberCommentThunk = (commentData) => async (dispatch) => {
+  const res = await csrfFetch(`/api/comments/${commentData.id}`, {
+    method: "DELETE",
+  });
+
+  if (res.ok) {
+    dispatch(deleteComment(commentData.id));
+    return;
+  }
+};
+
 //////////////////////////////////////////////////////////////////////////////
 
 const initialState = {};
 
 const memberReducer = (state = initialState, action) => {
   switch (action.type) {
+    // ! member images cases (on any page that isn't the main page)
     case LOAD_MEMBER_IMAGES: {
       const newState = {};
       action.images.forEach((image) => {
@@ -104,6 +172,34 @@ const memberReducer = (state = initialState, action) => {
     case DELETE_MEMBER_IMAGE: {
       const newState = { ...state };
       delete newState[action.image];
+      return newState;
+    }
+
+    // ! member comments cases (note: took this from imageReducer)
+
+    case LOAD_COMMENTS: {
+      const newState = {};
+      action.comments.forEach((comment) => {
+        newState[comment.id] = comment;
+      });
+
+      return {
+        ...state,
+        ...newState,
+      };
+    }
+
+    case ADD_COMMENT: {
+      const newState = {
+        ...state,
+        [action.comment.id]: action.comment,
+      };
+      return newState;
+    }
+
+    case DELETE_COMMENT: {
+      const newState = { ...state };
+      delete newState[action.commentId];
       return newState;
     }
 
