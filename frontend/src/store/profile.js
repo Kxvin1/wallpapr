@@ -17,6 +17,8 @@ const editUserProf = (profile) => {
   };
 };
 
+//////////////////////////////////////////////////////////////////////////////
+
 // load user profile
 export const getUserProfile = (userId) => async (dispatch) => {
   const res = await csrfFetch(`/api/profiles/${userId}`);
@@ -40,6 +42,8 @@ export const editUserProfile = (userData) => async (dispatch) => {
     return updatedProfile;
   }
 };
+
+//////////////////////////////////////////////////////////////////////////////
 
 const initialState = [];
 

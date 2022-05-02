@@ -6,12 +6,7 @@ const LOAD_MEMBER_IMAGES = "member/loadMemberImages";
 const EDIT_MEMBER_IMAGE = "member/editMemberImage";
 const DELETE_MEMBER_IMAGE = "member/deleteMemberImage";
 
-// const LOAD_NEWEST_IMAGE = "member/loadNewestImage";
-
-// export const loadNewestImage = (image) => ({
-//   type: LOAD_NEWEST_IMAGE,
-//   image,
-// });
+//////////////////////////////////////////////////////////////////////////////
 
 // load profile
 const loadMemberProf = (profile) => {
@@ -45,19 +40,7 @@ const deleteMemberImage = (image) => {
   };
 };
 
-// doesn't work -- doesn't re-render when uploading image on profile page
-// export const getNewImageOnMemberProfile = (imageData) => async (dispatch) => {
-//   const res = await csrfFetch(`/api/images`, {
-//     method: "POST",
-//     body: JSON.stringify(imageData),
-//   });
-
-//   if (res.ok) {
-//     const image = await res.json();
-//     dispatch(loadNewestImage(image));
-//     return image;
-//   }
-// };
+//////////////////////////////////////////////////////////////////////////////
 
 export const loadMemberProfileThunk = (memberId) => async (dispatch) => {
   const res = await csrfFetch(`/api/profiles/${memberId}`);
@@ -101,6 +84,8 @@ export const deleteMemberImageThunk = (imageData) => async (dispatch) => {
   }
 };
 
+//////////////////////////////////////////////////////////////////////////////
+
 const initialState = {};
 
 const memberReducer = (state = initialState, action) => {
@@ -115,29 +100,12 @@ const memberReducer = (state = initialState, action) => {
         ...newState,
       };
     }
-    // doesnt work
-    // case LOAD_NEWEST_IMAGE: {
-    //   const newState = {};
-    //   action.images.forEach((image) => {
-    //     newState[image.id] = image;
-    //   });
-    //   return {
-    //     ...state,
-    //     ...newState,
-    //   };
-    // }
 
     case DELETE_MEMBER_IMAGE: {
       const newState = { ...state };
       delete newState[action.image];
       return newState;
     }
-    // case LOAD_MEMBER_PROFILE: {
-    //   const newState = { ...state };
-    //   console.log(state);
-    //   newState = { ...action.profile };
-    //   return newState;
-    // }
 
     default:
       return state;

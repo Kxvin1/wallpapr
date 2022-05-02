@@ -55,6 +55,8 @@ const deleteImage = (imageId, memberId) => {
 //   };
 // };
 
+//////////////////////////////////////////////////////////////////////////////
+
 // load images -- works
 export const getImages = () => async (dispatch) => {
   const res = await fetch("/api/images");
@@ -164,6 +166,8 @@ export const deleteImageThunk = (imageData, memberId) => async (dispatch) => {
 //   }
 // };
 
+//////////////////////////////////////////////////////////////////////////////
+
 const initialState = {};
 
 const imageReducer = (state = initialState, action) => {
@@ -185,7 +189,6 @@ const imageReducer = (state = initialState, action) => {
       };
       return newState;
     }
-    // works but need to component to implement delete. will add this functionality in the user's profile (they can only delete from their profile)
     case DELETE_IMAGE: {
       const newState = { ...state };
       delete newState[action.imageId];

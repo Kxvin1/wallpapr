@@ -8,6 +8,8 @@ import { csrfFetch } from "./csrf";
 const SET_USER = "session/setUser";
 const REMOVE_USER = "session/removeUser";
 
+//////////////////////////////////////////////////////////////////////////////
+
 const setUser = (user) => {
   return {
     type: SET_USER,
@@ -20,6 +22,8 @@ const removeUser = () => {
     type: REMOVE_USER,
   };
 };
+
+//////////////////////////////////////////////////////////////////////////////
 
 // You need to call the API to login then set the session user from the response, so add a thunk action for the POST /api/session.
 export const login = (user) => async (dispatch) => {
@@ -74,6 +78,8 @@ export const logout = () => async (dispatch) => {
   dispatch(removeUser());
   return response;
 };
+
+//////////////////////////////////////////////////////////////////////////////
 
 // By default, there should be no session user in the session slice of state.
 const initialState = { user: null };
