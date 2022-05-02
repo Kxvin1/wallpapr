@@ -21,7 +21,7 @@ function ImageDeleteModal({ showModal, image }) {
     }
 
     alert("Image successfully deleted!");
-    history.push("/"); // temp fix while i fix the issue where if we delete from uploads page, and then click to discover, our deleted image is still there
+    // history.push("/"); // temp fix while i fix the issue where if we delete from uploads page, and then click to discover, our deleted image is still there
     showModal(false);
   };
 
