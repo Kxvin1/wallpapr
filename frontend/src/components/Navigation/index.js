@@ -51,7 +51,7 @@ function Navigation({ isLoaded }) {
         <li className="favorites-nav nav-button">
           <NavLink
             activeClassName="active-link"
-            to={`/profile/${sessionUser.id}`}
+            to={`/profiles/${sessionUser.id}`}
           >
             Profile{" "}
           </NavLink>
