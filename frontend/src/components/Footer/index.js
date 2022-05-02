@@ -11,14 +11,6 @@ function Footer() {
     decideView = (
       <footer className="footer">
         <ul className="footer-ul">
-          <li>JavaScript</li>
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>React</li>
-          <li>Redux</li>
-          <li>Express</li>
-          <li>Sequelize</li>
-          <li>PostgreSQL</li>
           <li className="footer-text">
             <a
               target="_blank"
@@ -47,6 +39,14 @@ function Footer() {
               <i className="fab fa-linkedin" />
             </a>
           </li>
+          <li>JavaScript</li>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>React</li>
+          <li>Redux</li>
+          <li>Express</li>
+          <li>Sequelize</li>
+          <li>PostgreSQL</li>
         </ul>
         {/* <ul className="below-footer-ul">
         <ul className="inner-ul"></ul>
