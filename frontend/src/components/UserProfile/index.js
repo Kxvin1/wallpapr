@@ -28,12 +28,26 @@ function UserProfile() {
   return (
     <div>
       <div className="image-user-profile-containers">
-        {memberImages?.map((image) => {
+        {memberImages.map((image) => {
+          let tagString;
+          if (image.tags) {
+            tagString = image.tags;
+            tagString = tagString.map((tag) => `#${tag}`);
+            tagString = tagString.join(", ");
+          }
           if (image.userId === sessionUser.id) {
-            return <OwnerOfImageInfo key={image.id} image={image} />;
+            return (
+              <OwnerOfImageInfo
+                key={image.id}
+                image={image}
+                tagString={tagString}
+              />
+            );
           }
 
-          return <ImageInfo key={image.id} image={image} />;
+          return (
+            <ImageInfo key={image.id} image={image} tagString={tagString} />
+          );
         })}
       </div>
     </div>

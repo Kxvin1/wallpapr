@@ -1,8 +1,9 @@
 import React from "react";
 import "./ImageZoom.css";
 
-function ImageZoom({ image }) {
-  //   console.log(image);
+function ImageZoom({ image, tagString }) {
+  // console.log(image);
+  // console.log("tag string", tagString);
 
   // {id: 2, userId: 4, imageURL: '/images/image-2.png', tags: Array(3), favoritedCount: 151, …}
   // Favorites: []
@@ -18,7 +19,19 @@ function ImageZoom({ image }) {
   return (
     <div className="image-zoom-container" key={image.id}>
       <img className="image-zoom-zoomed" src={image.imageURL} alt="img" />
-      <div className="image-zoomed-info"></div>
+      <div className="image-zoomed-info">
+        <div className="image-zoom-all-tags" key={image}>
+          {tagString ? (
+            tagString
+              .split(",")
+              .map((tag) => (
+                <p key={tag} className="image-zoom-single-tag">{`${tag}`}</p>
+              ))
+          ) : (
+            <p key="emptytag" className="image-zoom-no-tags"></p>
+          )}
+        </div>
+      </div>
     </div>
   );
 }

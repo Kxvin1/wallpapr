@@ -27,11 +27,23 @@ function UserMain() {
   return (
     <div className="image-user-main-container">
       {images?.map((image) => {
+        let tagString;
+        if (image.tags) {
+          tagString = image.tags;
+          tagString = tagString.map((tag) => `#${tag}`);
+          tagString = tagString.join(", ");
+        }
         if (image.userId === sessionUser.id) {
-          return <OwnerOfImageInfo key={image.id} image={image} />;
+          return (
+            <OwnerOfImageInfo
+              key={image.id}
+              image={image}
+              tagString={tagString}
+            />
+          );
         }
 
-        return <ImageInfo key={image.id} image={image} />;
+        return <ImageInfo key={image.id} image={image} tagString={tagString} />;
       })}
     </div>
   );

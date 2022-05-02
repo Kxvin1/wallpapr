@@ -36,3 +36,19 @@
   );
   border-radius: 0 0 7px 7px;
 }
+
+.image-zoom-all-tags {
+  display: flex;
+  margin-left: 20px;
+}
+
+.image-zoom-single-tag,
+.image-zoom-no-tags {
+  color: #dfe0df;
+  margin-left: 10px;
+  transition-duration: 0.2s;
+}
+
+.image-zoom-single-tag {
+  cursor: default;
+}

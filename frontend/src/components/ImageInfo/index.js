@@ -4,7 +4,7 @@ import ImageZoom from "../ImageZoom";
 
 import "./ImageInfo.css";
 
-function ImageInfo({ image }) {
+function ImageInfo({ image, tagString }) {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -19,7 +19,11 @@ function ImageInfo({ image }) {
       ></img>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
-          <ImageZoom image={image} key={`${image.id}-iz`} />
+          <ImageZoom
+            image={image}
+            tagString={tagString}
+            key={`${image.id}-iz`}
+          />
         </Modal>
       )}
     </div>

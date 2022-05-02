@@ -9,7 +9,7 @@ import EditImageModal from "../ImageEditModal";
 
 import "./OwnerOfImageInfo.css";
 
-function OwnerOfImageInfo({ image }) {
+function OwnerOfImageInfo({ image, tagString }) {
   const [showModal, setShowModal] = useState(false);
   const location = useLocation();
   const sessionUser = useSelector((state) => state.session.user);
@@ -40,7 +40,11 @@ function OwnerOfImageInfo({ image }) {
       ></img>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
-          <ImageZoom image={image} key={`${image.id}-iz`} />
+          <ImageZoom
+            image={image}
+            tagString={tagString}
+            key={`${image.id}-iz`}
+          />
         </Modal>
       )}
       {showDeleteAndEdit}
