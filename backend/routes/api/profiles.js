@@ -15,11 +15,11 @@ const validateProfile = [
     .exists({ checkFalsy: true })
     .withMessage("URL cannot be empty"),
   check("location")
-    .isLength({ max: 50 })
-    .withMessage("Location cannot exceed 50 characters"),
+    .isLength({ max: 80 })
+    .withMessage("Location cannot exceed 80 characters"),
   check("biography")
-    .isLength({ max: 100 })
-    .withMessage("Biography cannot exceed 100 characters"),
+    .isLength({ max: 255 })
+    .withMessage("Biography cannot exceed 255 characters"),
   handleValidationErrors,
 ];
 
