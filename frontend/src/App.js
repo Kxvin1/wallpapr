@@ -6,12 +6,11 @@ import Navigation from "./components/Navigation";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 import UserProfile from "./components/UserProfile";
+import UserProfileInfo from "./components/UserProfileInfo";
 
 // pages to do:
-// Discover (only displayed when logged in)
-// Profile (only displayed when logged in)
-// Favorites (only displayed when logged in)
 // Page Not Found
+// Favorites (only displayed when logged in) -- bonus
 
 function App() {
   const dispatch = useDispatch();
@@ -32,7 +31,9 @@ function App() {
           <Route path="/members/:memberId">
             <UserProfile />
           </Route>
-          <Route path="/my-favorites">Favorites Page Component</Route>
+          <Route path="/profile/:memberId">
+            <UserProfileInfo />
+          </Route>
           <Route>Page Not Found Component</Route>
         </Switch>
       )}
