@@ -60,7 +60,7 @@ const deleteMemberImage = (image) => {
 // };
 
 export const loadMemberProfileThunk = (memberId) => async (dispatch) => {
-  const res = await csrfFetch(`/api/members/${memberId}`);
+  const res = await csrfFetch(`/api/profiles/${memberId}`);
 
   if (res.ok) {
     const member = await res.json();
@@ -115,7 +115,6 @@ const memberReducer = (state = initialState, action) => {
         ...newState,
       };
     }
-
     // doesnt work
     // case LOAD_NEWEST_IMAGE: {
     //   const newState = {};
@@ -133,6 +132,12 @@ const memberReducer = (state = initialState, action) => {
       delete newState[action.image];
       return newState;
     }
+    // case LOAD_MEMBER_PROFILE: {
+    //   const newState = { ...state };
+    //   console.log(state);
+    //   newState = { ...action.profile };
+    //   return newState;
+    // }
 
     default:
       return state;
