@@ -49,8 +49,11 @@ function ImageEditModal({ showModal, image }) {
   }, [tags]);
 
   return (
-    <form onSubmit={handleSubmit}>
-      <ul className="errors-ul">
+    <form
+      onSubmit={handleSubmit}
+      className="form-header-edit-form roundbox boxshadow"
+    >
+      <ul className="errors-ul-image-edit">
         {errors.length > 0 &&
           errors.map((error) => (
             <li className="error-li-image-edit" key={error}>
@@ -62,6 +65,7 @@ function ImageEditModal({ showModal, image }) {
         <h2 className="h2-center">Edit Tags</h2>
         <label className="form-label">Current Tags: </label>
         <input
+          className="form-input-edit"
           type="text"
           value={tags}
           onChange={(e) => setTags(e.target.value)}
@@ -69,7 +73,7 @@ function ImageEditModal({ showModal, image }) {
         />
       </div>
       <button
-        className="delete-button"
+        className="image-edit-button"
         type="submit"
         disabled={errors.length > 0}
       >
