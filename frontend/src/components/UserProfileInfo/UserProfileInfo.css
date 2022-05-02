@@ -1,0 +1,27 @@
+.member-profile-main-container {
+  min-width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  position: absolute;
+  top: 75.61px;
+  display: flex;
+  justify-content: center;
+}
+
+.member-profile-main-inner-container {
+  display: grid;
+  grid-template-areas:
+    "profile profile"
+    "reviews images";
+  grid-template-columns: 400px auto;
+  grid-template-rows: fit-content fit-content;
+  width: 60%;
+  background-color: transparent;
+  min-width: 985px;
+}
+
+.member-profile-container {
+  width: 100%;
+  height: 100%;
+  grid-area: profile;
+}
