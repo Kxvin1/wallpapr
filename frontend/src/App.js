@@ -31,7 +31,7 @@ function App() {
           <Route path="/members/:memberId">
             <UserProfile />
           </Route>
-          <Route path="/profile/:memberId">
+          <Route path="/profiles/:memberId">
             <UserProfileInfo />
           </Route>
           <Route>Page Not Found Component</Route>
