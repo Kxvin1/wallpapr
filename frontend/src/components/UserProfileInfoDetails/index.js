@@ -11,7 +11,7 @@ function UserProfileInfoDetails({ memberId }) {
   const profileInfo = Object.values(sessionProfile);
   const actualProfile = profileInfo[0];
 
-  console.log("actual profile", actualProfile);
+  // console.log("actual profile", actualProfile);
   // array of objs containing user profile stuff.
   // How to use:
   // use actualProfile (this is an obj) to key into the profile info:
