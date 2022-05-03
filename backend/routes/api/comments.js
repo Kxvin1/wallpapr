@@ -17,11 +17,11 @@ const validateComment = [
 ];
 
 router.get(
-  "/:memberId(\\d+)",
+  "/:uploaderId(\\d+)",
   asyncHandler(async (req, res) => {
     const allComments = await Comment.findAll({
       where: {
-        memberId: req.params.memberId,
+        uploaderId: req.params.uploaderId,
       },
       include: [{ model: User }],
     });
