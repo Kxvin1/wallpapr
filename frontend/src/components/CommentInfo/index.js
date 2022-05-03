@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 // import delete comment modal
+import DeleteCommentModal from "../DeleteCommentModal";
 import "./CommentInfo.css";
 
 function CommentInfo({ comment }) {
@@ -19,8 +20,9 @@ function CommentInfo({ comment }) {
       </div>
       <div className="comment-text">{comment.commentText}</div>
       <div className="comment-date">{date}</div>
-      {/* add when delete comment modal is created and if match with userId then allow delete
-      {sessionUser.id === comment.userId && <DeleteCommentModal comment={comment} />} */}
+      {sessionUser.id === comment.userId && (
+        <DeleteCommentModal comment={comment} />
+      )}
     </div>
   );
 }
