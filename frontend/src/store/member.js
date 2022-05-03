@@ -179,6 +179,7 @@ const memberReducer = (state = initialState, action) => {
 
     case LOAD_COMMENTS: {
       const newState = {};
+      // console.log("comments", action.comments);
       action.comments.forEach((comment) => {
         newState[comment.id] = comment;
       });
