@@ -5,7 +5,3 @@
   opacity: 0;
   transition-duration: 0.4s;
 }
-
-.review-container:hover #delete-image-button {
-  opacity: 100%;
-}
