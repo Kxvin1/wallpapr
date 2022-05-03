@@ -177,6 +177,7 @@ const memberReducer = (state = initialState, action) => {
 
     // ! member comments cases (note: took this from imageReducer)
 
+    // works!
     case LOAD_COMMENTS: {
       const newState = {};
       // console.log("comments", action.comments);
@@ -190,6 +191,7 @@ const memberReducer = (state = initialState, action) => {
       };
     }
 
+    // not yet tested
     case ADD_COMMENT: {
       const newState = {
         ...state,
@@ -198,6 +200,7 @@ const memberReducer = (state = initialState, action) => {
       return newState;
     }
 
+    // not yet tested
     case DELETE_COMMENT: {
       const newState = { ...state };
       delete newState[action.commentId];
