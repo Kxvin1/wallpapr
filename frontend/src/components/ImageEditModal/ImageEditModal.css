@@ -38,7 +38,7 @@
 
 .error-li-image-edit {
   font-size: 1.2rem;
-  margin-top: -7rem;
+  margin-top: -10rem;
   margin-bottom: 1rem;
   padding: 10px;
   list-style-type: none;
@@ -73,4 +73,78 @@
 .image-edit-button:hover {
   background-color: green;
   border: 1px solid green;
+}
+
+/* testing below */
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+/* this makes it darkmode pretty cleanly, keeping it here */
+body {
+  background: #3c3c40;
+  transform: rotateX(0.003deg);
+  height: 100vh;
+  /* color: #fff; */
+}
+
+.image-edit-button-test {
+  position: absolute;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  /* left: 50%; */
+  /* top: 50%; */
+  transform: translate(-50%, -50%);
+  color: #16af44;
+  text-decoration: none;
+  font-size: 1em;
+  display: inline-block;
+  font-family: Montserrat;
+  text-transform: uppercase;
+  /* padding: 0.5em 2em; */
+  width: 150px;
+  left: 50%;
+  bottom: -5%;
+  height: 50px;
+  border: 2px solid #16af44;
+  transition: 0.02s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+}
+.image-edit-button-test::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #16af44;
+  transition: 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1),
+    left 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+  z-index: -1;
+}
+.image-edit-button-test::after {
+  content: "";
+  display: inline-block;
+  background-image: url("https://cdn-icons-png.flaticon.com/128/109/109617.png");
+  position: absolute;
+  top: 0;
+  left: calc(100% - 3em);
+  right: 3em;
+  bottom: 0;
+  background-size: 1.5em;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: right 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+}
+.image-edit-button-test:hover {
+  padding: 0.5em 3.5em 0.5em 0.5em;
+}
+.image-edit-button-test:hover::before {
+  left: calc(100% - 3em);
+  right: 0;
+  transition: 0.3s cubic-bezier(0.1, 0, 0.1, 1),
+    left 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+}
+.image-edit-button-test:hover::after {
+  right: 0;
+  transition: right 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
 }
