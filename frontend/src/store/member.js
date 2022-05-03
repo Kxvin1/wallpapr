@@ -121,11 +121,15 @@ export const deleteMemberImageThunk = (imageData) => async (dispatch) => {
 export const addMemberCommentThunk = (commentData) => async (dispatch) => {
   const res = await csrfFetch(`/api/comments`, {
     method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify(commentData),
   });
 
   if (res.ok) {
     const comment = await res.json();
+    // console.log("memberthunk comment", comment);
     dispatch(addComment(comment));
     return comment;
   }
@@ -177,7 +181,7 @@ const memberReducer = (state = initialState, action) => {
 
     // ! member comments cases (note: took this from imageReducer)
 
-    // works!
+    // works (kinda)
     case LOAD_COMMENTS: {
       const newState = {};
       // console.log("comments", action.comments);
@@ -186,12 +190,12 @@ const memberReducer = (state = initialState, action) => {
       });
 
       return {
-        ...state,
+        // ...state, ==> commenting this out removes all the empty comments
         ...newState,
       };
     }
 
-    // not yet tested
+    // works
     case ADD_COMMENT: {
       const newState = {
         ...state,
