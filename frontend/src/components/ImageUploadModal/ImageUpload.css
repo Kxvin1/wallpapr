@@ -79,12 +79,12 @@
 }
 
 .error-li-image-upload {
-  font-size: 1.2rem;
-  margin-top: -5rem;
-  margin-bottom: 1rem;
-  padding: 10px;
+  font-size: 1.5rem;
+  margin-top: -13rem;
+  margin-bottom: 9rem;
+  /* padding: 10px; */
   list-style-type: none;
-  margin-right: 40px;
+  /* margin-right: 40px; */
   color: red;
   font-weight: bold;
   text-align: center;

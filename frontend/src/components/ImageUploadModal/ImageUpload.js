@@ -49,49 +49,49 @@ function ImageUpload({ showModal }) {
   }, [tags, imageURL]);
 
   return (
-    <form onSubmit={imageSubmit} className="upload-form roundbox boxshadow">
-      <div className="form-header">
-        <h4>New Image Upload</h4>
-      </div>
-      <ul className="error-ul-image-upload">
-        {validationErrors.length > 0 &&
-          validationErrors.map((error) => (
-            <li className="error-li-image-upload" key={error}>
-              {error}
-            </li>
-          ))}
-      </ul>
-      {/* <div className="form-input"> */}
-      <input
-        className="form-input"
-        type="text"
-        value={imageURL}
-        onChange={(e) => setImageURL(e.target.value)}
-        placeholder="URL e.g., http//:img.com/NCkJ.jpg"
-        required
-      />
-      {/* </div> */}
-      {/* <div className="form-input"> */}
-      <input
-        className="form-input"
-        type="text"
-        value={tags}
-        onChange={(e) => setTags(e.target.value)}
-        placeholder="Tags (optional) e.g., lake, sky, dog"
-      />
-      {/* </div> */}
-      <button
-        type="submit"
-        className={
-          sessionUser.id === 7 && validationErrors.length <= 0
-            ? "upload-btn"
-            : "upload-btn-disabled"
-        }
-        disabled={sessionUser.id !== 7 || validationErrors.length > 0}
-      >
-        Upload
-      </button>
-    </form>
+    <div className="login-box">
+      <form onSubmit={imageSubmit} className="login-form">
+        <label className="signup-header">New Image Upload</label>
+        <ul className="error-ul-image-upload">
+          {validationErrors.length > 0 &&
+            validationErrors.map((error) => (
+              <li className="error-li-image-upload" key={error}>
+                {error}
+              </li>
+            ))}
+        </ul>
+        <div className="user-box">
+          <input
+            className="form-input"
+            type="text"
+            value={imageURL}
+            onChange={(e) => setImageURL(e.target.value)}
+            placeholder="URL: http//:img.com/gj1.jpg"
+            required
+          />
+        </div>
+        <div className="user-box">
+          <input
+            className="form-input"
+            type="text"
+            value={tags}
+            onChange={(e) => setTags(e.target.value)}
+            placeholder="Tags (optional): cat, sky, dog"
+          />
+        </div>
+        <button
+          type="submit"
+          className={
+            sessionUser.id === 7 && validationErrors.length <= 0
+              ? "upload-btn"
+              : "upload-btn-disabled"
+          }
+          disabled={sessionUser.id !== 7 || validationErrors.length > 0}
+        >
+          Upload
+        </button>
+      </form>
+    </div>
   );
 }
 
