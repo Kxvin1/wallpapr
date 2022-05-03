@@ -4,9 +4,9 @@ import { useParams } from "react-router-dom";
 
 import UserProfileInfoDetails from "../UserProfileInfoDetails";
 import Comments from "../Comments";
+import CommentPostModal from "../CommentPostModal";
 
 import "./UserProfileInfo.css";
-// import comment form modal component
 
 function UserProfileInfo() {
   const sessionUser = useSelector((state) => state.session.user);
@@ -21,14 +21,10 @@ function UserProfileInfo() {
               <div className="member-profile-container">
                 <UserProfileInfoDetails memberId={memberId} />
               </div>
-              <div className="all-reviews-container-container">
-                <div className="all-reviews-and-button-container">
-                  <div className="add-review-button-container">
-                    CommentFormModal Component
-                  </div>
-                  <Comments memberId={memberId} />
-                </div>
+              <div className="add-review-button-container">
+                <CommentPostModal memberId={memberId} />
               </div>
+              <Comments memberId={memberId} />
             </>
           </div>
         </div>
