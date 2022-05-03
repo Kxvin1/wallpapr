@@ -33,11 +33,17 @@ router.post(
   "/",
   validateComment,
   asyncHandler(async (req, res) => {
-    const newComment = await Comment.create(req.body);
+    const { userId, memberId, commentText } = req.body;
+    const newComment = await Comment.create({
+      userId,
+      uploaderId: memberId,
+      commentText,
+    });
+
     const comment = await Comment.findByPk(newComment.id, {
       include: [{ model: User }],
     });
-    res.json(comment);
+    res.json({ comment });
   })
 );
 
