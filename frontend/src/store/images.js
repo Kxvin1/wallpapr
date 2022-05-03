@@ -68,6 +68,73 @@ export const getImages = () => async (dispatch) => {
   }
 };
 
+// !  START    from member store //                                    //
+
+// ? load profile images
+const LOAD_MEMBER_IMAGES = "member/loadMemberImages";
+
+const loadMemberImages = (images) => {
+  return {
+    type: LOAD_MEMBER_IMAGES,
+    images,
+  };
+};
+
+export const loadMemberImagesThunk = (memberId) => async (dispatch) => {
+  const res = await fetch(`/api/members/${memberId}/images`);
+
+  if (res.ok) {
+    const memberImages = await res.json();
+    dispatch(loadMemberImages(memberImages));
+  }
+};
+
+// ? edit profile images
+const EDIT_MEMBER_IMAGE = "member/editMemberImage";
+
+const editMemberImage = (image) => {
+  return {
+    type: EDIT_MEMBER_IMAGE,
+    image,
+  };
+};
+
+export const editMemberImageThunk = (imageData) => async (dispatch) => {
+  const res = await csrfFetch(`/api/images/${imageData.id}`, {
+    method: "PUT",
+    body: JSON.stringify(imageData),
+  });
+
+  if (res.ok) {
+    const imageEdit = await res.json();
+    dispatch(editMemberImage(imageEdit));
+    return imageEdit;
+  }
+};
+
+// ? delete profile images
+const DELETE_MEMBER_IMAGE = "member/deleteMemberImage";
+
+const deleteMemberImage = (image) => {
+  return {
+    type: DELETE_MEMBER_IMAGE,
+    image,
+  };
+};
+
+export const deleteMemberImageThunk = (imageData) => async (dispatch) => {
+  const res = await csrfFetch(`/api/images/${imageData.id}`, {
+    method: "DELETE",
+  });
+
+  if (res.ok) {
+    dispatch(deleteMemberImage(imageData.id));
+    return;
+  }
+};
+
+// !  END        from member store //                                    //
+
 // post image -- works
 export const postImage = (imageData) => async (dispatch) => {
   const res = await csrfFetch("/api/images", {
@@ -170,8 +237,11 @@ export const deleteImageThunk = (imageData, memberId) => async (dispatch) => {
 
 const initialState = {};
 
+// home page reducer
+
 const imageReducer = (state = initialState, action) => {
   switch (action.type) {
+    // works
     case LOAD_IMAGES: {
       const newState = {};
       action.images.forEach((image) => {
@@ -182,6 +252,35 @@ const imageReducer = (state = initialState, action) => {
         ...newState,
       };
     }
+    // //
+    // ! START          from member store //                                    //
+
+    case LOAD_MEMBER_IMAGES: {
+      const newState = {};
+      action.images.forEach((image) => {
+        newState[image.id] = image;
+      });
+      return {
+        ...state,
+        ...newState,
+      };
+    }
+
+    case EDIT_MEMBER_IMAGE: {
+      const newState = { ...state, [action.image.id]: action.image };
+      return newState;
+    }
+
+    case DELETE_MEMBER_IMAGE: {
+      const newState = { ...state };
+      delete newState[action.image];
+      return newState;
+    }
+
+    // ! END          from member store //                                    //
+
+    // //
+
     case CREATE_IMAGE: {
       const newState = {
         ...state,
@@ -189,6 +288,10 @@ const imageReducer = (state = initialState, action) => {
       };
       return newState;
     }
+
+    // ? need to add: UPDATE_IMAGE
+
+    // * not needed
     case DELETE_IMAGE: {
       const newState = { ...state };
       delete newState[action.imageId];

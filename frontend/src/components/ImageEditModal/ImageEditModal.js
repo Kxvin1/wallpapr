@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useHistory } from "react-router-dom";
-import { editMemberImageThunk } from "../../store/member";
+import { editMemberImageThunk } from "../../store/images";
 
 import "./ImageEditModal.css";
 
@@ -36,7 +36,7 @@ function ImageEditModal({ showModal, image }) {
 
     alert("Edit submitted!");
     showModal(false);
-    history.push("/"); // temporary fix, auto redirects to discover page to force the render
+    // history.push("/"); // temporary fix, auto redirects to discover page to force the render
   };
 
   useEffect(() => {

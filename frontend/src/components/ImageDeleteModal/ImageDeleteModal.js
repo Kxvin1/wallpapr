@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useHistory } from "react-router-dom";
-import { deleteMemberImageThunk } from "../../store/member";
+import { deleteMemberImageThunk } from "../../store/images";
 
 function ImageDeleteModal({ showModal, image }) {
   const history = useHistory();

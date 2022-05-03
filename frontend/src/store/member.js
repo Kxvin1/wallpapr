@@ -11,6 +11,8 @@ const ADD_COMMENT = "member/addComment";
 const LOAD_COMMENTS = "member/loadComments";
 const DELETE_COMMENT = "member/deleteComment";
 
+// do I need something to load the newest image?
+
 //////////////////////////////////////////////////////////////////////////////
 
 // ! member stuff
@@ -24,28 +26,28 @@ const loadMemberProf = (profile) => {
 };
 
 // load member images
-const loadMemberImages = (images) => {
-  return {
-    type: LOAD_MEMBER_IMAGES,
-    images,
-  };
-};
+// const loadMemberImages = (images) => {
+//   return {
+//     type: LOAD_MEMBER_IMAGES,
+//     images,
+//   };
+// };
 
 // edit member image
-const editMemberImage = (image) => {
-  return {
-    type: EDIT_MEMBER_IMAGE,
-    image,
-  };
-};
+// const editMemberImage = (image) => {
+//   return {
+//     type: EDIT_MEMBER_IMAGE,
+//     image,
+//   };
+// };
 
 // delete member image
-const deleteMemberImage = (image) => {
-  return {
-    type: DELETE_MEMBER_IMAGE,
-    image,
-  };
-};
+// const deleteMemberImage = (image) => {
+//   return {
+//     type: DELETE_MEMBER_IMAGE,
+//     image,
+//   };
+// };
 
 // ! comment stuff
 
@@ -83,38 +85,38 @@ export const loadMemberProfileThunk = (memberId) => async (dispatch) => {
   }
 };
 
-export const loadMemberImagesThunk = (memberId) => async (dispatch) => {
-  const res = await csrfFetch(`/api/members/${memberId}/images`);
+// export const loadMemberImagesThunk = (memberId) => async (dispatch) => {
+//   const res = await fetch(`/api/members/${memberId}/images`);
 
-  if (res.ok) {
-    const memberImages = await res.json();
-    dispatch(loadMemberImages(memberImages));
-  }
-};
+//   if (res.ok) {
+//     const memberImages = await res.json();
+//     dispatch(loadMemberImages(memberImages));
+//   }
+// };
 
-export const editMemberImageThunk = (imageData) => async (dispatch) => {
-  const res = await csrfFetch(`/api/images/${imageData.id}`, {
-    method: "PUT",
-    body: JSON.stringify(imageData),
-  });
+// export const editMemberImageThunk = (imageData) => async (dispatch) => {
+//   const res = await csrfFetch(`/api/images/${imageData.id}`, {
+//     method: "PUT",
+//     body: JSON.stringify(imageData),
+//   });
 
-  if (res.ok) {
-    const imageEdit = await res.json();
-    dispatch(editMemberImage(imageEdit));
-    return imageEdit;
-  }
-};
+//   if (res.ok) {
+//     const imageEdit = await res.json();
+//     dispatch(editMemberImage(imageEdit));
+//     return imageEdit;
+//   }
+// };
 
-export const deleteMemberImageThunk = (imageData) => async (dispatch) => {
-  const res = await csrfFetch(`/api/images/${imageData.id}`, {
-    method: "DELETE",
-  });
+// export const deleteMemberImageThunk = (imageData) => async (dispatch) => {
+//   const res = await csrfFetch(`/api/images/${imageData.id}`, {
+//     method: "DELETE",
+//   });
 
-  if (res.ok) {
-    dispatch(deleteMemberImage(imageData.id));
-    return;
-  }
-};
+//   if (res.ok) {
+//     dispatch(deleteMemberImage(imageData.id));
+//     return;
+//   }
+// };
 
 // ! comment stuff
 
@@ -159,25 +161,32 @@ export const deleteMemberCommentThunk = (commentData) => async (dispatch) => {
 
 const initialState = {};
 
+// profile page reducer
+
 const memberReducer = (state = initialState, action) => {
   switch (action.type) {
     // ! member images cases (on any page that isn't the main page)
-    case LOAD_MEMBER_IMAGES: {
-      const newState = {};
-      action.images.forEach((image) => {
-        newState[image.id] = image;
-      });
-      return {
-        ...state,
-        ...newState,
-      };
-    }
+    // case LOAD_MEMBER_IMAGES: {
+    //   const newState = {};
+    //   action.images.forEach((image) => {
+    //     newState[image.id] = image;
+    //   });
+    //   return {
+    //     ...state,
+    //     ...newState,
+    //   };
+    // }
 
-    case DELETE_MEMBER_IMAGE: {
-      const newState = { ...state };
-      delete newState[action.image];
-      return newState;
-    }
+    // ? need to add: do I need something to load the newest image when it's uploaded from the uploads page?
+
+    // ? need to add: EDIT_MEMBER_IMAGE
+
+    // works on uploads page
+    // case DELETE_MEMBER_IMAGE: {
+    //   const newState = { ...state };
+    //   delete newState[action.image];
+    //   return newState;
+    // }
 
     // ! member comments cases (note: took this from imageReducer)
 
@@ -204,7 +213,7 @@ const memberReducer = (state = initialState, action) => {
       return newState;
     }
 
-    // not yet tested
+    // ! not yet tested (no delete button)
     case DELETE_COMMENT: {
       const newState = { ...state };
       delete newState[action.commentId];
