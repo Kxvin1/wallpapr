@@ -73,7 +73,7 @@ function ImageEditModal({ showModal, image }) {
         />
       </div>
       <button
-        className="image-edit-button-test"
+        className="image-edit-button"
         type="submit"
         disabled={errors.length > 0}
       >
