@@ -10,7 +10,8 @@ function Comments({ memberId }) {
   const sessionProfile = useSelector((state) => state.member);
   const memberComments = Object.values(sessionProfile);
 
-  //   console.log("member comments", memberComments);
+  // console.log("sessionProfile", sessionProfile);
+  // console.log("member comments", memberComments);
 
   useEffect(() => {
     dispatch(loadMemberCommentsThunk(memberId));
@@ -18,11 +19,13 @@ function Comments({ memberId }) {
 
   return (
     <>
-      <div className="all-comments-container">
-        {memberComments.map((comment) => {
-          return <CommentInfo key={comment.userId} comment={comment} />;
-        })}
-      </div>
+      {memberComments.length ? (
+        <div className="all-comments-container">
+          {memberComments?.map((comment) => {
+            return <CommentInfo key={comment.id} comment={comment} />;
+          })}
+        </div>
+      ) : null}
     </>
   );
 }
