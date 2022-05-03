@@ -43,7 +43,7 @@ router.post(
     const comment = await Comment.findByPk(newComment.id, {
       include: [{ model: User }],
     });
-    res.json({ comment });
+    res.json(comment);
   })
 );
 

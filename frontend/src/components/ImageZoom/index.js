@@ -1,5 +1,6 @@
 import React from "react";
 import "./ImageZoom.css";
+import { NavLink } from "react-router-dom";
 
 function ImageZoom({ image, tagString }) {
   // console.log(image);
@@ -20,6 +21,12 @@ function ImageZoom({ image, tagString }) {
     <div className="image-zoom-container" key={image.id}>
       <img className="image-zoom-zoomed" src={image.imageURL} alt="img" />
       <div className="image-zoomed-info">
+        {/* <NavLink
+          className="zoomed-uploader-container"
+          to={`/profiles/${image?.userId}`}
+        >
+          <p className="zoomed-uploader-name">{image?.User.username}</p>
+        </NavLink> */}
         <div className="image-zoom-all-tags" key={image}>
           {tagString ? (
             tagString

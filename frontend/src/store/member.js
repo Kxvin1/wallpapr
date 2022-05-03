@@ -206,6 +206,7 @@ const memberReducer = (state = initialState, action) => {
 
     // works
     case ADD_COMMENT: {
+      console.log("action.comment", action.comment);
       const newState = {
         ...state,
         [action.comment.id]: action.comment,

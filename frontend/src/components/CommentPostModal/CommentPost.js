@@ -23,7 +23,7 @@ function CommentPost({ showModal, memberId }) {
 
     // console.log(payload);
 
-    dispatch(addMemberCommentThunk(payload));
+    await dispatch(addMemberCommentThunk(payload));
     showModal(false);
   };
 
