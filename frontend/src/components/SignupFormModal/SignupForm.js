@@ -31,61 +31,71 @@ function SignupForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="signup-form roundbox boxshadow">
-      <ul className="error-ul">
-        {errors.map((error, idx) => (
-          <li key={idx} className="error-li">
-            {error}
-          </li>
-        ))}
-      </ul>
-      <label className="signup-header">Sign up for Wallpapr</label>
-      <input
-        placeholder="Email Address"
-        className="signup-input"
-        type="text"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-      />
-      <input
-        placeholder="Username"
-        className="signup-input"
-        type="text"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        required
-      />
-      <input
-        placeholder="Password"
-        className="signup-input"
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required
-      />
-      <input
-        placeholder="Confirm Password"
-        className="signup-input"
-        type="password"
-        value={confirmPassword}
-        onChange={(e) => setConfirmPassword(e.target.value)}
-        required
-      />
-      <button
-        type="submit"
-        className={
-          !email.includes("@") ||
-          username.length < 4 ||
-          password.length < 6 ||
-          confirmPassword.length < 6
-            ? "signup-btn-disabled"
-            : "signup-btn"
-        }
-      >
-        Sign Up
-      </button>
-    </form>
+    <div className="login-box">
+      <form onSubmit={handleSubmit} className="login-form">
+        <ul className="error-ul">
+          {errors.map((error, idx) => (
+            <li key={idx} className="error-li">
+              {error}
+            </li>
+          ))}
+        </ul>
+        <label className="signup-header">Sign up for Wallpapr</label>
+        <div className="user-box">
+          <input
+            placeholder="Email Address"
+            className="signup-input"
+            type="text"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </div>
+        <div className="user-box">
+          <input
+            placeholder="Username"
+            className="signup-input"
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
+        </div>
+        <div className="user-box">
+          <input
+            placeholder="Password"
+            className="signup-input"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+        <div className="user-box">
+          <input
+            placeholder="Confirm Password"
+            className="signup-input"
+            type="password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            required
+          />
+        </div>
+        <button
+          type="submit"
+          className={
+            !email.includes("@") ||
+            username.length < 4 ||
+            password.length < 6 ||
+            confirmPassword.length < 6
+              ? "signup-btn-disabled"
+              : "signup-btn"
+          }
+        >
+          Sign Up
+        </button>
+      </form>
+    </div>
   );
 }
 

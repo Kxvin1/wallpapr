@@ -39,47 +39,100 @@ function LoginForm() {
     );
   };
 
+  // return (
+  //   <form onSubmit={handleSubmit} className="login-form roundbox boxshadow">
+  //     <ul className="error-ul">
+  //       {errors.map((error, idx) => (
+  //         <li key={idx} className="error-li">
+  //           {error}
+  //         </li>
+  //       ))}
+  //     </ul>
+  //     <label className="login-header">Log in to Wallpapr</label>
+  //     <input
+  //       placeholder="Username or Email"
+  //       className="login-input"
+  //       type="text"
+  //       value={credential}
+  //       onChange={(e) => setCredential(e.target.value)}
+  //       required
+  //     />
+  //     <input
+  //       placeholder="Password"
+  //       className="login-input"
+  //       type="password"
+  //       value={password}
+  //       onChange={(e) => setPassword(e.target.value)}
+  //       required
+  //     />
+  //     <button
+  //       type="submit"
+  //       className={
+  //         credential.length > 0 && password.length > 0
+  //           ? "login-btn"
+  //           : "login-btn-disabled"
+  //       }
+  //       disabled={credential.length === 0 || password.length === 0}
+  //     >
+  //       Log In
+  //     </button>
+  //     <button type="button" onMouseDown={demoLogin} className="demo-btn">
+  //       Demo User
+  //     </button>
+  //   </form>
+  // );
+
   return (
-    <form onSubmit={handleSubmit} className="login-form roundbox boxshadow">
-      <ul className="error-ul">
-        {errors.map((error, idx) => (
-          <li key={idx} className="error-li">
-            {error}
-          </li>
-        ))}
-      </ul>
-      <label className="login-header">Log in to Wallpapr</label>
-      <input
-        placeholder="Username or Email"
-        className="login-input"
-        type="text"
-        value={credential}
-        onChange={(e) => setCredential(e.target.value)}
-        required
-      />
-      <input
-        placeholder="Password"
-        className="login-input"
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required
-      />
-      <button
-        type="submit"
-        className={
-          credential.length > 0 && password.length > 0
-            ? "login-btn"
-            : "login-btn-disabled"
-        }
-        disabled={credential.length === 0 || password.length === 0}
-      >
-        Log In
-      </button>
-      <button type="button" onMouseDown={demoLogin} className="demo-btn">
-        Demo User
-      </button>
-    </form>
+    <div className="login-box">
+      <form onSubmit={handleSubmit} className="login-form">
+        <ul className="error-ul">
+          {errors.map((error, idx) => (
+            <li key={idx} className="error-li">
+              {error}
+            </li>
+          ))}
+        </ul>
+        <label className="login-header">Log in to Wallpapr</label>
+        <div className="user-box">
+          <input
+            placeholder="Username or Email"
+            className="login-input"
+            type="text"
+            value={credential}
+            onChange={(e) => setCredential(e.target.value)}
+            required
+          />
+        </div>
+        <div className="user-box">
+          <input
+            placeholder="Password"
+            className="login-input"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+        <button
+          type="submit"
+          className={
+            credential.length > 0 && password.length > 0
+              ? "login-btn"
+              : "login-btn-disabled"
+          }
+          disabled={credential.length === 0 || password.length === 0}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Log In
+        </button>
+        <button type="button" onMouseDown={demoLogin} className="demo-btn">
+          Demo User
+        </button>
+      </form>
+    </div>
   );
 }
 
