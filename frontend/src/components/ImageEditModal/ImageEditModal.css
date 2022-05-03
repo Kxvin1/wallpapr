@@ -1,3 +1,20 @@
+/* this makes it darkmode pretty cleanly, keeping it here */
+/* Light Mode */
+body {
+  background: #b1aeae;
+  transform: rotateX(0.003deg);
+  height: 100vh;
+}
+
+/* Dark Mode */
+/* body {
+  background: #57514b;
+  transform: rotateX(0.003deg);
+  height: 100vh;
+} */
+
+/* testing above */
+
 .h2-center {
   text-align: center;
 }
@@ -73,14 +90,4 @@
 .image-edit-button:hover {
   background-color: green;
   border: 1px solid green;
-}
-
-/* testing below */
-
-/* this makes it darkmode pretty cleanly, keeping it here */
-body {
-  background: #3c3c40;
-  transform: rotateX(0.003deg);
-  height: 100vh;
-  /* color: #fff; */
 }
