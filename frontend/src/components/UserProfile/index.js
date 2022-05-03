@@ -29,7 +29,7 @@ function UserProfile() {
 
   useEffect(() => {
     dispatch(loadMemberImagesThunk(memberId));
-  }, [dispatch]);
+  }, [dispatch, memberId]);
 
   return (
     <div>
