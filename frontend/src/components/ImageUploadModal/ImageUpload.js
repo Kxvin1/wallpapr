@@ -15,7 +15,7 @@ function ImageUpload({ showModal }) {
   const sessionUser = useSelector((state) => state.session.user);
   // console.log(sessionUser);
 
-  const superUsersArray = [7, 13];
+  const superUsersArray = [7, 10];
   console.log(superUsersArray);
 
   const imageSubmit = async (e) => {
