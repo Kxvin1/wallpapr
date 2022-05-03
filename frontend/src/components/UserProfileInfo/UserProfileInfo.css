@@ -12,7 +12,7 @@
   display: grid;
   grid-template-areas:
     "profile profile"
-    "reviews images";
+    "comments images";
   grid-template-columns: 400px auto;
   grid-template-rows: fit-content fit-content;
   width: 60%;
