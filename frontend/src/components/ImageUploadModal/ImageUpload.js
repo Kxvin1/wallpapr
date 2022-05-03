@@ -13,6 +13,10 @@ function ImageUpload({ showModal }) {
   const [tags, setTags] = useState([]);
   const [validationErrors, setValidationErrors] = useState([]);
   const sessionUser = useSelector((state) => state.session.user);
+  // console.log(sessionUser);
+
+  const superUsersArray = [7, 13];
+  console.log(superUsersArray);
 
   const imageSubmit = async (e) => {
     e.preventDefault();
@@ -82,11 +86,15 @@ function ImageUpload({ showModal }) {
         <button
           type="submit"
           className={
-            sessionUser.id === 7 && validationErrors.length <= 0
+            superUsersArray.includes(sessionUser.id) &&
+            validationErrors.length <= 0
               ? "upload-btn"
               : "upload-btn-disabled"
           }
-          disabled={sessionUser.id !== 7 || validationErrors.length > 0}
+          disabled={
+            !superUsersArray.includes(sessionUser.id) ||
+            validationErrors.length > 0
+          }
         >
           Upload
         </button>
