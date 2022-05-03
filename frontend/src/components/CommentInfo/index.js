@@ -9,9 +9,9 @@ function CommentInfo({ comment }) {
   const sessionUser = useSelector((state) => state.session.user);
   // console.log(comment);
 
-  console.log("before date object", comment.createdAt);
+  // console.log("before date object", comment.createdAt);
   const date = new Date(comment.createdAt).toDateString();
-  console.log("after date object", comment.createdAt);
+  // console.log("after date object", comment.createdAt);
 
   // console.log(comment.User?.username);
 

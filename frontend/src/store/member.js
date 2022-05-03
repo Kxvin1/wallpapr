@@ -131,7 +131,6 @@ export const addMemberCommentThunk = (commentData) => async (dispatch) => {
 
   if (res.ok) {
     const comment = await res.json();
-    // console.log("memberthunk comment", comment);
     dispatch(addComment(comment));
     return comment;
   }
@@ -188,7 +187,7 @@ const memberReducer = (state = initialState, action) => {
     //   return newState;
     // }
 
-    // ! member comments cases (note: took this from imageReducer)
+    // ! member comments cases
 
     // works (kinda)
     case LOAD_COMMENTS: {
@@ -199,7 +198,7 @@ const memberReducer = (state = initialState, action) => {
       });
 
       return {
-        // ...state, ==> commenting this out removes all the empty comments
+        // ...state, // ==> commenting this out removes all the empty comments
         ...newState,
       };
     }
@@ -214,7 +213,7 @@ const memberReducer = (state = initialState, action) => {
       return newState;
     }
 
-    // ! not yet tested (no delete button)
+    // works
     case DELETE_COMMENT: {
       const newState = { ...state };
       delete newState[action.commentId];

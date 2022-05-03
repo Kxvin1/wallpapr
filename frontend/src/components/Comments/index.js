@@ -10,14 +10,11 @@ function Comments({ memberId }) {
   const sessionProfile = useSelector((state) => state.member);
   const memberComments = Object.values(sessionProfile);
 
-  // console.log("member comments", memberComments);
-
-  // console.log("sessionProfile", sessionProfile);
-  // console.log("member comments", memberComments);
+  console.log("member comments", memberComments);
 
   useEffect(() => {
     dispatch(loadMemberCommentsThunk(memberId));
-  }, [dispatch]);
+  }, [dispatch, memberId]);
 
   return (
     <>
