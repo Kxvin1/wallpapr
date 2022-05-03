@@ -289,8 +289,6 @@ const imageReducer = (state = initialState, action) => {
       return newState;
     }
 
-    // ? need to add: UPDATE_IMAGE
-
     // * not needed
     case DELETE_IMAGE: {
       const newState = { ...state };
