@@ -76,8 +76,8 @@ function UserProfileInfoDetails({ memberId }) {
         />
         {collectionLinks}
         <h3>{actualProfile?.fullName}</h3>
-        <h4>AKA: "{actualProfile?.User?.username}"</h4>
-        <h3>Location: {actualProfile?.location}</h3>
+        {/* <h4>AKA: "{actualProfile?.User?.username}"</h4> */}
+        <p>Location: {actualProfile?.location}</p>
         <p className="user-bio">{actualProfile?.biography}</p>
         {/* EditProfileModal below: */}
         {/* {sessionUser.id === +memberId && <EditProfileModal myProfile={actualProfile} />} */}
