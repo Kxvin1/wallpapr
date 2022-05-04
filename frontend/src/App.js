@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import UserProfile from "./components/UserProfile";
 import UserProfileInfo from "./components/UserProfileInfo";
 import PageNotFound from "./components/PageNotFound";
+import Search from "./components/Search";
 
 // pages to do:
 // Favorites (only displayed when logged in) -- bonus
@@ -33,6 +34,9 @@ function App() {
           </Route>
           <Route path="/profiles/:memberId">
             <UserProfileInfo />
+          </Route>
+          <Route path="/search/:searchParams">
+            <Search />
           </Route>
           <Route>
             <PageNotFound />

@@ -9,6 +9,7 @@ const favoritesRouter = require("./favorites");
 const profilesRouter = require("./profiles");
 const membersRouter = require("./members");
 const commentsRouter = require("./comments");
+const searchRouter = require("./search");
 
 // router usage
 router.use("/session", sessionRouter);
@@ -18,10 +19,6 @@ router.use("/favorites", favoritesRouter);
 router.use("/profiles", profilesRouter);
 router.use("/members", membersRouter);
 router.use("/comments", commentsRouter);
-
-// To do routes:
-
-// ? Search -- Get
-// router.use('/search', searchRouter);
+router.use("/search", searchRouter);
 
 module.exports = router;

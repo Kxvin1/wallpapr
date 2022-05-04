@@ -6,6 +6,7 @@ import imageReducer from "./images";
 import profileReducer from "./profile";
 import memberReducer from "./member";
 import userReducer from "./user";
+import searchReducer from "./search";
 
 // Set a key of session in the rootReducer's combineReducer object argument to the session reducer.
 const rootReducer = combineReducers({
@@ -14,6 +15,7 @@ const rootReducer = combineReducers({
   profile: profileReducer,
   member: memberReducer,
   user: userReducer,
+  search: searchReducer,
 });
 
 let enhancer;

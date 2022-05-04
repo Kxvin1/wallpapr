@@ -18,8 +18,6 @@ function UserMain() {
     return b.id - a.id;
   });
 
-  // console.log("images sorted?", imagesSorted);
-
   useEffect(() => {
     dispatch(getImages());
   }, [dispatch]);

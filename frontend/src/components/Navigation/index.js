@@ -6,6 +6,7 @@ import LoginFormModal from "../LoginFormModal";
 import SignupFormModal from "../SignupFormModal";
 import ImageUploadModal from "../ImageUploadModal";
 import * as sessionActions from "../../store/session";
+import Search from "../Search/Search";
 
 import "./Navigation.css";
 
@@ -60,6 +61,7 @@ function Navigation({ isLoaded }) {
             Profile{" "}
           </NavLink>
         </li>
+        <Search />
       </ul>
     );
   } else {
