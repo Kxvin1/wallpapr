@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { getUserProfile } from "../../store/profile";
+import { getUsers } from "../../store/user";
 // import { loadMemberProfileThunk } from "../../store/member"; // doesn't work
 
 import "./UserProfileInfoDetails.css";
@@ -12,10 +13,17 @@ function UserProfileInfoDetails({ memberId }) {
   const profileInfo = Object.values(sessionProfile);
   const actualProfile = profileInfo[0];
 
+  const sessionUserImages = useSelector((state) => state?.image);
+  const sessionUserUserName = useSelector(
+    (state) => state?.session?.user?.username
+  );
+
+  console.log("memberid", memberId);
+
   // console.log("actual", actualProfile);
 
-  const usersObj = useSelector((state) => state.user);
-  const users = Object.values(usersObj);
+  // const usersObj = useSelector((state) => state.user);
+  // const users = Object.values(usersObj);
 
   // const uploaderProfile = users.find((user) => {
   //   return user.id === image.userId;
@@ -29,8 +37,7 @@ function UserProfileInfoDetails({ memberId }) {
   const userUploaderId = userUploadsLinkObj?.User?.id;
   const userUploaderUsername = userUploadsLinkObj?.User?.username;
 
-  console.log(userUploaderId);
-  console.log(userUploaderUsername);
+  // console.log(userUploaderUsername);
 
   let collectionLinks;
 
@@ -42,6 +49,17 @@ function UserProfileInfoDetails({ memberId }) {
           to={`/members/${userUploaderId}`}
         >
           {userUploaderUsername}'s Collection
+        </NavLink>
+      </p>
+    );
+  } else if (sessionUserImages) {
+    collectionLinks = (
+      <p className="user-collection-link">
+        <NavLink
+          className="user-collection-navlink"
+          to={`/members/${memberId}`}
+        >
+          {memberId}'s Collection
         </NavLink>
       </p>
     );
@@ -72,6 +90,10 @@ function UserProfileInfoDetails({ memberId }) {
   useEffect(() => {
     dispatch(getUserProfile(memberId));
   }, [dispatch, memberId]);
+
+  useEffect(() => {
+    dispatch(getUsers());
+  }, [dispatch]);
 
   return (
     <div className="out-out-container">
