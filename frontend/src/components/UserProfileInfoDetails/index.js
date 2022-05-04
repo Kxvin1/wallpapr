@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { getUserProfile } from "../../store/profile";
 import { getUsers } from "../../store/user";
-// import { loadMemberProfileThunk } from "../../store/member"; // doesn't work
+import EditUserProfileModal from "../EditUserProfileModal";
 
 import "./UserProfileInfoDetails.css";
 
@@ -13,6 +13,7 @@ function UserProfileInfoDetails({ memberId }) {
   const profileInfo = Object.values(sessionProfile);
   const actualProfile = profileInfo[0];
 
+  const sessionUser = useSelector((state) => state?.session?.user);
   const sessionUserImages = useSelector((state) => state?.image);
   const sessionUserUserName = useSelector(
     (state) => state?.session?.user?.username
@@ -109,7 +110,9 @@ function UserProfileInfoDetails({ memberId }) {
         {locationText}
         <p className="user-bio">{actualProfile?.biography}</p>
         {/* EditProfileModal below: */}
-        {/* {sessionUser.id === +memberId && <EditProfileModal myProfile={actualProfile} />} */}
+        {/* {sessionUser.id === +memberId && (
+          <EditUserProfileModal userProfile={actualProfile} />
+        )} */}
       </div>
     </div>
   );
