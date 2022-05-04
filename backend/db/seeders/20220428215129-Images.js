@@ -37,7 +37,7 @@ module.exports = {
         },
         {
           userId: 4,
-          imageURL: "/images/image-6.jpg",
+          imageURL: "/images/image-6.png",
           tags: ["sky", "red"],
           favoritedCount: 1111,
         },
@@ -49,7 +49,7 @@ module.exports = {
         },
         {
           userId: 1,
-          imageURL: "/images/image-8.jpg",
+          imageURL: "/images/image-8.png",
           tags: ["cyberpunk", "woman", "computer"],
           favoritedCount: 777,
         },
