@@ -9,32 +9,31 @@ module.exports = {
           userId: 1,
           fullName: "Demo L. Ition",
           location: "Demo Island",
-          biography: "I'm here to look good and show off.",
+          biography: "I'm here to show you around",
         },
         {
           userId: 2,
           fullName: "Kevin Bartolome",
           location: "California",
-          biography: "Work in progress (forever)",
+          biography: "Very Interesting Biography Here",
         },
         {
           userId: 3,
           fullName: "Leonardo Da Vinci",
           location: "Château du Clos Lucé, Amboise, France",
-          biography: "Learning never exhausts the mind.",
+          biography: "Leonardo da Biography",
         },
         {
           userId: 4,
           fullName: "Pablo Picasso",
           location: "Mougins, France",
-          biography: "Everything you can imagine is real.",
+          biography: "Pablography",
         },
         {
           userId: 5,
           fullName: "Vincent van Gogh",
           location: "Auvers-sur-Oise, France",
-          biography:
-            "I often think that the night is more alive and more richly colored than the day.",
+          biography: "Vincent Van Bio.",
         },
       ],
       {}

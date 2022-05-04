@@ -8,47 +8,50 @@ module.exports = {
         {
           userId: 4,
           uploaderId: 2,
-          commentText: "Cool image bro",
+          commentText: "impressed me on multiple levels.",
         },
         {
-          userId: 4,
+          userId: 2,
           uploaderId: 2,
-          commentText: "Nice image bro",
+          commentText:
+            "Not able to tell you how happy I am with you. It's all good.",
         },
         {
-          userId: 4,
+          userId: 3,
           uploaderId: 2,
-          commentText: "Neat image bro",
+          commentText:
+            "Stunning!!! i love them all , i wish i can these images framed!!",
+        },
+        {
+          userId: 3,
+          uploaderId: 1,
+          commentText: "beautiful arts!",
+        },
+        {
+          userId: 1,
+          uploaderId: 2,
+          commentText: "Love your landscape picture",
         },
         {
           userId: 4,
           uploaderId: 1,
-          commentText: "Delightful image bro",
-        },
-        {
-          userId: 4,
-          uploaderId: 2,
-          commentText: "Satisfying image bro",
-        },
-        {
-          userId: 4,
-          uploaderId: 1,
-          commentText: "Enjoyable image bro",
+          commentText: "Love your artwork! Looking forward to seeing more.",
         },
         {
           userId: 2,
           uploaderId: 4,
-          commentText: "Swell image bro",
+          commentText: "Beautiful!",
         },
         {
           userId: 2,
           uploaderId: 3,
-          commentText: "Pleasant image bro",
+          commentText:
+            "I was wondering if I could get any information on who the owner of this image is.  I would like to contact them.",
         },
         {
           userId: 2,
           uploaderId: 5,
-          commentText: "Admirable image bro",
+          commentText: "your works are sooooo extraordinary!",
         },
       ],
       {}
