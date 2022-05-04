@@ -15,7 +15,7 @@ function PageNotFound() {
   return (
     <div className="page-not-found-container">
       <div className="page-not-found">
-        <h2 id="nothing-to-see">404 Page Not Found</h2>
+        <h2 className="pnf-404">404 Page Not Found</h2>
         <p>Redirecting you back to the homepage in 5 seconds...</p>
         <p>
           Or click{" "}

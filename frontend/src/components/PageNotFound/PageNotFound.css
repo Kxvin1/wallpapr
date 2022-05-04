@@ -13,8 +13,9 @@
   align-items: center;
 }
 
-#nothing-to-see {
+.pnf-404 {
   padding-bottom: 30px;
+  font-size: 5em;
 }
 
 .redirect-link {
