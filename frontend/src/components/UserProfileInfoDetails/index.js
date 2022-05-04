@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { getUserProfile } from "../../store/profile";
 import { getUsers } from "../../store/user";
-import EditUserProfileModal from "../EditUserProfileModal";
 
 import "./UserProfileInfoDetails.css";
 
@@ -19,26 +18,10 @@ function UserProfileInfoDetails({ memberId }) {
     (state) => state?.session?.user?.username
   );
 
-  console.log("memberid", memberId);
-
-  // console.log("actual", actualProfile);
-
-  // const usersObj = useSelector((state) => state.user);
-  // const users = Object.values(usersObj);
-
-  // const uploaderProfile = users.find((user) => {
-  //   return user.id === image.userId;
-  // });
-
   const userUploadsLinkObj = profileInfo[0];
-
-  // console.log(userUploadsLinkObj?.User?.id);
-  // console.log(userUploadsLinkObj?.User?.username);
 
   const userUploaderId = userUploadsLinkObj?.User?.id;
   const userUploaderUsername = userUploadsLinkObj?.User?.username;
-
-  // console.log(userUploaderUsername);
 
   let collectionLinks;
 
@@ -76,18 +59,6 @@ function UserProfileInfoDetails({ memberId }) {
     locationText = <p>User {memberId}'s profile is currently empty!</p>;
   }
 
-  // console.log("actual profile", actualProfile);
-  // console.log("sesh user", actualProfile.userId === 7);
-  // array of objs containing user profile stuff.
-  // How to use:
-  // use actualProfile (this is an obj) to key into the profile info:
-  // actualProfile.User.username (note User is capitalized)
-  // actualProfile.User.id (note User is capitalized)
-  // actualProfile.avatar
-  // actualProfile.biography
-  // actualProfile.fullName
-  // actualProfile.location
-
   useEffect(() => {
     dispatch(getUserProfile(memberId));
   }, [dispatch, memberId]);
@@ -106,13 +77,8 @@ function UserProfileInfoDetails({ memberId }) {
         />
         {collectionLinks}
         <h3>{actualProfile?.fullName}</h3>
-        {/* <h4>AKA: "{actualProfile?.User?.username}"</h4> */}
         {locationText}
         <p className="user-bio">{actualProfile?.biography}</p>
-        {/* EditProfileModal below: */}
-        {/* {sessionUser.id === +memberId && (
-          <EditUserProfileModal userProfile={actualProfile} />
-        )} */}
       </div>
     </div>
   );
