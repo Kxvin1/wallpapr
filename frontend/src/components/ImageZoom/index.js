@@ -42,7 +42,7 @@ function ImageZoom({ image, tagString }) {
             to={`/profiles/${image?.userId}`}
           >
             <p className="zoomed-uploader-name">
-              {username?.username}'s Profile
+              Uploaded by: {username?.username}
             </p>
           </NavLink>
           {tagString ? (
