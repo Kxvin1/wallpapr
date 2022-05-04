@@ -3,10 +3,11 @@ header {
   justify-content: center;
   margin: 0;
   background-color: #212121cc;
-  position: relative;
+  position: fixed;
   width: 100%;
   z-index: 3;
   max-height: 5.5rem;
+  top: 0;
 }
 
 .welcome-text {
