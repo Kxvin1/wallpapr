@@ -1,10 +1,10 @@
 /* this makes it darkmode pretty cleanly, keeping it here */
 /* Light Mode */
-body {
+/* body {
   background: #b1aeae;
   transform: rotateX(0.003deg);
   height: 100vh;
-}
+} */
 
 /* Dark Mode */
 /* body {
