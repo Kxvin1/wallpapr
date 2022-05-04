@@ -10,6 +10,10 @@
   margin-bottom: 3rem;
 }
 
+/* .image-info-container:hover #delete-comment-trash {
+  opacity: 1;
+} */
+
 .image-info-img {
   height: 20rem;
   position: relative;
@@ -21,6 +25,12 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.image-info-img:hover {
+  opacity: 90%;
+  cursor: zoom-in;
+  transform: scale(1.07);
 }
 
 .image-info-img:hover {
