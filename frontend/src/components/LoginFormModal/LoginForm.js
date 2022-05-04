@@ -32,10 +32,10 @@ function LoginForm() {
   const demoLogin = (e) => {
     e.preventDefault();
 
-    setCredential("Demo-lition");
+    setCredential("Demo");
     setPassword("password");
     return dispatch(
-      sessionActions.login({ credential: "Demo-lition", password: "password" })
+      sessionActions.login({ credential: "Demo", password: "password" })
     );
   };
 
