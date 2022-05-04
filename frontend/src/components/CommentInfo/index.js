@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
 
 // import delete comment modal
 import DeleteCommentModal from "../DeleteCommentModal";
@@ -7,19 +8,27 @@ import "./CommentInfo.css";
 
 function CommentInfo({ comment }) {
   const sessionUser = useSelector((state) => state.session.user);
-  // console.log(comment);
 
-  // console.log("before date object", comment.createdAt);
+  const commentersProfile = comment?.User?.id;
+
+  // console.log(comment.User.id);
+
+  // const userUploaderId = userUploadsLinkObj?.User?.id;
+  // const userUploaderUsername = userUploadsLinkObj?.User?.username;
+
   const date = new Date(comment.createdAt).toDateString();
-  // console.log("after date object", comment.createdAt);
-
-  // console.log(comment.User?.username);
 
   return (
     <div className="comment-container">
       <div className="commented-by-container">
         <div className="commented-by">
-          Comment by: {comment?.User?.username}
+          {/* Comment by: {comment?.User?.username} */}
+          <NavLink
+            className="user-collection-navlink-comment"
+            to={`/profiles/${commentersProfile}`}
+          >
+            Comment by: {comment?.User?.username}
+          </NavLink>
         </div>
       </div>
       <div className="comment-text">{comment.commentText}</div>

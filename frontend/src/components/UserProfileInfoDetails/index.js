@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { getUserProfile } from "../../store/profile";
 // import { loadMemberProfileThunk } from "../../store/member"; // doesn't work
-import { getUsers } from "../../store/user";
 
 import "./UserProfileInfoDetails.css";
 
