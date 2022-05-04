@@ -1,7 +1,7 @@
 #delete-comment-trash {
   position: relative;
-  top: -55px;
-  right: -120px;
+  top: 10px;
+  right: -10px;
   opacity: 0;
   transition-duration: 0.4s;
 }

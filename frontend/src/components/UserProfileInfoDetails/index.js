@@ -33,7 +33,7 @@ function UserProfileInfoDetails({ memberId }) {
       <div className="card-container">
         <img
           className="round"
-          src="https://randomuser.me/api/portraits/women/79.jpg"
+          src="/logo-images/1-default-avatar-astro.png"
           alt="user"
         />
         <h3>{actualProfile?.fullName}</h3>
