@@ -35,6 +35,12 @@ module.exports = {
           location: "Auvers-sur-Oise, France",
           biography: "Vincent Van Bio.",
         },
+        {
+          userId: 6,
+          fullName: "Abc",
+          location: "Dictionaryland",
+          biography: "Xyz",
+        },
       ],
       {}
     );

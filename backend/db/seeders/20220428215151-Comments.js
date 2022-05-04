@@ -33,6 +33,16 @@ module.exports = {
           commentText: "Love your landscape picture",
         },
         {
+          userId: 1,
+          uploaderId: 2,
+          commentText: "Love your space picture",
+        },
+        {
+          userId: 1,
+          uploaderId: 2,
+          commentText: "Love your scenic pictures",
+        },
+        {
           userId: 4,
           uploaderId: 1,
           commentText: "Love your artwork! Looking forward to seeing more.",
@@ -50,6 +60,16 @@ module.exports = {
         },
         {
           userId: 2,
+          uploaderId: 5,
+          commentText: "your works are sooooo extraordinary!",
+        },
+        {
+          userId: 1,
+          uploaderId: 5,
+          commentText: "your works are sooooo extraordinary!",
+        },
+        {
+          userId: 3,
           uploaderId: 5,
           commentText: "your works are sooooo extraordinary!",
         },
