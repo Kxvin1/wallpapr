@@ -61,7 +61,7 @@ header {
 }
 
 .nav-bar:hover {
-  color: #a8927a;
+  /* color: #a8927a; */
 }
 
 .active-link {
@@ -154,4 +154,12 @@ header {
   transform: scale(1.5);
   color: white;
   cursor: pointer;
+}
+
+.greeting-message-nav {
+  padding-right: 40px;
+}
+
+.greeting-message-nav:hover {
+  color: #fff;
 }

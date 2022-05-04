@@ -13,6 +13,7 @@ function Navigation({ isLoaded }) {
   const sessionUser = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
   const history = useHistory();
+  console.log(sessionUser);
 
   const logout = (e) => {
     e.preventDefault();
@@ -25,12 +26,15 @@ function Navigation({ isLoaded }) {
   let loggedInLinks;
   if (sessionUser) {
     defaultLinks = (
-      <div>
-        <ImageUploadModal />
-        <button className="logout-button" onMouseDown={logout}>
-          <i className="fas fa-power-off"></i>
-        </button>
-      </div>
+      <>
+        <h2 className="greeting-message-nav">Hello, {sessionUser.username}!</h2>
+        <div>
+          <ImageUploadModal />
+          <button className="logout-button" onMouseDown={logout}>
+            <i className="fas fa-power-off"></i>
+          </button>
+        </div>
+      </>
     );
 
     loggedInLinks = (
