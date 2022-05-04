@@ -37,34 +37,38 @@ function CommentPost({ showModal, memberId }) {
   }, [comment]);
 
   return (
-    <form onSubmit={commentSubmit}>
-      <div className="form-header">
-        <h4>Write Comment</h4>
-      </div>
-      <ul className="errors-ul">
-        {errors.length > 0 &&
-          errors.map((error) => (
-            <li className="error-li-comment-post" key={error}>
-              {error}
-            </li>
-          ))}
-      </ul>
-      <div className="form-element form-text-area">
-        <textarea
-          type="text"
-          value={comment}
-          onChange={(e) => setComment(e.target.value)}
-          placeholder="Your comment here..."
-        />
-      </div>
-      <button
-        className="comment-post-button"
-        type="submit"
-        disabled={errors.length > 0}
-      >
-        Post Comment
-      </button>
-    </form>
+    <div className="login-box">
+      <form onSubmit={commentSubmit} className="login-form">
+        <label className="signup-header">Write Comment</label>
+        <ul className="errors-ul">
+          {errors.length > 0 &&
+            errors.map((error) => (
+              <li className="error-li-comment-post" key={error}>
+                {error}
+              </li>
+            ))}
+        </ul>
+        <div className="form-element form-text-area">
+          <div className="comment-user-box">
+            <textarea
+              className="textarea-for-comment"
+              type="text"
+              value={comment}
+              onChange={(e) => setComment(e.target.value)}
+              placeholder="Your comment here..."
+              rows={5}
+            />
+          </div>
+        </div>
+        <button
+          className="comment-post-button"
+          type="submit"
+          disabled={errors.length > 0}
+        >
+          Post Comment
+        </button>
+      </form>
+    </div>
   );
 }
 

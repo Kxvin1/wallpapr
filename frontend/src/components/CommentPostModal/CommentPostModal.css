@@ -22,3 +22,15 @@
   background-color: green;
   border: 1px solid green;
 }
+
+.textarea-for-comment {
+  min-width: 280px;
+  max-width: 280px;
+  min-height: 80px;
+  max-height: 80px;
+  width: 280px;
+}
+
+.comment-user-box {
+  width: 280px;
+}
