@@ -72,3 +72,28 @@
   font-size: 14px;
   line-height: 21px;
 }
+
+/* testing below */
+
+.user-collection-navlink {
+  background: linear-gradient(to right, hsl(98 100% 62%), hsl(204 100% 59%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.user-collection-link:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.user-collection-navlink:hover {
+  text-decoration: underline;
+}
+p,
+h3,
+div {
+  font-family: "Dank Mono", ui-monospace, monospace;
+}
