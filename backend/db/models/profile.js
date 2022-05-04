@@ -10,9 +10,11 @@ module.exports = (sequelize, DataTypes) => {
       },
       fullName: {
         type: DataTypes.STRING,
+        defaultValue: "Full Name Default Value",
       },
       location: {
         type: DataTypes.STRING,
+        defaultValue: "Location Default Value",
       },
       avatar: {
         type: DataTypes.STRING,
@@ -20,6 +22,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       biography: {
         type: DataTypes.TEXT,
+        defaultValue: "Default Biography Longer Text Stuff Fill",
       },
     },
     {}
