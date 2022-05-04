@@ -9,15 +9,18 @@ function PageNotFound() {
   useEffect(() => {
     setTimeout(() => {
       history.push("/");
-    }, 5000);
+    }, 10000);
   }, [history]);
 
   return (
     <div className="page-not-found-container">
       <div className="page-not-found">
-        <h2 className="pnf-404">404 Page Not Found</h2>
-        <p>Redirecting you back to the homepage in 5 seconds...</p>
-        <p>
+        <h2 className="pnf-404">404</h2>
+        <p className="redirect-paragraph">Page Not Found</p>
+        <p className="redirect-paragraph">
+          Redirecting you back to the homepage in 10 seconds...
+        </p>
+        <p className="redirect-paragraph">
           Or click{" "}
           <a href="/">
             <span className="redirect-link">HERE</span>

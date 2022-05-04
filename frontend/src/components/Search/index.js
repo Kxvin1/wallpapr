@@ -17,7 +17,6 @@ function Search() {
       {results.length ? (
         <>
           <div className="search-title"></div>
-          <h2 id="search-title">Search results for "{`${searchParams}`}"</h2>
           <div className="image-user-main-container">
             {results?.map((image) => {
               let tagString;
@@ -46,7 +45,7 @@ function Search() {
       ) : (
         <>
           <div className="no-search-results-title-container">
-            <h2 id="no-results-title">No results for "{`${searchParams}`}"</h2>
+            <h2 id="no-results-title">No results for "{`${searchParams}`}".</h2>
           </div>
         </>
       )}

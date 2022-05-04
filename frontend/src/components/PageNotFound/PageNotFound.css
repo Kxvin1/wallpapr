@@ -14,14 +14,14 @@
 }
 
 .pnf-404 {
-  padding-bottom: 30px;
-  font-size: 5em;
+  /* padding-bottom: 20px; */
+  font-size: 3.5em;
 }
 
 .redirect-link {
   color: #171717;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1.2em;
   font-weight: bold;
   color: #1c7cca;
 }
@@ -36,4 +36,8 @@
 .redirect-link:hover {
   color: #1faa42;
   font-weight: bold;
+}
+
+.redirect-paragraph {
+  font-size: 2em;
 }
