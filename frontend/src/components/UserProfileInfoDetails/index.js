@@ -49,6 +49,14 @@ function UserProfileInfoDetails({ memberId }) {
     collectionLinks = <></>;
   }
 
+  let locationText;
+
+  if (actualProfile) {
+    locationText = <p>Location: {actualProfile?.location}</p>;
+  } else {
+    locationText = <p>User {memberId}'s profile is currently empty!</p>;
+  }
+
   // console.log("actual profile", actualProfile);
   // console.log("sesh user", actualProfile.userId === 7);
   // array of objs containing user profile stuff.
@@ -76,7 +84,7 @@ function UserProfileInfoDetails({ memberId }) {
         {collectionLinks}
         <h3>{actualProfile?.fullName}</h3>
         {/* <h4>AKA: "{actualProfile?.User?.username}"</h4> */}
-        <p>Location: {actualProfile?.location}</p>
+        {locationText}
         <p className="user-bio">{actualProfile?.biography}</p>
         {/* EditProfileModal below: */}
         {/* {sessionUser.id === +memberId && <EditProfileModal myProfile={actualProfile} />} */}
