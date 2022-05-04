@@ -10,7 +10,11 @@ function Comments({ memberId }) {
   const sessionProfile = useSelector((state) => state.member);
   const memberComments = Object.values(sessionProfile);
 
-  console.log("member comments", memberComments);
+  memberComments.sort((a, b) => {
+    return b.id - a.id;
+  });
+
+  // console.log("after sort", memberComments);
 
   useEffect(() => {
     dispatch(loadMemberCommentsThunk(memberId));

@@ -40,6 +40,8 @@ function UserProfileInfoDetails({ memberId }) {
         <h3>AKA: {actualProfile?.User?.username}</h3>
         <h6>From: {actualProfile?.location}</h6>
         <p className="user-bio">{actualProfile?.biography}</p>
+        {/* EditProfileModal below: */}
+        {/* {sessionUser.id === +memberId && <EditProfileModal myProfile={actualProfile} />} */}
       </div>
     </div>
   );

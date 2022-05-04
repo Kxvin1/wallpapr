@@ -1,0 +1,14 @@
+#delete-comment-trash {
+  position: relative;
+  top: -55px;
+  right: -120px;
+  opacity: 0;
+  transition-duration: 0.4s;
+}
+.comment-container {
+  padding-bottom: 2em;
+}
+
+.comment-container:hover #delete-comment-trash {
+  opacity: 100%;
+}

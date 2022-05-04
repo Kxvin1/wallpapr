@@ -34,3 +34,8 @@
 .comment-user-box {
   width: 280px;
 }
+
+.comment-post-button-container {
+  display: flex;
+  justify-content: center;
+}

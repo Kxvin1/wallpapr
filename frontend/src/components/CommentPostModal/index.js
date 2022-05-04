@@ -5,9 +5,9 @@ import CommentPost from "./CommentPost";
 function CommentPostModal({ memberId }) {
   const [showModal, setShowModal] = useState(false);
   return (
-    <div>
+    <div className="comment-post-button-container">
       <button
-        className="write-comment-button-color-this"
+        className="comment-post-button"
         onClick={() => setShowModal(true)}
       >
         Write Comment

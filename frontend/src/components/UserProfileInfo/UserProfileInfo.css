@@ -13,9 +13,9 @@
   grid-template-areas:
     "profile profile"
     "comments images";
-  grid-template-columns: 400px auto;
+  grid-template-columns: 350px auto;
   grid-template-rows: fit-content fit-content;
-  width: 60%;
+  width: 45%;
   background-color: transparent;
   min-width: 985px;
 }

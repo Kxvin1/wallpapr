@@ -17,15 +17,12 @@ function UserProfileInfo() {
       {sessionUser ? (
         <div className="member-profile-main-container">
           <div className="member-profile-main-inner-container">
-            <>
-              <div className="member-profile-container">
-                <UserProfileInfoDetails memberId={memberId} />
-              </div>
-              <div className="add-review-button-container">
-                <CommentPostModal memberId={memberId} />
-              </div>
-              <Comments memberId={memberId} />
-            </>
+            <div className="member-profile-container">
+              <UserProfileInfoDetails memberId={memberId} />
+              <CommentPostModal memberId={memberId} />
+            </div>
+            <div className="add-review-button-container"></div>
+            <Comments memberId={memberId} />
           </div>
         </div>
       ) : (

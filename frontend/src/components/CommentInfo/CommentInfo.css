@@ -1,0 +1,22 @@
+.commented-by {
+  font-weight: 700;
+  transition-duration: 0.2s;
+}
+
+.commented-by:hover {
+  color: #a8927a;
+  transform: scale(1.05);
+}
+
+.comment-text {
+  padding: 10px 0;
+  font-family: proxima-nova-condensed, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.comment-date {
+  font-family: proxima-nova-condensed, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}

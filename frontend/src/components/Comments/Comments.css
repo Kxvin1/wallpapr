@@ -1,0 +1,13 @@
+.all-comments-container {
+  grid-area: comments;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 100%;
+
+  /* align-items: center; */
+  padding: 5px 200px;
+  /* justify-content: center; */
+  border-radius: 7px;
+  margin-top: 5em;
+}
