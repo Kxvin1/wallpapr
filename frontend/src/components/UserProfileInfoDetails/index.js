@@ -11,7 +11,9 @@ function UserProfileInfoDetails({ memberId }) {
   const profileInfo = Object.values(sessionProfile);
   const actualProfile = profileInfo[0];
 
+  console.log("actual", actualProfile);
   // console.log("actual profile", actualProfile);
+  // console.log("sesh user", actualProfile.userId === 7);
   // array of objs containing user profile stuff.
   // How to use:
   // use actualProfile (this is an obj) to key into the profile info:
@@ -27,17 +29,18 @@ function UserProfileInfoDetails({ memberId }) {
   }, [dispatch, memberId]);
 
   return (
-    <div className="user-profile-info-details-top-container">
-      {profileInfo && (
-        <div id="user-profile-info-details-content">
-          <div>Placeholder Bio Info Text: </div>
-          <div>Placeholder Bio Info Text: </div>
-          <div>Placeholder Bio Info Text: </div>
-          <div>Placeholder Bio Info Text: </div>
-          <div>Placeholder Bio Info Text: </div>
-          <div>Placeholder Bio Info Text: </div>
-        </div>
-      )}
+    <div className="out-out-container">
+      <div className="card-container">
+        <img
+          className="round"
+          src="https://randomuser.me/api/portraits/women/79.jpg"
+          alt="user"
+        />
+        <h3>{actualProfile?.fullName}</h3>
+        <h3>AKA: {actualProfile?.User?.username}</h3>
+        <h6>From: {actualProfile?.location}</h6>
+        <p className="user-bio">{actualProfile?.biography}</p>
+      </div>
     </div>
   );
 }

@@ -15,16 +15,19 @@ module.exports = {
       },
       fullName: {
         type: Sequelize.STRING,
+        defaultValue: "Full Name Default Value",
       },
       location: {
         type: Sequelize.STRING,
+        defaultValue: "Location Default Value",
       },
       avatar: {
         type: Sequelize.STRING,
-        defaultValue: "/images/default-avatar.png",
+        defaultValue: "/images/1-default-avatar-astro.png",
       },
       biography: {
         type: Sequelize.TEXT,
+        defaultValue: "Default Biography",
       },
       createdAt: {
         allowNull: false,
