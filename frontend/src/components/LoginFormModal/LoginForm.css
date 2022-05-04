@@ -69,16 +69,16 @@
   background-size: cover;
   background-position: center;
 }
+} */
 
 .login-form input:focus {
   outline: 0;
 }
 
 .login-form input:focus::placeholder {
-  color: rgba(0, 0, 0, 0.2);
+  color: rgb(255, 255, 255);
   transition: all 0.15s ease-in;
 }
-} */
 
 .login-header {
   color: whitesmoke;
