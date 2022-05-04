@@ -11,8 +11,6 @@ const ADD_COMMENT = "member/addComment";
 const LOAD_COMMENTS = "member/loadComments";
 const DELETE_COMMENT = "member/deleteComment";
 
-// do I need something to load the newest image?
-
 //////////////////////////////////////////////////////////////////////////////
 
 // ! member stuff
