@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 
 import { loadMemberImagesThunk } from "../../store/images";
+import { getUsers } from "../../store/user";
 import ImageInfo from "../ImageInfo";
 import OwnerOfImageInfo from "../OwnerOfImageInfo";
 
@@ -10,6 +11,7 @@ import "./UserProfile.css";
 
 function UserProfile() {
   const sessionUser = useSelector((state) => state.session.user);
+  const history = useHistory();
   const dispatch = useDispatch();
   const { memberId } = useParams();
 
@@ -17,15 +19,31 @@ function UserProfile() {
   const memberImages = Object.values(memberImagesObject);
   // console.log(memberImages);
 
+  // const usersObject = useSelector((state) => state.user);
+  // const users = Object.values(usersObject);
+  // console.log("users", users);
+
+  // const validUser = users.find((user) => {
+  //   return user.id === +memberId;
+  // });
+  // // console.log("validUser", validUser);
+
+  // if (!validUser) {
+  //   history.push("/member-id-invalid");
+  // }
+
   const memberImagesFiltered = memberImages.filter(
-    // eslint-disable-next-line
-    (image) => image.userId == memberId
+    (image) => image.userId === +memberId
   );
   // console.log(memberImagesFiltered);
 
   memberImagesFiltered.sort((a, b) => {
     return b.id - a.id;
   });
+
+  // useEffect(() => {
+  //   dispatch(getUsers());
+  // }, [dispatch]);
 
   useEffect(() => {
     dispatch(loadMemberImagesThunk(memberId));

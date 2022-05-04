@@ -1,22 +1,26 @@
 .commented-by {
   font-weight: 700;
   transition-duration: 0.2s;
+  color: #03bfcb;
 }
 
 .commented-by:hover {
-  color: #a8927a;
+  /* color: white; */
+  color: #beb5ab;
   transform: scale(1.05);
 }
 
 .comment-text {
   padding: 10px 0;
   font-family: proxima-nova-condensed, sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   word-wrap: break-word;
+  color: white;
 }
 
 .comment-date {
+  color: white;
   font-family: proxima-nova-condensed, sans-serif;
   font-weight: 400;
   font-style: italic;
