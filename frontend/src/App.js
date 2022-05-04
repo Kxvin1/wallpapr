@@ -7,9 +7,9 @@ import Main from "./components/Main";
 import Footer from "./components/Footer";
 import UserProfile from "./components/UserProfile";
 import UserProfileInfo from "./components/UserProfileInfo";
+import PageNotFound from "./components/PageNotFound";
 
 // pages to do:
-// Page Not Found
 // Favorites (only displayed when logged in) -- bonus
 
 function App() {
@@ -34,7 +34,9 @@ function App() {
           <Route path="/profiles/:memberId">
             <UserProfileInfo />
           </Route>
-          <Route>Page Not Found Component</Route>
+          <Route>
+            <PageNotFound />
+          </Route>
         </Switch>
       )}
     </>
