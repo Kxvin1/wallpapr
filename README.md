@@ -63,6 +63,7 @@ Inspired by Flickr, Wallpapr is an image sharing app where users can share their
 ![Splash Page](./readme-images/splash-page.jpeg)
 
 - Users can log into an existing account or sign up. Alternatively, users can test the site with the Demo Login feature.
+- The bar at the top with the logo, login and sign up buttons is the navigation bar of a user who is not signed in.
 - **Note: Upload feature is currently disabled (on purpose) for any account that isn't the dev's account**
 
 ![User Auth](./readme-images/user-auth.jpeg)
@@ -71,9 +72,7 @@ Inspired by Flickr, Wallpapr is an image sharing app where users can share their
 
 ### Navigation
 
-- The bar at the top with the links, search bar and icons is the navigation bar.
-
-- Once the user is logged in, their nav bar changes and they can also view all images posted on the Discover page.
+- Once the user is logged in, the user's navigation bar changes and they can also view all images posted on the Discover page.
 
 - They will also gain access to an Uploads page, where they can view, edit, and delete images they've uploaded. And the other page is the Profile page (explained in User Profile section).
 
