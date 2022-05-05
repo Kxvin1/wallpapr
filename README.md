@@ -86,7 +86,7 @@ Inspired by Flickr, Wallpapr is an image sharing app where users can share their
 
 ## User Uploads
 
-- A user can post a new image by clicking the upload icon (arrow pointing up, next to the log out button) in the navigation bar.
+- A user can post a new image by clicking the upload icon (arrow pointing up, next to the log out button) in the navigation bar. This action is doable anywhere on the site as long as the User is logged in.
 
 ![User Uploads](./readme-images/user-uploads.jpeg)
 
