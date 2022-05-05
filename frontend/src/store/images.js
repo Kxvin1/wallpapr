@@ -135,15 +135,37 @@ export const deleteMemberImageThunk = (imageData) => async (dispatch) => {
 
 // !  END        from member store //                                    //
 
-// post image -- works
-export const postImage = (imageData) => async (dispatch) => {
-  const res = await csrfFetch("/api/images", {
+// ? post image -- pre aws route
+// export const postImage = (imageData) => async (dispatch) => {
+//   const res = await csrfFetch("/api/images", {
+//     method: "POST",
+//     body: JSON.stringify(imageData),
+//   });
+
+//   if (res.ok) {
+//     const image = await res.json();
+//     dispatch(create(image));
+//     return image;
+//   }
+// };
+
+// ! post image -- aws route
+export const postImage = (data) => async (dispatch) => {
+  const { userId, tags, image } = data;
+  const formData = new FormData();
+  formData.append("userId", userId);
+  if (tags) formData.append("tags", tags);
+  if (image) formData.append("image", image);
+  const response = await csrfFetch(`/api/images`, {
     method: "POST",
-    body: JSON.stringify(imageData),
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+    body: formData,
   });
 
-  if (res.ok) {
-    const image = await res.json();
+  if (response.ok) {
+    const image = await response.json();
     dispatch(create(image));
     return image;
   }

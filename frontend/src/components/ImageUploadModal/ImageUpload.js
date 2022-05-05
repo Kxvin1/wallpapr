@@ -9,14 +9,13 @@ function ImageUpload({ showModal }) {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const [imageURL, setImageURL] = useState("");
+  // const [imageURL, setImageURL] = useState(""); --> pre aws
+  const [image, setImage] = useState(null); // --> post aws
   const [tags, setTags] = useState([]);
   const [validationErrors, setValidationErrors] = useState([]);
   const sessionUser = useSelector((state) => state.session.user);
-  // console.log(sessionUser);
 
-  const superUsersArray = [7, 10];
-  console.log(superUsersArray);
+  const superUsersArray = [7]; // add Demo user to this (id = 1) when demoing or want to give upload functionality to demo user
 
   const imageSubmit = async (e) => {
     e.preventDefault();
@@ -29,28 +28,34 @@ function ImageUpload({ showModal }) {
 
     const payload = {
       userId: sessionUser.id,
-      imageURL,
+      image,
       tags: tagsArr,
     };
 
+    console.log(payload);
+
     dispatch(postImage(payload));
     alert("Image uploaded successfully!");
-    // history.push(`/`); // temporary fix, auto redirects to discover page to force the render
-    // history.push(`/members/${sessionUser.id}`); // if want to redirect them to their profile after upload
 
     showModal(false);
     return;
   };
 
+  const uploadFile = (e) => {
+    const file = e.target.files[0];
+    // console.log(file);
+    if (file) setImage(file);
+  };
+
   useEffect(() => {
     const errors = [];
-    if (!imageURL.length) errors.push("URL is Required");
+    // if (!image.length) errors.push("URL is Required");
     if (tags.indexOf(" ") >= 0) errors.push("Current Tags Invalid");
-    if (!imageURL.match(/^https?:\/\/.+\/.+$/) && imageURL.length > 0)
-      errors.push("Current URL Invalid");
+    // if (!image.match(/^https?:\/\/.+\/.+$/) && image.length > 0)
+    //   errors.push("Current URL Invalid");
 
     setValidationErrors(errors);
-  }, [tags, imageURL]);
+  }, [tags]);
 
   return (
     <div className="login-box">
@@ -65,16 +70,17 @@ function ImageUpload({ showModal }) {
             ))}
         </ul>
         <div className="user-box">
-          <input
+          {/* <input
             className="form-input"
             type="text"
-            value={imageURL}
-            onChange={(e) => setImageURL(e.target.value)}
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
             placeholder="URL: http//:img.com/gj1.jpg"
             required
-          />
+          /> */}
+          <input type="file" onChange={uploadFile} />
         </div>
-        <div className="user-box">
+        {/* <div className="user-box">
           <input
             className="form-input"
             type="text"
@@ -82,7 +88,7 @@ function ImageUpload({ showModal }) {
             onChange={(e) => setTags(e.target.value)}
             placeholder="Tags (optional): cat, sky, dog"
           />
-        </div>
+        </div> */}
         <button
           type="submit"
           className={
