@@ -13,13 +13,14 @@ function ImageUpload({ showModal }) {
   const [image, setImage] = useState(null); // --> post aws
   const [tags, setTags] = useState([]);
   const [validationErrors, setValidationErrors] = useState([]);
+  const [validFile, setValidFile] = useState(true);
   const sessionUser = useSelector((state) => state.session.user);
 
   const superUsersArray = [7]; // add Demo user to this (id = 1) when demoing or want to give upload functionality to demo user
 
   const imageSubmit = async (e) => {
     e.preventDefault();
-
+    //
     let tagsArr;
     if (tags.length) {
       tagsArr = tags.split(",");
@@ -41,21 +42,29 @@ function ImageUpload({ showModal }) {
     return;
   };
 
-  const uploadFile = (e) => {
-    const file = e.target.files[0];
-    // console.log(file);
-    if (file) setImage(file);
+  const uploadFile = async (e) => {
+    const file = await e.target.files[0];
+    const fileType = await file?.type;
+    const fileTypeArray = await fileType.split("/");
+    if (fileTypeArray[0] !== "image") {
+      setValidFile(false);
+    } else {
+      setValidFile(true);
+      setValidationErrors([]);
+      setImage(file);
+    }
   };
 
   useEffect(() => {
     const errors = [];
     // if (!image.length) errors.push("URL is Required");
     if (tags.indexOf(" ") >= 0) errors.push("Current Tags Invalid");
+    if (!validFile) errors.push("Selected file invalid");
     // if (!image.match(/^https?:\/\/.+\/.+$/) && image.length > 0)
     //   errors.push("Current URL Invalid");
 
     setValidationErrors(errors);
-  }, [tags]);
+  }, [tags, validFile]);
 
   return (
     <div className="login-box">
@@ -78,7 +87,7 @@ function ImageUpload({ showModal }) {
             placeholder="URL: http//:img.com/gj1.jpg"
             required
           /> */}
-          <input type="file" onChange={uploadFile} />
+          <input type="file" onChange={uploadFile} accept="image/*" />
         </div>
         {/* <div className="user-box">
           <input
