@@ -4,6 +4,7 @@ const { check } = require("express-validator");
 const { handleValidationErrors } = require("../../utils/validation");
 
 const { Image, User, Favorite } = require("../../db/models");
+const { singleMulterUpload, singlePublicFileUpload } = require("../../awsS3");
 
 const router = express.Router();
 
@@ -27,14 +28,35 @@ router.get(
   })
 );
 
-// post image
+// ? post image -- pre-aws route
+// router.post(
+//   "/",
+//   validateImage,
+//   asyncHandler(async (req, res) => {
+//     const imageUpload = await Image.create(req.body);
+
+//     const image = await Image.findByPk(imageUpload.id, {
+//       include: [{ model: User }, { model: Favorite }],
+//     });
+//     res.json(image);
+//   })
+// );
+
+// ! post image -- aws route
 router.post(
   "/",
-  validateImage,
-  asyncHandler(async (req, res) => {
-    const imageUpload = await Image.create(req.body);
-    const image = await Image.findByPk(imageUpload.id, {
-      include: [{ model: User }, { model: Favorite }],
+  singleMulterUpload("image"),
+  asyncHandler(async function (req, res) {
+    const { userId, tags } = req.body;
+    const imageURL = await singlePublicFileUpload(req.file);
+    const newImage = await Image.create({
+      userId,
+      imageURL,
+      tags,
+    });
+
+    const image = await Image.findByPk(newImage.id, {
+      include: [{ model: User }],
     });
     res.json(image);
   })

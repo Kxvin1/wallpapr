@@ -92,6 +92,7 @@ const sessionReducer = (state = initialState, action) => {
       newState = Object.assign({}, state);
       newState.user = action.payload;
       return newState;
+    // return { ...state, user: action.payload };
     case REMOVE_USER:
       newState = Object.assign({}, state);
       newState.user = null;
@@ -100,6 +101,8 @@ const sessionReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+//////////////////////////////////////////////////////////////////////////////
 
 // Export the login thunk action, and export the reducer as the default export.
 export default sessionReducer;
