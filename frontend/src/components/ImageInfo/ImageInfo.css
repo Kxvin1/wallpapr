@@ -19,7 +19,11 @@
   position: relative;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
-  border: 7px solid black;
+  /* border: 7px solid rgb(28, 25, 25);
+
+  CHANGE IMAGE BORDERS HERE
+
+  */
   box-shadow: 0.5rem 0.5rem 1rem 0 rgba(31, 27, 27, 0.843);
   display: block;
   height: 100%;

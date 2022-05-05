@@ -15,13 +15,16 @@
   /* background: white; */
   border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
   color: white;
-  box-shadow: 10px 10px rgba(0, 0, 0, 0.752);
+  /* box-shadow: 10px 10px rgba(0, 0, 0, 0.432); */
+  box-shadow: 10px 10px rgba(5, 6, 6, 0.547);
   transition: all 0.4s ease;
 }
 
 .profile-owner-of-image:hover {
   border-radius: 0% 0% 50% 50% / 0% 0% 5% 5%;
-  box-shadow: 10px 10px rgba(0, 0, 0, 0.752);
+  /* box-shadow: 10px 10px rgb(126, 124, 115); */
+  /* box-shadow: 10px 10px rgb(187, 196, 194); */
+  box-shadow: 10px 10px rgb(173, 179, 188);
 }
 
 .profile-image:hover {
