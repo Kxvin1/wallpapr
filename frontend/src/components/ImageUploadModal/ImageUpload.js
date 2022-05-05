@@ -20,7 +20,7 @@ function ImageUpload({ showModal }) {
 
   const imageSubmit = async (e) => {
     e.preventDefault();
-
+    //
     let tagsArr;
     if (tags.length) {
       tagsArr = tags.split(",");
