@@ -11,8 +11,6 @@ function CommentInfo({ comment }) {
 
   const commentersProfile = comment?.User?.id;
 
-  // console.log(comment.User.id);
-
   // const userUploaderId = userUploadsLinkObj?.User?.id;
   // const userUploaderUsername = userUploadsLinkObj?.User?.username;
 

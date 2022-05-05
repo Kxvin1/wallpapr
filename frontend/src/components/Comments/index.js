@@ -14,8 +14,6 @@ function Comments({ memberId }) {
     return b.id - a.id;
   });
 
-  // console.log("after sort", memberComments);
-
   useEffect(() => {
     dispatch(loadMemberCommentsThunk(memberId));
   }, [dispatch, memberId]);
