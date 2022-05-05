@@ -33,8 +33,6 @@ function ImageUpload({ showModal }) {
       tags: tagsArr,
     };
 
-    console.log(payload);
-
     dispatch(postImage(payload));
     alert("Image uploaded successfully!");
 

@@ -190,7 +190,6 @@ const memberReducer = (state = initialState, action) => {
     // works (kinda)
     case LOAD_COMMENTS: {
       const newState = {};
-      // console.log("comments", action.comments);
       action.comments.forEach((comment) => {
         newState[comment.id] = comment;
       });
@@ -203,7 +202,6 @@ const memberReducer = (state = initialState, action) => {
 
     // works
     case ADD_COMMENT: {
-      console.log("action.comment", action.comment);
       const newState = {
         ...state,
         [action.comment.id]: action.comment,

@@ -7,7 +7,6 @@ import "./CommentPostModal.css";
 function CommentPost({ showModal, memberId }) {
   const dispatch = useDispatch();
   const sessionUser = useSelector((state) => state.session.user);
-  //   console.log("session user", sessionUser);
 
   const [comment, setComment] = useState("");
   const [errors, setErrors] = useState([]);
@@ -20,8 +19,6 @@ function CommentPost({ showModal, memberId }) {
       memberId,
       commentText: comment,
     };
-
-    // console.log(payload);
 
     await dispatch(addMemberCommentThunk(payload));
     showModal(false);

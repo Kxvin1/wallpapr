@@ -14,7 +14,6 @@ function Navigation({ isLoaded }) {
   const sessionUser = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
   const history = useHistory();
-  console.log(sessionUser);
 
   const logout = (e) => {
     e.preventDefault();

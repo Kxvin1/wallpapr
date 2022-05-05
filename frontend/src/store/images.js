@@ -63,7 +63,6 @@ export const getImages = () => async (dispatch) => {
 
   if (res.ok) {
     const images = await res.json();
-    // console.log("store/images.js", images);
     dispatch(load(images.images));
   }
 };
@@ -227,8 +226,6 @@ export const deleteImageThunk = (imageData, memberId) => async (dispatch) => {
 
 //   if (res.ok) {
 //     return;
-//   } else {
-//     console.log("error in deleteFromFavorites store/image.js");
 //   }
 // };
 
@@ -250,8 +247,6 @@ export const deleteImageThunk = (imageData, memberId) => async (dispatch) => {
 //   if (res.ok) {
 //     const favoriteImages = await res.json();
 //     dispatch(loadFavorites(favoriteImages));
-//   } else {
-//     console.log("error in getFavoriteImages store/image.js");
 //   }
 // };
 

@@ -9,24 +9,9 @@ function ImageZoom({ image, tagString }) {
   const usersObj = useSelector((state) => state.user);
   const users = Object.values(usersObj);
 
-  // console.log("users", users);
-
   const username = users.find((user) => {
     return user.id === image.userId;
   });
-
-  console.log("~~~~~~~~~~~~username~~~~~~~~~~~~~", username?.username);
-
-  // {id: 2, userId: 4, imageURL: '/images/image-2.png', tags: Array(3), favoritedCount: 151, …}
-  // Favorites: []
-  // Users: []
-  // createdAt: "2022-04-29T00:45:22.345Z"
-  // favoritedCount: 151
-  // id: 2
-  // imageURL: "/images/image-2.png"
-  // tags: (3) ['dragon', 'fantasy', 'army']
-  // updatedAt: "2022-04-29T00:45:22.345Z"
-  // userId: 4
 
   useEffect(() => {
     dispatch(getUsers());
