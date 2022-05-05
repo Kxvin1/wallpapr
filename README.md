@@ -6,7 +6,7 @@ Inspired by Flickr, Wallpapr is an image sharing app where users can share their
 - [MVP Feature List](https://github.com/Kxvin1/wallpapr/wiki/MVP-Feature-List)
 - [Database Schema](https://github.com/Kxvin1/wallpapr/wiki/Database-Schema)
 
-**_Recommended resolution size: 1920 x 1080 or higher_**
+**_Recommended resolution size for viewing: 1920 x 1080 or higher_**
 
 # Technologies Used
 
