@@ -1,6 +1,6 @@
 # Wallpapr
 
-Inspired by Flickr, Wallpapr is an image sharing app where users can share their favorite desktop wallpapers as well as view other users' uploads and profiles. Users can interact with other users by leaving comments on their profile.
+Inspired by Flickr, Wallpapr is a single page image sharing app where users can share their favorite desktop wallpapers as well as view other users' uploads and profiles. Users can interact with other users by leaving comments on their profile.
 
 All features update the page the user is on without a refresh of the page through use of the Redux store.
 
