@@ -2,6 +2,8 @@
 
 Inspired by Flickr, Wallpapr is an image sharing app where users can share their favorite desktop wallpapers as well as view other users' uploads and profiles. Users can interact with other users by leaving comments on their profile.
 
+All features update the page the user is on without a refresh of the page through use of the Redux store.
+
 - [Live Site](https://wall-papr.herokuapp.com/)
 - [MVP Feature List](https://github.com/Kxvin1/wallpapr/wiki/MVP-Feature-List)
 - [Database Schema](https://github.com/Kxvin1/wallpapr/wiki/Database-Schema)
