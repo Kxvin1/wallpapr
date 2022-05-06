@@ -10,8 +10,6 @@ All features update the page the user is on without a refresh of the page throug
 
 #### **_Recommended resolution size for viewing: 1920 x 1080 or higher_**
 
-#### **_Note: Upload feature is currently disabled (on purpose) for any account that isn't the dev's account_**
-
 # Technologies Used
 
 ## Hosting
