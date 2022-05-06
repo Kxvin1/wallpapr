@@ -83,7 +83,7 @@ All features update the page the user is on without a refresh of the page throug
 
 ![Image Zoom](./readme-images/image-zoom.jpeg)
 
-- Clicking on the username shows the portfolio of the user (shown further below)
+- Clicking on the username shows the profile of the user (shown further below)
 
 ## User Uploads
 
