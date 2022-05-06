@@ -8,7 +8,9 @@ All features update the page the user is on without a refresh of the page throug
 - [MVP Feature List](https://github.com/Kxvin1/wallpapr/wiki/MVP-Feature-List)
 - [Database Schema](https://github.com/Kxvin1/wallpapr/wiki/Database-Schema)
 
-**_Recommended resolution size for viewing: 1920 x 1080 or higher_**
+#### **_Recommended resolution size for viewing: 1920 x 1080 or higher_**
+
+#### **_Note: Upload feature is currently disabled (on purpose) for any account that isn't the dev's account_**
 
 # Technologies Used
 
@@ -66,7 +68,6 @@ All features update the page the user is on without a refresh of the page throug
 
 - Users can log into an existing account or sign up. Alternatively, users can test the site with the Demo Login feature.
 - The bar at the top with the logo, login and sign up buttons is the navigation bar of a user who is not signed in.
-- **Note: Upload feature is currently disabled (on purpose) for any account that isn't the dev's account**
 
 ![User Auth](./readme-images/user-auth.jpeg)
 
