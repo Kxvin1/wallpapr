@@ -9,7 +9,7 @@ module.exports = {
           userId: 1,
           fullName: "Demo L. Ition",
           location: "Demo Island",
-          biography: "I'm here to show you around",
+          biography: "I'm only here to show you around 🤖",
         },
         {
           userId: 2,
@@ -19,27 +19,29 @@ module.exports = {
         },
         {
           userId: 3,
-          fullName: "Leonardo Da Vinci",
-          location: "Château du Clos Lucé, Amboise, France",
-          biography: "Leonardo da Biography",
+          fullName: "Klay Thompson",
+          location: "Bay Area",
+          biography: "aka Captain Klay 🛥️",
         },
         {
           userId: 4,
-          fullName: "Pablo Picasso",
-          location: "Mougins, France",
-          biography: "Pablography",
+          fullName: "Rocco",
+          location: "klay's house",
+          biography:
+            "🐕 iykyk. drop a follow https://www.instagram.com/rocco.thompson",
         },
         {
           userId: 5,
-          fullName: "Vincent van Gogh",
-          location: "Auvers-sur-Oise, France",
-          biography: "Vincent Van Bio.",
+          fullName: "Stephen Curry",
+          location: "Bay Area",
+          biography: "🐐",
         },
         {
           userId: 6,
-          fullName: "Abc",
-          location: "Dictionaryland",
-          biography: "Xyz",
+          fullName: "Abcs123-hitmakerx",
+          location: "Thesaurusland",
+          biography:
+            "bruh check my soundcloud www.soundcloud.com/abcs123-beats",
         },
       ],
       {}

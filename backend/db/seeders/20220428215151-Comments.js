@@ -11,13 +11,13 @@ module.exports = {
           commentText: "impressed me on multiple levels.",
         },
         {
-          userId: 2,
+          userId: 1,
           uploaderId: 2,
           commentText:
             "Not able to tell you how happy I am with you. It's all good.",
         },
         {
-          userId: 3,
+          userId: 1,
           uploaderId: 2,
           commentText:
             "Stunning!!! i love them all , i wish i can these images framed!!",
@@ -60,18 +60,144 @@ module.exports = {
         },
         {
           userId: 2,
-          uploaderId: 5,
+          uploaderId: 4,
           commentText: "your works are sooooo extraordinary!",
         },
         {
           userId: 1,
+          uploaderId: 1,
+          commentText: "i'm saving everything in your collection",
+        },
+        {
+          userId: 5,
+          uploaderId: 2,
+          commentText: "i'm saving everything in your collection",
+        },
+        {
+          userId: 5,
+          uploaderId: 3,
+          commentText: "i'm saving everything in your collection",
+        },
+        {
+          userId: 2,
+          uploaderId: 4,
+          commentText: "i'm saving everything in your collection",
+        },
+        {
+          userId: 4,
           uploaderId: 5,
-          commentText: "your works are sooooo extraordinary!",
+          commentText: "i'm saving everything in your collection",
         },
         {
           userId: 3,
+          uploaderId: 3,
+          commentText: "sweet stuff guy",
+        },
+        {
+          userId: 3,
+          uploaderId: 3,
+          commentText: "awesome art",
+        },
+        {
+          userId: 3,
+          uploaderId: 3,
+          commentText: "where do you find all these?",
+        },
+        {
+          userId: 3,
+          uploaderId: 1,
+          commentText: "how do I visit demo island?",
+        },
+        {
+          userId: 6,
+          uploaderId: 1,
+          commentText:
+            "checkout my soundcloud: www.soundcloud.com/abcs123-beats",
+        },
+        {
+          userId: 6,
+          uploaderId: 2,
+          commentText:
+            "checkout my soundcloud: www.soundcloud.com/abcs123-beats",
+        },
+        {
+          userId: 6,
+          uploaderId: 3,
+          commentText:
+            "checkout my soundcloud: www.soundcloud.com/abcs123-beats",
+        },
+        {
+          userId: 6,
+          uploaderId: 4,
+          commentText:
+            "checkout my soundcloud: www.soundcloud.com/abcs123-beats",
+        },
+        {
+          userId: 6,
           uploaderId: 5,
-          commentText: "your works are sooooo extraordinary!",
+          commentText:
+            "checkout my soundcloud: www.soundcloud.com/abcs123-beats",
+        },
+        {
+          userId: 6,
+          uploaderId: 6,
+          commentText:
+            "checkout my soundcloud: www.soundcloud.com/abcs123-beats",
+        },
+        {
+          userId: 6,
+          uploaderId: 1,
+          commentText: "and my insta: www.instagram.com/therealabcs123",
+        },
+        {
+          userId: 6,
+          uploaderId: 2,
+          commentText: "and my insta: www.instagram.com/therealabcs123",
+        },
+        {
+          userId: 6,
+          uploaderId: 3,
+          commentText: "and my insta: www.instagram.com/therealabcs123",
+        },
+        {
+          userId: 6,
+          uploaderId: 4,
+          commentText: "and my insta: www.instagram.com/therealabcs123",
+        },
+        {
+          userId: 6,
+          uploaderId: 5,
+          commentText: "and my insta: www.instagram.com/therealabcs123",
+        },
+        {
+          userId: 5,
+          uploaderId: 1,
+          commentText: "amazing stuff",
+        },
+        {
+          userId: 5,
+          uploaderId: 2,
+          commentText: "amazing stuff",
+        },
+        {
+          userId: 5,
+          uploaderId: 3,
+          commentText: "amazing stuff",
+        },
+        {
+          userId: 5,
+          uploaderId: 4,
+          commentText: "amazing stuff",
+        },
+        {
+          userId: 3,
+          uploaderId: 6,
+          commentText: "check out my twitter: www.twitter.com/klayyyyyylmao",
+        },
+        {
+          userId: 3,
+          uploaderId: 6,
+          commentText: "catch me on xbox live, heres my tag: toasterklay11",
         },
       ],
       {}

@@ -18,22 +18,22 @@ module.exports = {
         },
         {
           email: "leonardo.d.vinci.75423@gmail.com",
-          username: "leonardo",
+          username: "headbandklay42",
           hashedPassword: bcrypt.hashSync("password"),
         },
         {
           email: "pablo.ruiz.p.10249@gmail.com",
-          username: "picasso",
+          username: "rocco",
           hashedPassword: bcrypt.hashSync("password"),
         },
         {
           email: "vince.v.g.89132@gmail.com",
-          username: "vinny",
+          username: "SC30",
           hashedPassword: bcrypt.hashSync("password"),
         },
         {
           email: "abc543254@gmail.com",
-          username: "alphabet",
+          username: "abcs-123",
           hashedPassword: bcrypt.hashSync("password"),
         },
       ],
