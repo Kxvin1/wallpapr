@@ -16,7 +16,7 @@ function ImageUpload({ showModal }) {
   const [validFile, setValidFile] = useState(true);
   const sessionUser = useSelector((state) => state.session.user);
 
-  const superUsersArray = [7]; // add Demo user to this (id = 1) when demoing or want to give upload functionality to demo user
+  const superUsersArray = [7, 1]; // add Demo user to this (id = 1) when demoing or want to give upload functionality to demo user
 
   const imageSubmit = async (e) => {
     e.preventDefault();
@@ -98,16 +98,20 @@ function ImageUpload({ showModal }) {
         </div> */}
         <button
           type="submit"
+          // className={
+          //   superUsersArray.includes(sessionUser.id) &&
+          //   validationErrors.length <= 0
+          //     ? "upload-btn"
+          //     : "upload-btn-disabled"
+          // }
           className={
-            superUsersArray.includes(sessionUser.id) &&
-            validationErrors.length <= 0
-              ? "upload-btn"
-              : "upload-btn-disabled"
+            validationErrors.length <= 0 ? "upload-btn" : "upload-btn-disabled"
           }
-          disabled={
-            !superUsersArray.includes(sessionUser.id) ||
-            validationErrors.length > 0
-          }
+          // disabled={
+          //   !superUsersArray.includes(sessionUser.id) ||
+          //   validationErrors.length > 0
+          // }
+          disabled={validationErrors.length > 0}
         >
           Upload
         </button>
