@@ -12,7 +12,7 @@ All features update the page the user is on without a refresh of the page throug
 
 # Technologies Used
 
-## Hosting
+## Image Storage & Hosting
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white) ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 
