@@ -2,8 +2,14 @@
 
 Inspired by Flickr, Wallpapr is an image sharing single page app where users can share their favorite desktop wallpapers as well as view other users' uploads and profiles. Users can interact with other users by leaving comments on their profile.
 
-All features update the page the user is on without a refresh of the page through use of the Redux store.
+### Here are some key features:
+  - Leveraged Redux to create a single page app to dynamically render React components without a refresh
+  - Generated a Node.js backend using the Sequelize ORM to handle validations and database queries
+  - Implemented filters on the Express backend API routes to organize user comments
+  - Incorporated element manipulation using React on the navigation bar to create a frontend setup that is similar to Flickr’s user interface
+  - Integrated AWS S3 for all image uploads
 
+### Links
 - [Live Site](https://wall-papr.herokuapp.com/)
 - [MVP Feature List](https://github.com/Kxvin1/wallpapr/wiki/MVP-Feature-List)
 - [Database Schema](https://github.com/Kxvin1/wallpapr/wiki/Database-Schema)
@@ -56,7 +62,7 @@ All features update the page the user is on without a refresh of the page throug
 
    `npm start`
 
-# Features
+# About the Project & Features
 
 ## Splash Page & User Authentication
 
