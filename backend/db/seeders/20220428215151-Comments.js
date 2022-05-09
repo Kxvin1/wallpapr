@@ -13,8 +13,7 @@ module.exports = {
         {
           userId: 1,
           uploaderId: 2,
-          commentText:
-            "Not able to tell you how happy I am with you. It's all good.",
+          commentText: "everything you have is so high res!",
         },
         {
           userId: 1,
@@ -61,7 +60,7 @@ module.exports = {
         {
           userId: 2,
           uploaderId: 4,
-          commentText: "your works are sooooo extraordinary!",
+          commentText: "your works are extraordinary!",
         },
         {
           userId: 1,
@@ -106,68 +105,62 @@ module.exports = {
         {
           userId: 3,
           uploaderId: 1,
-          commentText: "how do I visit demo island?",
+          commentText: "great collection!",
         },
         {
           userId: 6,
           uploaderId: 1,
-          commentText:
-            "checkout my soundcloud: www.soundcloud.com/abcs123-beats",
+          commentText: "+1",
         },
         {
           userId: 6,
           uploaderId: 2,
-          commentText:
-            "checkout my soundcloud: www.soundcloud.com/abcs123-beats",
+          commentText: "+1",
         },
         {
           userId: 6,
           uploaderId: 3,
-          commentText:
-            "checkout my soundcloud: www.soundcloud.com/abcs123-beats",
+          commentText: "+1",
         },
         {
           userId: 6,
           uploaderId: 4,
-          commentText:
-            "checkout my soundcloud: www.soundcloud.com/abcs123-beats",
+          commentText: "+1",
         },
         {
           userId: 6,
           uploaderId: 5,
-          commentText:
-            "checkout my soundcloud: www.soundcloud.com/abcs123-beats",
+          commentText: "now this is worth adding to my collection",
         },
         {
           userId: 6,
           uploaderId: 6,
-          commentText:
-            "checkout my soundcloud: www.soundcloud.com/abcs123-beats",
+          commentText: "now this is worth adding to my collection",
         },
         {
           userId: 6,
           uploaderId: 1,
-          commentText: "and my insta: www.instagram.com/therealabcs123",
+          commentText: "setting this as my background right now!",
         },
         {
           userId: 6,
           uploaderId: 2,
-          commentText: "and my insta: www.instagram.com/therealabcs123",
+          commentText: "setting this as my background right now!",
         },
         {
           userId: 6,
           uploaderId: 3,
-          commentText: "and my insta: www.instagram.com/therealabcs123",
+          commentText: "setting this as my background right now!",
         },
         {
           userId: 6,
           uploaderId: 4,
-          commentText: "and my insta: www.instagram.com/therealabcs123",
+          commentText: "setting this as my background right now!",
         },
         {
           userId: 6,
           uploaderId: 5,
-          commentText: "and my insta: www.instagram.com/therealabcs123",
+          commentText: "setting this as my background right now!",
         },
         {
           userId: 5,
@@ -177,27 +170,27 @@ module.exports = {
         {
           userId: 5,
           uploaderId: 2,
-          commentText: "amazing stuff",
+          commentText: "this is just what i like",
         },
         {
           userId: 5,
           uploaderId: 3,
-          commentText: "amazing stuff",
+          commentText: "dude amazing stuff",
         },
         {
           userId: 5,
           uploaderId: 4,
-          commentText: "amazing stuff",
+          commentText: "just wanted to say... amazing stuff",
         },
         {
           userId: 3,
           uploaderId: 6,
-          commentText: "check out my twitter: www.twitter.com/klayyyyyylmao",
+          commentText: "how do I change my profile picture?",
         },
         {
           userId: 3,
           uploaderId: 6,
-          commentText: "catch me on xbox live, heres my tag: toasterklay11",
+          commentText: "i've been looking everywhere for this!",
         },
       ],
       {}

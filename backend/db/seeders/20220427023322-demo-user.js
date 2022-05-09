@@ -18,7 +18,7 @@ module.exports = {
         },
         {
           email: "leonardo.d.vinci.75423@gmail.com",
-          username: "headbandklay42",
+          username: "nevros",
           hashedPassword: bcrypt.hashSync("password"),
         },
         {
@@ -28,12 +28,12 @@ module.exports = {
         },
         {
           email: "vince.v.g.89132@gmail.com",
-          username: "SC30",
+          username: "joe48239",
           hashedPassword: bcrypt.hashSync("password"),
         },
         {
           email: "abc543254@gmail.com",
-          username: "abcs-123",
+          username: "oswell",
           hashedPassword: bcrypt.hashSync("password"),
         },
       ],

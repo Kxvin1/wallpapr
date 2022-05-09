@@ -7,41 +7,39 @@ module.exports = {
       [
         {
           userId: 1,
-          fullName: "Demo L. Ition",
-          location: "Demo Island",
-          biography: "I'm only here to show you around 🤖",
+          fullName: "Demo Guy",
+          location: "Unknown",
+          biography: "🤖",
         },
         {
           userId: 2,
           fullName: "Kevin Bartolome",
-          location: "California",
-          biography: "Very Interesting Biography Here",
+          location: "Los Angeles",
+          biography: "Software Engineer",
         },
         {
           userId: 3,
-          fullName: "Klay Thompson",
-          location: "Bay Area",
-          biography: "aka Captain Klay 🛥️",
+          fullName: "Nevro S4",
+          location: "San Francisco",
+          biography: "Collector",
         },
         {
           userId: 4,
           fullName: "Rocco",
-          location: "klay's house",
-          biography:
-            "🐕 iykyk. drop a follow https://www.instagram.com/rocco.thompson",
+          location: "San Francisco",
+          biography: "🐕",
         },
         {
           userId: 5,
-          fullName: "Stephen Curry",
-          location: "Bay Area",
-          biography: "🐐",
+          fullName: "dashwall",
+          location: "Greece",
+          biography: "just showing off my collection",
         },
         {
           userId: 6,
-          fullName: "Abcs123-hitmakerx",
-          location: "Thesaurusland",
-          biography:
-            "bruh check my soundcloud www.soundcloud.com/abcs123-beats",
+          fullName: "blueyk",
+          location: "Seattle",
+          biography: "The pictures here are really nice",
         },
       ],
       {}
