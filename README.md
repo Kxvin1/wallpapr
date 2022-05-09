@@ -6,7 +6,7 @@ Inspired by Flickr, Wallpapr is an image sharing single page app where users can
   - Leveraged Redux to create a single page app to dynamically render React components without a refresh
   - Generated a Node.js backend using the Sequelize ORM to handle validations and database queries
   - Implemented filters on the Express backend API routes to organize user comments
-  - Incorporated element manipulation using React on the navigation bar to create a frontend setup that is similar to Flickr’s user interface
+  - Incorporated element manipulation using React on the navigation bar and splash page to create a frontend setup that is similar to Flickr’s user interface
   - Integrated AWS S3 for all image uploads
 
 ### Links
