@@ -3,7 +3,7 @@
 Inspired by Flickr, Wallpapr is an image sharing single page app where users can share their favorite desktop wallpapers as well as view other users' uploads and profiles. Users can interact with other users by leaving comments on their profile.
 
 ### Here are some key features:
-  - Engineered Redux to create a single page app to dynamically render React components without a refresh
+  - Engineered with Redux to create a single page app to dynamically render React components without a refresh
   - Generated a Node.js backend using the Sequelize ORM to handle validations and PostgreSQL database queries
   - Used React to create a splash page setup similar to Flickr by incorporating element manipulation
   - Configured Bcrypt to hash user passwords and store them in the database to implement access control lists
