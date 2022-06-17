@@ -8,8 +8,8 @@ Inspired by Flickr, Wallpapr is an image sharing single page app where users can
   - Implemented CRUD features for Images and User Comments
   - Used React to create a splash page setup similar to Flickr by incorporating element manipulation
   - Configured Bcrypt to hash user passwords and store them in the database to implement access control lists
-  - Utilized AWS S3 to implement user image uploads reducing server load and allowing for scalability of image services
   - Implemented a custom modal framework using React component architecture allowing for efficient development of new forms
+  - Utilized AWS S3 to implement user image uploads to reduce server load allowing for scalability of the webapp's image sharing services
 
 ### Links
 - [Live Site](https://wall-papr.herokuapp.com/)
