@@ -48,9 +48,6 @@ function Footer() {
           <li>Sequelize</li>
           <li>PostgreSQL</li>
         </ul>
-        {/* <ul className="below-footer-ul">
-        <ul className="inner-ul"></ul>
-      </ul> */}
       </footer>
     );
   } else {
