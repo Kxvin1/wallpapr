@@ -35,7 +35,7 @@ function Footer() {
             <a
               target="_blank"
               rel="noreferrer noopener"
-              href="https://www.linkedin.com/in/kevin-bartolome/"
+              href="https://www.linkedin.com/"
             >
               <i className="fab fa-linkedin" />
             </a>
