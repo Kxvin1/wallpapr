@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 function Footer() {
   const user = useSelector((state) => state.session.user);
 
-  // upd
+  // upd2
   let decideView;
 
   if (!user) {
