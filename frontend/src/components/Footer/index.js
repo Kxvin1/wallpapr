@@ -19,7 +19,7 @@ function Footer() {
               href="https://github.com/Kxvin1/wallpapr"
               className="white"
             >
-              GitHub Repository | Wallpapr 2022
+              GitHub Repository | Wallpapr 2023
             </a>
           </li>
           <li>
